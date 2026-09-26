@@ -1,0 +1,6 @@
+{
+  "name": "Agenda Mengajar Guru",
+  "description": "Aplikasi Agenda Mengajar Guru dengan Keamanan PIN, Presensi Kelas, CRUD Siswa, Jadwal, Penilaian, dan Cetak Laporan PDF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "AppDataStore": {
+      "title": "AppDataStore",
+      "description": "Primary persistent document store for all academic records across sleep/republish",
+      "type": "object",
+      "properties": {
+        "profile": { "type": "object" },
+        "kelas": { "type": "array" },
+        "siswa": { "type": "array" },
+        "jadwal": { "type": "array" },
+        "agenda": { "type": "array" },
+        "penilaianExtra": { "type": "array" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile data",
+      "type": "object",
+      "properties": {
+        "namaGuru": { "type": "string" },
+        "nip": { "type": "string" },
+        "namaSekolah": { "type": "string" },
+        "mapelUtama": { "type": "string" },
+        "tahunAjaran": { "type": "string" },
+        "semester": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "app_data/primary": {
+      "schema": "AppDataStore",
+      "description": "Global application primary data store"
+    },
+    "users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Teacher profile documents"
+    }
+  }
+}

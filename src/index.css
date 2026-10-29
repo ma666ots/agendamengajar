@@ -6,6 +6,12 @@
   }
 }
 
+/* Fix html2canvas font baseline measurement issue caused by Tailwind CSS preflight */
+img[src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"] {
+  display: inline !important;
+  vertical-align: baseline !important;
+}
+
 /* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 6px;

@@ -20,6 +20,7 @@ import {
   BookOpen,
   FileText,
   Loader2,
+  Camera,
 } from 'lucide-react';
 import { Kelas, Siswa, PenilaianSession, TeacherProfile, GradeHuruf } from '../types';
 import {
@@ -28,6 +29,11 @@ import {
   getGradePredikat,
   normalizeGradeHuruf,
 } from '../utils/gradeUtils';
+import {
+  captureElementToCanvas,
+  downloadCanvasAsPng,
+  copyCanvasToClipboard,
+} from '../utils/screenshotUtils';
 import { formatCityName } from './ShareablePresensiModal';
 
 export interface PenilaianSessionExtended extends PenilaianSession {
@@ -43,6 +49,8 @@ interface ShareableNilaiModalProps {
   sessionsList: PenilaianSessionExtended[];
   profile: TeacherProfile;
   initialSessionId?: string;
+  kelasList?: Kelas[];
+  onSelectKelas?: (kelas: Kelas) => void;
 }
 
 export const ShareableNilaiModal: React.FC<ShareableNilaiModalProps> = ({
@@ -53,6 +61,8 @@ export const ShareableNilaiModal: React.FC<ShareableNilaiModalProps> = ({
   sessionsList,
   profile,
   initialSessionId,
+  kelasList,
+  onSelectKelas,
 }) => {
   const [activeTab, setActiveTab] = useState<'card' | 'whatsapp' | 'individual'>('card');
   const [selectedSessionId, setSelectedSessionId] = useState<string>(
@@ -63,6 +73,8 @@ export const ShareableNilaiModal: React.FC<ShareableNilaiModalProps> = ({
   const [copiedIndividualWA, setCopiedIndividualWA] = useState<boolean>(false);
   const [filterStatus, setFilterStatus] = useState<'ALL' | 'TUNTAS' | 'REMEDIAL'>('ALL');
   const [isExportingPdf, setIsExportingPdf] = useState<boolean>(false);
+  const [isCapturingScreenshot, setIsCapturingScreenshot] = useState<boolean>(false);
+  const [copiedScreenshot, setCopiedScreenshot] = useState<boolean>(false);
 
   if (!isOpen) return null;
 
@@ -876,6 +888,34 @@ export const ShareableNilaiModal: React.FC<ShareableNilaiModalProps> = ({
     }
   };
 
+  // Capture Report Card as Image (Download or Copy to Clipboard)
+  const handleCaptureReportCard = async (mode: 'download' | 'copy') => {
+    const el = document.getElementById('printable-report-card');
+    if (!el) return;
+    setIsCapturingScreenshot(true);
+    try {
+      const cleanTitle = activeTitle.replace(/[^a-zA-Z0-9_-]/g, '_');
+      const cleanKelas = activeKelas.namaKelas.replace(/[^a-zA-Z0-9_-]/g, '_');
+      const filename = `Laporan_Nilai_${cleanKelas}_${cleanTitle}.png`;
+      const canvas = await captureElementToCanvas(el, { scale: 2 });
+      if (mode === 'download') {
+        downloadCanvasAsPng(canvas, filename);
+      } else {
+        const ok = await copyCanvasToClipboard(canvas);
+        if (ok) {
+          setCopiedScreenshot(true);
+          setTimeout(() => setCopiedScreenshot(false), 2500);
+        } else {
+          downloadCanvasAsPng(canvas, filename);
+        }
+      }
+    } catch (err) {
+      console.error('Error capturing report card screenshot:', err);
+    } finally {
+      setIsCapturingScreenshot(false);
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
       {/* Styles for isolated print formatting */}
@@ -927,40 +967,62 @@ export const ShareableNilaiModal: React.FC<ShareableNilaiModalProps> = ({
         {/* Toolbar: Navigation Tabs & Selection Controls */}
         <div className="p-4 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0 no-print">
           {/* Tabs */}
-          <div className="flex items-center gap-1.5 p-1 bg-slate-200/80 rounded-2xl self-start">
-            <button
-              onClick={() => setActiveTab('card')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                activeTab === 'card'
-                  ? 'bg-white text-indigo-700 shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <Trophy className="w-3.5 h-3.5" />
-              <span>Kartu Hasil Belajar</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('whatsapp')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                activeTab === 'whatsapp'
-                  ? 'bg-emerald-600 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <Send className="w-3.5 h-3.5" />
-              <span>Format WhatsApp</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('individual')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                activeTab === 'individual'
-                  ? 'bg-white text-indigo-700 shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <UserCheck className="w-3.5 h-3.5" />
-              <span>Slip Per Siswa</span>
-            </button>
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex items-center gap-1.5 p-1 bg-slate-200/80 rounded-2xl self-start">
+              <button
+                onClick={() => setActiveTab('card')}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                  activeTab === 'card'
+                    ? 'bg-white text-indigo-700 shadow-xs'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <Trophy className="w-3.5 h-3.5" />
+                <span>Kartu Hasil Belajar</span>
+              </button>
+              <button
+                onClick={() => setActiveTab('whatsapp')}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                  activeTab === 'whatsapp'
+                    ? 'bg-emerald-600 text-white shadow-xs'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <Send className="w-3.5 h-3.5" />
+                <span>Format WhatsApp</span>
+              </button>
+              <button
+                onClick={() => setActiveTab('individual')}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                  activeTab === 'individual'
+                    ? 'bg-white text-indigo-700 shadow-xs'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <UserCheck className="w-3.5 h-3.5" />
+                <span>Slip Per Siswa</span>
+              </button>
+            </div>
+
+            {/* Optional Class Picker */}
+            {kelasList && kelasList.length > 1 && onSelectKelas && (
+              <div className="flex items-center gap-1 overflow-x-auto scrollbar-none pl-1">
+                <span className="text-[11px] font-bold text-slate-400 mr-1">Kelas:</span>
+                {kelasList.map(k => (
+                  <button
+                    key={k.id}
+                    onClick={() => onSelectKelas(k)}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
+                      k.id === activeKelas.id
+                        ? 'bg-indigo-600 text-white shadow-2xs'
+                        : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'
+                    }`}
+                  >
+                    {k.namaKelas}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Sesi Penilaian Dropdown Filter */}
@@ -1027,9 +1089,46 @@ export const ShareableNilaiModal: React.FC<ShareableNilaiModalProps> = ({
                 </div>
 
                 <div className="flex flex-wrap items-center gap-2">
+                  {/* Screenshot Buttons */}
+                  <button
+                    onClick={() => handleCaptureReportCard('copy')}
+                    disabled={isCapturingScreenshot}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold shadow-xs cursor-pointer flex items-center gap-1.5 transition-all ${
+                      copiedScreenshot
+                        ? 'bg-emerald-700 text-white'
+                        : 'bg-emerald-600 hover:bg-emerald-700 text-white'
+                    }`}
+                    title="Salin gambar laporan langsung ke clipboard untuk ditempel di WhatsApp"
+                  >
+                    {copiedScreenshot ? (
+                      <>
+                        <Check className="w-3.5 h-3.5" />
+                        <span>Tersalin ke WA!</span>
+                      </>
+                    ) : isCapturingScreenshot ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                        <span>Menyalin...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3.5 h-3.5" />
+                        <span>Salin ke WA</span>
+                      </>
+                    )}
+                  </button>
+                  <button
+                    onClick={() => handleCaptureReportCard('download')}
+                    disabled={isCapturingScreenshot}
+                    className="px-3 py-1.5 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl shadow-xs cursor-pointer flex items-center gap-1.5 transition-all disabled:opacity-60"
+                    title="Simpan gambar tangkapan layar (screenshot) sebagai file .png"
+                  >
+                    <Camera className="w-3.5 h-3.5" />
+                    <span>Screenshot PNG</span>
+                  </button>
                   <button
                     onClick={handleExportExcel}
-                    className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-xs cursor-pointer flex items-center gap-1.5 transition-all"
+                    className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-xl shadow-xs cursor-pointer flex items-center gap-1.5 transition-all"
                     title="Download file Excel (.xlsx)"
                   >
                     <Download className="w-3.5 h-3.5" />

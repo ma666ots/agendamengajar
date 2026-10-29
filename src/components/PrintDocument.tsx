@@ -144,7 +144,7 @@ export const PrintDocument: React.FC<PrintDocumentProps> = ({
       {type === 'presensi' && (
         <table className="w-full text-xs border-collapse border border-black mb-8">
           <thead>
-            <tr className="bg-slate-100 text-center">
+            <tr className="bg-slate-100 text-center font-bold">
               <th className="border border-black p-2 w-8">No</th>
               <th className="border border-black p-2 w-20">NIS</th>
               <th className="border border-black p-2">Nama Siswa</th>
@@ -152,6 +152,8 @@ export const PrintDocument: React.FC<PrintDocumentProps> = ({
               <th className="border border-black p-2 w-12">Sakit</th>
               <th className="border border-black p-2 w-12">Izin</th>
               <th className="border border-black p-2 w-12">Alpa</th>
+              <th className="border border-black p-2 w-12">Dispen</th>
+              <th className="border border-black p-2 w-12">Magang</th>
               <th className="border border-black p-2 w-16">% Hadir</th>
             </tr>
           </thead>
@@ -161,6 +163,8 @@ export const PrintDocument: React.FC<PrintDocumentProps> = ({
                 ijin = 0,
                 alpa = 0,
                 hadir = 0,
+                dispen = 0,
+                magang = 0,
                 totalP = 0;
 
               agendaList.forEach(ag => {
@@ -168,12 +172,16 @@ export const PrintDocument: React.FC<PrintDocumentProps> = ({
                 if (p) {
                   totalP++;
                   if (p.status === 'hadir') hadir++;
-                  if (p.status === 'sakit') sakit++;
-                  if (p.status === 'ijin') ijin++;
-                  if (p.status === 'alpa') alpa++;
+                  else if (p.status === 'sakit') sakit++;
+                  else if (p.status === 'ijin') ijin++;
+                  else if (p.status === 'alpa') alpa++;
+                  else if (p.status === 'dispen') dispen++;
+                  else if (p.status === 'magang') magang++;
+                  else hadir++;
                 }
               });
 
+              // Dispen, Sakit, Izin, Alpa, Magang dihitung tidak ikut tatap muka kelas
               const pct = totalP > 0 ? Math.round((hadir / totalP) * 100) : 100;
 
               return (
@@ -185,6 +193,8 @@ export const PrintDocument: React.FC<PrintDocumentProps> = ({
                   <td className="border border-black p-2 text-center">{sakit}</td>
                   <td className="border border-black p-2 text-center">{ijin}</td>
                   <td className="border border-black p-2 text-center">{alpa}</td>
+                  <td className="border border-black p-2 text-center">{dispen}</td>
+                  <td className="border border-black p-2 text-center">{magang}</td>
                   <td className="border border-black p-2 text-center font-bold">{pct}%</td>
                 </tr>
               );

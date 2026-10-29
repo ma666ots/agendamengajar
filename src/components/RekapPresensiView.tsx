@@ -190,9 +190,8 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
       });
 
       const total = filteredAgendas.length;
-      // Note: Hadir, Dispen, and Magang are considered present/excused for official school duties
-      const presenceEffective = h + dp + mg;
-      const pct = total > 0 ? Math.round((presenceEffective / total) * 100) : 100;
+      // Dispen, Sakit, Izin, Alpa, Magang dihitung tidak ikut tatap muka kelas
+      const pct = total > 0 ? Math.round((h / total) * 100) : 100;
 
       statsMap.set(s.id, {
         hadir: h,
@@ -230,7 +229,7 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
     const totalRecords = activeSiswa.length * filteredAgendas.length;
     const avgPct =
       totalRecords > 0
-        ? Math.round(((totalH + totalD + totalM) / totalRecords) * 1000) / 10
+        ? Math.round((totalH / totalRecords) * 1000) / 10
         : 100;
 
     return {
@@ -261,10 +260,10 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
         const st = studentStats.get(s.id);
         if (!st) return true;
         if (statusFilter === 'unperfect') {
-          return st.persenHadir < 100 || st.sakit > 0 || st.ijin > 0 || st.alpa > 0;
+          return st.persenHadir < 100 || st.sakit > 0 || st.ijin > 0 || st.alpa > 0 || st.dispen > 0 || st.magang > 0;
         }
         if (statusFilter === 'perfect') {
-          return st.persenHadir === 100 && st.sakit === 0 && st.ijin === 0 && st.alpa === 0;
+          return st.persenHadir === 100 && st.sakit === 0 && st.ijin === 0 && st.alpa === 0 && st.dispen === 0 && st.magang === 0;
         }
       }
 
@@ -414,9 +413,7 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
       rowData['Total Izin (I)'] = st?.ijin || 0;
       rowData['Total Alpa (A)'] = st?.alpa || 0;
       rowData['Total Dispen (D)'] = st?.dispen || 0;
-      if (classKpi.hasMagang) {
-        rowData['Total Magang (M)'] = st?.magang || 0;
-      }
+      rowData['Total Magang (M)'] = st?.magang || 0;
       rowData['% Kehadiran'] = `${st?.persenHadir || 100}%`;
       rowData['Status'] =
         (st?.persenHadir || 100) >= 90
@@ -476,7 +473,7 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
 
     const unperfectStudents = activeSiswa.filter(s => {
       const st = studentStats.get(s.id);
-      return st && (st.sakit > 0 || st.ijin > 0 || st.alpa > 0);
+      return st && (st.sakit > 0 || st.ijin > 0 || st.alpa > 0 || st.dispen > 0 || st.magang > 0);
     });
 
     if (unperfectStudents.length === 0) {
@@ -488,6 +485,7 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
         if (st.sakit > 0) notes.push(`${st.sakit} Sakit`);
         if (st.ijin > 0) notes.push(`${st.ijin} Izin`);
         if (st.alpa > 0) notes.push(`${st.alpa} Alpa`);
+        if (st.dispen > 0) notes.push(`${st.dispen} Dispen`);
         if (st.magang > 0) notes.push(`${st.magang} Magang`);
         text += `${i + 1}. ${s.nama} (${notes.join(', ')}) -> Hadir: ${st.persenHadir}%\n`;
       });
@@ -864,7 +862,7 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
       </div>
 
       {/* 4. KPI Statistics Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5">
         <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-2xs flex flex-col items-center justify-center text-center">
           <span className="text-[11px] font-semibold text-slate-400">Pertemuan</span>
           <span className="text-xl font-extrabold text-slate-800 mt-0.5">
@@ -897,6 +895,16 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
         <div className="bg-rose-50/50 p-3.5 rounded-2xl border border-rose-100 flex flex-col items-center justify-center text-center">
           <span className="text-[11px] font-semibold text-rose-500">Alpa (A)</span>
           <span className="text-xl font-extrabold text-rose-600 mt-0.5">{classKpi.totalA}</span>
+        </div>
+
+        <div className="bg-purple-50/50 p-3.5 rounded-2xl border border-purple-100 flex flex-col items-center justify-center text-center">
+          <span className="text-[11px] font-semibold text-purple-600">Dispen (D)</span>
+          <span className="text-xl font-extrabold text-purple-700 mt-0.5">{classKpi.totalD}</span>
+        </div>
+
+        <div className="bg-indigo-50/50 p-3.5 rounded-2xl border border-indigo-100 flex flex-col items-center justify-center text-center">
+          <span className="text-[11px] font-semibold text-indigo-600">Magang (M)</span>
+          <span className="text-xl font-extrabold text-indigo-700 mt-0.5">{classKpi.totalM}</span>
         </div>
       </div>
 
@@ -969,14 +977,12 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
               </span>
               <span className="text-[11px]">Dispen</span>
             </div>
-            {classKpi.hasMagang && (
-              <div className="flex items-center gap-1">
-                <span className="w-5 h-5 rounded-md bg-indigo-100 text-indigo-800 font-bold text-[10px] flex items-center justify-center">
-                  M
-                </span>
-                <span className="text-[11px]">Magang / PKL</span>
-              </div>
-            )}
+            <div className="flex items-center gap-1">
+              <span className="w-5 h-5 rounded-md bg-indigo-100 text-indigo-800 font-bold text-[10px] flex items-center justify-center">
+                M
+              </span>
+              <span className="text-[11px]">Magang / PKL</span>
+            </div>
           </div>
 
           {/* Matrix Table with Sticky Columns */}
@@ -1044,11 +1050,12 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
                   <th className="p-2 text-center whitespace-nowrap bg-rose-50/70 font-bold text-rose-800 min-w-[40px]">
                     A
                   </th>
-                  {classKpi.hasMagang && (
-                    <th className="p-2 text-center whitespace-nowrap bg-indigo-50/70 font-bold text-indigo-800 min-w-[40px]">
-                      M
-                    </th>
-                  )}
+                  <th className="p-2 text-center whitespace-nowrap bg-purple-50/70 font-bold text-purple-800 min-w-[40px]">
+                    D
+                  </th>
+                  <th className="p-2 text-center whitespace-nowrap bg-indigo-50/70 font-bold text-indigo-800 min-w-[40px]">
+                    M
+                  </th>
                   <th className="p-3 text-center whitespace-nowrap bg-indigo-50/70 font-bold text-indigo-950 min-w-[68px]">
                     % Hadir
                   </th>
@@ -1061,7 +1068,7 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
                 {displayedStudents.length === 0 ? (
                   <tr>
                     <td
-                      colSpan={8 + filteredAgendas.length}
+                      colSpan={10 + filteredAgendas.length}
                       className="py-12 text-center text-slate-400 text-xs"
                     >
                       {searchStudent
@@ -1082,7 +1089,7 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
                       persenHadir: 100,
                     };
 
-                    const isPerfect = st.persenHadir === 100 && st.sakit === 0 && st.ijin === 0 && st.alpa === 0;
+                    const isPerfect = st.persenHadir === 100 && st.sakit === 0 && st.ijin === 0 && st.alpa === 0 && st.dispen === 0 && st.magang === 0;
 
                     return (
                       <tr
@@ -1157,12 +1164,24 @@ export const RekapPresensiView: React.FC<RekapPresensiViewProps> = ({
                             <span className="text-slate-300">-</span>
                           )}
                         </td>
-
-                        {classKpi.hasMagang && (
-                          <td className="p-2 text-center whitespace-nowrap font-bold text-indigo-700 bg-indigo-50/20">
-                            {st.magang > 0 ? st.magang : '-'}
-                          </td>
-                        )}
+                        <td className="p-2 text-center whitespace-nowrap font-bold text-purple-700 bg-purple-50/20">
+                          {st.dispen > 0 ? (
+                            <span className="px-1.5 py-0.5 bg-purple-100 text-purple-800 rounded-md font-bold">
+                              {st.dispen}
+                            </span>
+                          ) : (
+                            <span className="text-slate-300">-</span>
+                          )}
+                        </td>
+                        <td className="p-2 text-center whitespace-nowrap font-bold text-indigo-700 bg-indigo-50/20">
+                          {st.magang > 0 ? (
+                            <span className="px-1.5 py-0.5 bg-indigo-100 text-indigo-800 rounded-md font-bold">
+                              {st.magang}
+                            </span>
+                          ) : (
+                            <span className="text-slate-300">-</span>
+                          )}
+                        </td>
 
                         {/* Percent Attendance */}
                         <td className="p-3 text-center whitespace-nowrap font-extrabold bg-indigo-50/30 text-indigo-900">

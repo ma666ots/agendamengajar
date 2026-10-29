@@ -14,6 +14,8 @@ import {
   Search,
   Download,
   AlertCircle,
+  Briefcase,
+  Building2,
 } from 'lucide-react';
 import { Kelas, Siswa } from '../types';
 import { ConfirmModal } from './ConfirmModal';
@@ -61,9 +63,21 @@ export const KelasSiswaView: React.FC<KelasSiswaViewProps> = ({
   // Selected class
   const activeKelas = kelasList.find(k => k.id === selectedKelasId) || kelasList[0];
 
-  // Students in selected class
-  const filteredSiswaInKelas = siswaList
-    .filter(s => s.kelasId === selectedKelasId)
+  // Magang Filter Tab
+  const [magangFilter, setMagangFilter] = useState<'all' | 'reguler' | 'magang'>('all');
+
+  // All students in selected class
+  const allSiswaInKelas = siswaList.filter(s => s.kelasId === selectedKelasId);
+  const countMagangInKelas = allSiswaInKelas.filter(s => s.isMagang).length;
+  const countRegulerInKelas = allSiswaInKelas.length - countMagangInKelas;
+
+  // Students in selected class (filtered)
+  const filteredSiswaInKelas = allSiswaInKelas
+    .filter(s => {
+      if (magangFilter === 'magang') return Boolean(s.isMagang);
+      if (magangFilter === 'reguler') return !s.isMagang;
+      return true;
+    })
     .filter(
       s =>
         s.nama.toLowerCase().includes(searchSiswaQuery.toLowerCase()) ||
@@ -81,6 +95,16 @@ export const KelasSiswaView: React.FC<KelasSiswaViewProps> = ({
   const [nisn, setNisn] = useState('');
   const [namaSiswa, setNamaSiswa] = useState('');
   const [jenisKelamin, setJenisKelamin] = useState<'L' | 'P'>('L');
+  const [isMagang, setIsMagang] = useState<boolean>(false);
+
+  // Quick direct toggle magang on student row
+  const handleToggleMagang = (s: Siswa) => {
+    const updatedSiswa: Siswa = {
+      ...s,
+      isMagang: !s.isMagang,
+    };
+    onSaveSiswa(updatedSiswa);
+  };
 
   // Open Kelas Modal
   const handleOpenKelasModal = (k?: Kelas) => {
@@ -125,12 +149,14 @@ export const KelasSiswaView: React.FC<KelasSiswaViewProps> = ({
       setNisn(s.nisn || '');
       setNamaSiswa(s.nama);
       setJenisKelamin(s.jenisKelamin);
+      setIsMagang(Boolean(s.isMagang));
     } else {
       setEditingSiswa(null);
       setNis('');
       setNisn('');
       setNamaSiswa('');
       setJenisKelamin('L');
+      setIsMagang(false);
     }
     setIsSiswaModalOpen(true);
   };
@@ -146,6 +172,7 @@ export const KelasSiswaView: React.FC<KelasSiswaViewProps> = ({
       nisn,
       nama: namaSiswa,
       jenisKelamin,
+      isMagang,
     };
 
     onSaveSiswa(s);
@@ -502,16 +529,56 @@ export const KelasSiswaView: React.FC<KelasSiswaViewProps> = ({
 
       {/* Student List Table Card */}
       <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-2xs">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-          <div className="relative w-full sm:w-72">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
-            <input
-              type="text"
-              value={searchSiswaQuery}
-              onChange={e => setSearchSiswaQuery(e.target.value)}
-              placeholder="Cari NIS atau Nama Siswa..."
-              className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
-            />
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
+            <div className="relative w-full sm:w-64">
+              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+              <input
+                type="text"
+                value={searchSiswaQuery}
+                onChange={e => setSearchSiswaQuery(e.target.value)}
+                placeholder="Cari NIS atau Nama Siswa..."
+                className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              />
+            </div>
+
+            {/* Filter Magang / Reguler Tabs */}
+            <div className="flex items-center gap-1 p-1 bg-slate-100 rounded-xl">
+              <button
+                type="button"
+                onClick={() => setMagangFilter('all')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  magangFilter === 'all'
+                    ? 'bg-white text-indigo-700 shadow-2xs'
+                    : 'text-slate-500 hover:text-slate-700'
+                }`}
+              >
+                Semua ({allSiswaInKelas.length})
+              </button>
+              <button
+                type="button"
+                onClick={() => setMagangFilter('reguler')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  magangFilter === 'reguler'
+                    ? 'bg-white text-slate-800 shadow-2xs'
+                    : 'text-slate-500 hover:text-slate-700'
+                }`}
+              >
+                Reguler ({countRegulerInKelas})
+              </button>
+              <button
+                type="button"
+                onClick={() => setMagangFilter('magang')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1 ${
+                  magangFilter === 'magang'
+                    ? 'bg-indigo-600 text-white shadow-2xs'
+                    : 'text-indigo-600 hover:text-indigo-800'
+                }`}
+              >
+                <Building2 className="w-3.5 h-3.5" />
+                <span>Magang ({countMagangInKelas})</span>
+              </button>
+            </div>
           </div>
 
           <div className="text-xs text-slate-500 flex items-center gap-3">
@@ -528,6 +595,15 @@ export const KelasSiswaView: React.FC<KelasSiswaViewProps> = ({
                 {filteredSiswaInKelas.filter(s => s.jenisKelamin === 'P').length}
               </strong>
             </span>
+            {countMagangInKelas > 0 && (
+              <>
+                <span>•</span>
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-indigo-50 border border-indigo-100 text-indigo-700 font-bold">
+                  <Building2 className="w-3 h-3" />
+                  {countMagangInKelas} Magang
+                </span>
+              </>
+            )}
           </div>
         </div>
 
@@ -541,14 +617,15 @@ export const KelasSiswaView: React.FC<KelasSiswaViewProps> = ({
                 <th className="pb-3 font-semibold">NISN</th>
                 <th className="pb-3 font-semibold">Nama Lengkap Siswa</th>
                 <th className="pb-3 font-semibold text-center">L/P</th>
+                <th className="pb-3 font-semibold text-center">Status Magang / PKL</th>
                 <th className="pb-3 font-semibold text-right pr-3">Aksi</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-50">
               {filteredSiswaInKelas.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="py-8 text-center text-slate-400">
-                    Belum ada data siswa di kelas ini. Klik "Tambah Siswa" atau "Impor Siswa CSV".
+                  <td colSpan={7} className="py-8 text-center text-slate-400">
+                    Belum ada data siswa di kelas ini dengan filter tersebut.
                   </td>
                 </tr>
               ) : (
@@ -557,7 +634,17 @@ export const KelasSiswaView: React.FC<KelasSiswaViewProps> = ({
                     <td className="py-3.5 pl-3 font-semibold text-slate-400">{idx + 1}</td>
                     <td className="py-3.5 font-bold text-slate-700">{s.nis}</td>
                     <td className="py-3.5 text-slate-500">{s.nisn || '-'}</td>
-                    <td className="py-3.5 font-semibold text-slate-800 text-sm">{s.nama}</td>
+                    <td className="py-3.5 font-semibold text-slate-800 text-sm">
+                      <div className="flex items-center gap-2">
+                        <span>{s.nama}</span>
+                        {s.isMagang && (
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-indigo-50 text-indigo-700 border border-indigo-200">
+                            <Building2 className="w-3 h-3" />
+                            Magang
+                          </span>
+                        )}
+                      </div>
+                    </td>
                     <td className="py-3.5 text-center">
                       <span
                         className={`inline-block px-2 py-0.5 rounded-md text-[10px] font-bold ${
@@ -568,6 +655,32 @@ export const KelasSiswaView: React.FC<KelasSiswaViewProps> = ({
                       >
                         {s.jenisKelamin}
                       </span>
+                    </td>
+                    <td className="py-3.5 text-center">
+                      <button
+                        type="button"
+                        onClick={() => handleToggleMagang(s)}
+                        className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer shadow-2xs ${
+                          s.isMagang
+                            ? 'bg-indigo-600 hover:bg-indigo-700 text-white border-indigo-600 ring-2 ring-indigo-500/20'
+                            : 'bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-200 hover:border-slate-300'
+                        }`}
+                        title={
+                          s.isMagang
+                            ? 'Siswa sedang magang. Klik untuk menonaktifkan magang (kembali reguler)'
+                            : 'Siswa reguler. Klik untuk mengaktifkan status magang / PKL'
+                        }
+                      >
+                        {/* Toggle switch visual */}
+                        <span
+                          className={`w-7 h-4 flex items-center rounded-full p-0.5 transition-colors ${
+                            s.isMagang ? 'bg-indigo-900/40 justify-end' : 'bg-slate-300 justify-start'
+                          }`}
+                        >
+                          <span className="bg-white w-3 h-3 rounded-full shadow-md" />
+                        </span>
+                        <span>{s.isMagang ? 'Sedang Magang' : 'Reguler (Kelas)'}</span>
+                      </button>
                     </td>
                     <td className="py-3.5 text-right pr-3">
                       <div className="flex items-center justify-end gap-1">
@@ -761,6 +874,28 @@ export const KelasSiswaView: React.FC<KelasSiswaViewProps> = ({
                     <span>Perempuan (P)</span>
                   </label>
                 </div>
+              </div>
+
+              {/* Status Magang / PKL Toggle in Modal */}
+              <div className="p-4 bg-indigo-50/60 border border-indigo-100 rounded-2xl flex items-center justify-between gap-3">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <Building2 className="w-4 h-4 text-indigo-600 shrink-0" />
+                    <span className="text-xs font-bold text-slate-800">Status Magang / PKL Industri</span>
+                  </div>
+                  <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">
+                    Aktifkan jika siswa sedang menjalankan magang/PKL. Saat aktif, presensi siswa di seluruh agenda otomatis terkunci sebagai Magang dan tidak dapat diubah di menu presensi harian.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setIsMagang(!isMagang)}
+                  className={`w-12 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors shrink-0 ${
+                    isMagang ? 'bg-indigo-600 justify-end' : 'bg-slate-300 justify-start'
+                  }`}
+                >
+                  <span className="bg-white w-4 h-4 rounded-full shadow-md" />
+                </button>
               </div>
 
               <div className="flex items-center justify-end gap-3 pt-4 border-t border-slate-100">

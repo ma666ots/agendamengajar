@@ -136,8 +136,14 @@ export default function App() {
       setKelasList(kelas);
 
       // Agenda list: Merge agendas from all available sources
-      // For k-xi-pplg-1 and k-xii-pplg-3, enforce the 8 verified meetings from initialAgenda
-      const initialVerifiedAgendas = initialAgenda.filter(a => a.kelasId === 'k-xi-pplg-1' || a.kelasId === 'k-xii-pplg-3');
+      // For k-xi-pplg-1, k-xi-pplg-2, k1, and k-xii-pplg-3, enforce the verified meetings from initialAgenda
+      const initialVerifiedAgendas = initialAgenda.filter(
+        a =>
+          a.kelasId === 'k-xi-pplg-1' ||
+          a.kelasId === 'k-xi-pplg-2' ||
+          a.kelasId === 'k1' ||
+          a.kelasId === 'k-xii-pplg-3'
+      );
       const initialVerifiedIds = new Set(initialVerifiedAgendas.map(a => a.id));
 
       const agendaMap = new Map<string, AgendaMengajar>();
@@ -228,6 +234,19 @@ export default function App() {
           ...newK11Pplg2Siswa,
         ];
       }
+      // Detect students currently with magang status from agendas for initial setup if not yet explicitly set
+      const magangStudentIdSet = new Set<string>();
+      enrichedAgendas.forEach(ag => {
+        ag.presensi?.forEach(p => {
+          if (p.status === 'magang') magangStudentIdSet.add(p.siswaId);
+        });
+      });
+
+      siswa = siswa.map(s => ({
+        ...s,
+        isMagang: typeof s.isMagang === 'boolean' ? s.isMagang : magangStudentIdSet.has(s.id),
+      }));
+
       setSiswaList(siswa);
 
       // Jadwal list
@@ -254,10 +273,17 @@ export default function App() {
           if (p && p.id) penilaianMap.set(p.id, p);
         });
       }
-      // Purge obsolete dummy tasks for XI PPLG 1
+      // Ensure Ulangan PHP session for XI PPLG 1 is always included
+      const ulanganPhpSession = initialPenilaianExtra.find(p => p.id === 'pen-xi-pplg1-ulangan-php');
+      if (ulanganPhpSession) {
+        penilaianMap.set('pen-xi-pplg1-ulangan-php', ulanganPhpSession);
+      }
+      // Purge obsolete dummy tasks for XI PPLG 1, 2, & 3
       penilaianMap.delete('pen-xi-pplg1-tugas1');
       penilaianMap.delete('pen-xi-pplg1-proyek');
       penilaianMap.delete('pen-xi-pplg1-presensi');
+      penilaianMap.delete('pen-xi-pplg2-tugas-html-2');
+      penilaianMap.delete('pen-ex-1');
 
       const penilaian = Array.from(penilaianMap.values());
       setPenilaianExtraList(penilaian);

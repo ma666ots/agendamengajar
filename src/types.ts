@@ -61,6 +61,7 @@ export interface Siswa {
   nisn?: string;
   nama: string;
   jenisKelamin: 'L' | 'P';
+  isMagang?: boolean;
 }
 
 export type HariName = 'Senin' | 'Selasa' | 'Rabu' | 'Kamis' | 'Jumat';

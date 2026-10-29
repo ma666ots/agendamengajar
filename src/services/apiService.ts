@@ -47,7 +47,17 @@ function getLocalFallback(): AppData {
           parsed.kelas = parsed.kelas.map((k: any) => k.id === 'k-xi-pplg-1' ? { ...k, jumlahSiswa: 35 } : k);
         }
         // Merge initial agendas so verified meetings are never dropped or corrupted
-        const initialVerifiedIds = new Set(initialAgenda.filter(a => a.kelasId === 'k-xi-pplg-1' || a.kelasId === 'k-xii-pplg-3').map(a => a.id));
+        const initialVerifiedIds = new Set(
+          initialAgenda
+            .filter(
+              a =>
+                a.kelasId === 'k-xi-pplg-1' ||
+                a.kelasId === 'k-xi-pplg-2' ||
+                a.kelasId === 'k1' ||
+                a.kelasId === 'k-xii-pplg-3'
+            )
+            .map(a => a.id)
+        );
         const agendaMap = new Map<string, AgendaMengajar>();
         if (Array.isArray(parsed.agenda)) {
           parsed.agenda.forEach((a: AgendaMengajar) => {

@@ -16,6 +16,8 @@ import {
   Smile,
   ShieldAlert,
   Pencil,
+  Building2,
+  Lock,
 } from 'lucide-react';
 import {
   JadwalMengajar,
@@ -146,8 +148,16 @@ export const AgendaFlowModal: React.FC<AgendaFlowModalProps> = ({
         // Load existing presensi
         studentsInClass.forEach(s => {
           const p = editingAgenda.presensi?.find(item => item.siswaId === s.id);
-          if (p) {
-            newPresensiMap[s.id] = { status: p.status, ket: p.keterangan || '' };
+          if (s.isMagang) {
+            // Siswa berstatus magang di Data Siswa: otomatis terkunci ke status magang
+            newPresensiMap[s.id] = {
+              status: 'magang',
+              ket: p?.keterangan || 'Magang / PKL Industri (Terkunci via Data Siswa)',
+            };
+          } else if (p) {
+            // Jika siswa sudah tidak magang di Data Siswa, kembalikan ke hadir jika sebelumnya magang
+            const resolvedStatus = p.status === 'magang' ? 'hadir' : p.status;
+            newPresensiMap[s.id] = { status: resolvedStatus, ket: p.keterangan || '' };
           } else {
             newPresensiMap[s.id] = { status: 'hadir', ket: '' };
           }
@@ -212,13 +222,16 @@ export const AgendaFlowModal: React.FC<AgendaFlowModalProps> = ({
 
     const studentsInClass = siswaList.filter(s => s.kelasId === j.kelasId);
 
-    // Default all students to 'hadir'
+    // Default: siswa magang otomatis 'magang', siswa lainnya 'hadir'
     const newPresensiMap: Record<string, { status: PresensiStatus; ket: string }> = {};
     const newNilaiMap: Record<string, { nilai: number; catatan: string }> = {};
     const newGradeHurufMap: Record<string, GradeHuruf> = {};
 
     studentsInClass.forEach(s => {
-      newPresensiMap[s.id] = { status: 'hadir', ket: '' };
+      newPresensiMap[s.id] = {
+        status: s.isMagang ? 'magang' : 'hadir',
+        ket: s.isMagang ? 'Magang / PKL Industri (Terkunci via Data Siswa)' : '',
+      };
       newNilaiMap[s.id] = { nilai: 80, catatan: '' };
       newGradeHurufMap[s.id] = 'B+';
     });
@@ -243,22 +256,32 @@ export const AgendaFlowModal: React.FC<AgendaFlowModalProps> = ({
   const currentKelas = kelasList.find(k => k.id === currentJadwal?.kelasId);
   const currentStudents = siswaList.filter(s => s.kelasId === currentJadwal?.kelasId);
 
-  // Quick Action: Set All Hadir
+  // Quick Action: Set All Hadir (Siswa yang sedang Magang tetap berstatus Magang)
   const handleSetAllHadir = () => {
     const updated = { ...presensiMap };
     currentStudents.forEach(s => {
-      updated[s.id] = { status: 'hadir', ket: '' };
+      if (s.isMagang) {
+        updated[s.id] = { status: 'magang', ket: 'Magang / PKL Industri (Terkunci via Data Siswa)' };
+      } else {
+        updated[s.id] = { status: 'hadir', ket: '' };
+      }
     });
     setPresensiMap(updated);
   };
 
   // Change individual attendance status
   const handleStatusChange = (siswaId: string, status: PresensiStatus) => {
+    const targetStudent = currentStudents.find(s => s.id === siswaId);
+    if (targetStudent?.isMagang) {
+      // Siswa sedang magang di Data Siswa -> tidak dapat diubah di presensi
+      return;
+    }
     setPresensiMap(prev => ({
       ...prev,
       [siswaId]: {
         ...prev[siswaId],
         status,
+        ket: status === 'hadir' ? '' : prev[siswaId]?.ket || '',
       },
     }));
   };
@@ -841,8 +864,15 @@ export const AgendaFlowModal: React.FC<AgendaFlowModalProps> = ({
                     <span className="text-rose-600">Alpa: {alpaCount}</span>
                     <span>•</span>
                     <span className="text-purple-600">Dispen: {dispenCount}</span>
-                    <span>•</span>
-                    <span className="text-indigo-600">Magang: {magangCount}</span>
+                    {magangCount > 0 && (
+                      <>
+                        <span>•</span>
+                        <span className="text-indigo-600 font-bold flex items-center gap-1">
+                          <Building2 className="w-3.5 h-3.5" />
+                          Magang: {magangCount} (Terkunci)
+                        </span>
+                      </>
+                    )}
                   </div>
                 </div>
                 <button
@@ -854,23 +884,46 @@ export const AgendaFlowModal: React.FC<AgendaFlowModalProps> = ({
                 </button>
               </div>
 
+              {/* Informative Banner when Magang Students are present */}
+              {magangCount > 0 && (
+                <div className="p-3 bg-indigo-50/70 border border-indigo-100 rounded-2xl flex items-center gap-2.5 text-xs text-indigo-700">
+                  <Building2 className="w-4 h-4 shrink-0 text-indigo-600" />
+                  <span>
+                    Terdapat <strong>{magangCount} siswa</strong> berstatus <strong>Magang / PKL</strong>. Kehadiran otomatis berstatus Magang dan terkunci (diatur melalui menu Data Siswa).
+                  </span>
+                </div>
+              )}
+
               {/* Student Attendance List */}
               <div className="space-y-2.5 max-h-[50vh] overflow-y-auto pr-1">
                 {currentStudents.map((s, idx) => {
-                  const currentStatus = presensiMap[s.id]?.status || 'hadir';
+                  const isStudentMagang = Boolean(s.isMagang);
+                  const currentStatus = isStudentMagang ? 'magang' : (presensiMap[s.id]?.status || 'hadir');
                   const currentKet = presensiMap[s.id]?.ket || '';
 
                   return (
                     <div
                       key={s.id}
-                      className="p-3.5 bg-slate-50/70 rounded-2xl border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-3"
+                      className={`p-3.5 rounded-2xl border flex flex-col md:flex-row md:items-center justify-between gap-3 transition-colors ${
+                        isStudentMagang
+                          ? 'bg-indigo-50/40 border-indigo-100/90'
+                          : 'bg-slate-50/70 border-slate-100'
+                      }`}
                     >
                       <div className="flex items-center gap-3 min-w-0">
                         <span className="text-xs font-bold text-slate-400 w-6 text-center">
                           {idx + 1}
                         </span>
                         <div>
-                          <p className="font-bold text-slate-800 text-xs">{s.nama}</p>
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <p className="font-bold text-slate-800 text-xs">{s.nama}</p>
+                            {isStudentMagang && (
+                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-100 text-indigo-700 border border-indigo-200">
+                                <Building2 className="w-3 h-3" />
+                                Sedang Magang
+                              </span>
+                            )}
+                          </div>
                           <p className="text-[10px] text-slate-400">
                             NIS: {s.nis} ({s.jenisKelamin})
                           </p>
@@ -878,41 +931,57 @@ export const AgendaFlowModal: React.FC<AgendaFlowModalProps> = ({
                       </div>
 
                       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 shrink-0">
-                        {/* Attendance status chips */}
-                        <div className="flex items-center gap-1 bg-white p-1 rounded-xl border border-slate-200">
-                          {(
-                            [
-                              { id: 'hadir', label: 'Hadir', color: 'bg-emerald-500 text-white' },
-                              { id: 'sakit', label: 'Sakit', color: 'bg-amber-500 text-white' },
-                              { id: 'ijin', label: 'Ijin', color: 'bg-blue-500 text-white' },
-                              { id: 'alpa', label: 'Alpa', color: 'bg-rose-500 text-white' },
-                              { id: 'dispen', label: 'Dispen', color: 'bg-purple-500 text-white' },
-                              { id: 'magang', label: 'Magang', color: 'bg-indigo-500 text-white' },
-                            ] as const
-                          ).map(st => (
-                            <button
-                              key={st.id}
-                              onClick={() => handleStatusChange(s.id, st.id)}
-                              className={`px-2 py-1 rounded-lg text-[10px] font-bold cursor-pointer transition-all ${
-                                currentStatus === st.id
-                                  ? st.color
-                                  : 'text-slate-500 hover:bg-slate-100'
-                              }`}
-                            >
-                              {st.label}
-                            </button>
-                          ))}
-                        </div>
+                        {isStudentMagang ? (
+                          /* Siswa Magang: Tampilan terkunci, tidak ada pilihan tombol */
+                          <div
+                            className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-xs shadow-2xs select-none"
+                            title="Status kehadiran terkunci karena siswa sedang magang di Data Siswa. Edit di menu Data Siswa untuk mengubah."
+                          >
+                            <Building2 className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+                            <span>Magang / PKL</span>
+                            <span className="text-[10px] text-indigo-600 font-semibold bg-indigo-100 px-2 py-0.5 rounded-md flex items-center gap-1">
+                              <Lock className="w-3 h-3 text-indigo-500" /> Terkunci (Data Siswa)
+                            </span>
+                          </div>
+                        ) : (
+                          /* Siswa Reguler: Pilihan presensi murni (Magang ditiadakan dari pilihan presensi) */
+                          <>
+                            <div className="flex items-center gap-1 bg-white p-1 rounded-xl border border-slate-200">
+                              {(
+                                [
+                                  { id: 'hadir', label: 'Hadir', color: 'bg-emerald-500 text-white' },
+                                  { id: 'sakit', label: 'Sakit', color: 'bg-amber-500 text-white' },
+                                  { id: 'ijin', label: 'Ijin', color: 'bg-blue-500 text-white' },
+                                  { id: 'alpa', label: 'Alpa', color: 'bg-rose-500 text-white' },
+                                  { id: 'dispen', label: 'Dispen', color: 'bg-purple-500 text-white' },
+                                ] as const
+                              ).map(st => (
+                                <button
+                                  key={st.id}
+                                  type="button"
+                                  onClick={() => handleStatusChange(s.id, st.id)}
+                                  className={`px-2 py-1 rounded-lg text-[10px] font-bold cursor-pointer transition-all ${
+                                    currentStatus === st.id
+                                      ? st.color
+                                      : 'text-slate-500 hover:bg-slate-100'
+                                  }`}
+                                >
+                                  {st.label}
+                                </button>
+                              ))}
+                            </div>
 
-                        {/* Note input if not hadir */}
-                        {currentStatus !== 'hadir' && (
-                          <input
-                            type="text"
-                            value={currentKet}
-                            onChange={e => handleKetChange(s.id, e.target.value)}
-                            placeholder="Ket..."
-                            className="px-2.5 py-1 bg-white border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none w-32"
-                          />
+                            {/* Note input if not hadir */}
+                            {currentStatus !== 'hadir' && (
+                              <input
+                                type="text"
+                                value={currentKet}
+                                onChange={e => handleKetChange(s.id, e.target.value)}
+                                placeholder="Ket..."
+                                className="px-2.5 py-1 bg-white border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none w-32"
+                              />
+                            )}
+                          </>
                         )}
                       </div>
                     </div>
@@ -1228,7 +1297,16 @@ export const AgendaFlowModal: React.FC<AgendaFlowModalProps> = ({
                         {currentStudents.map((s, idx) => (
                           <tr key={s.id} className="hover:bg-white">
                             <td className="p-2 pl-3 font-semibold text-slate-400">{idx + 1}</td>
-                            <td className="p-2 font-bold text-slate-800">{s.nama}</td>
+                            <td className="p-2 font-bold text-slate-800">
+                              <div className="flex items-center gap-1.5 flex-wrap">
+                                <span>{s.nama}</span>
+                                {s.isMagang && (
+                                  <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200 inline-flex items-center gap-1">
+                                    <Building2 className="w-3 h-3" /> Magang
+                                  </span>
+                                )}
+                              </div>
+                            </td>
                             <td className="p-2 text-center">
                               {skalaPenilaian === 'huruf' ? (
                                 <select

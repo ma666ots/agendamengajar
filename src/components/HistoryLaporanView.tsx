@@ -23,7 +23,9 @@ import {
   AgendaMengajar,
   PenilaianSession,
 } from '../types';
-import { PrintDocument } from './PrintDocument';
+import { ShareableJurnalModal } from './ShareableJurnalModal';
+import { ShareablePresensiModal } from './ShareablePresensiModal';
+import { ShareableNilaiModal } from './ShareableNilaiModal';
 import { ConfirmModal } from './ConfirmModal';
 
 interface HistoryLaporanViewProps {
@@ -68,19 +70,27 @@ export const HistoryLaporanView: React.FC<HistoryLaporanViewProps> = ({
     }
   };
 
-  // Print Mode State
-  const [isPrintModalOpen, setIsPrintModalOpen] = useState<boolean>(false);
-  const [printType, setPrintType] = useState<
-    'jurnal' | 'presensi' | 'nilai' | 'short_pertemuan'
-  >('jurnal');
-  const [selectedAgendaForDetail, setSelectedAgendaForDetail] = useState<AgendaMengajar | null>(
-    null
-  );
+  // Shareable / Print Modals State
+  const [isJurnalModalOpen, setIsJurnalModalOpen] = useState<boolean>(false);
+  const [isPresensiModalOpen, setIsPresensiModalOpen] = useState<boolean>(false);
+  const [isNilaiModalOpen, setIsNilaiModalOpen] = useState<boolean>(false);
+  const [selectedSingleAgenda, setSelectedSingleAgenda] = useState<AgendaMengajar | null>(null);
+  const [modalKelasId, setModalKelasId] = useState<string>('');
   const [deletingAgendaId, setDeletingAgendaId] = useState<string | null>(null);
 
-  const activeKelas =
-    kelasList.find(k => k.id === selectedKelasId) ||
-    kelasList[0] || { id: '', namaKelas: 'Semua Kelas', tingkat: '', jurusan: '', rombel: '' };
+  const currentModalTargetId =
+    modalKelasId ||
+    (selectedKelasId !== 'all' ? selectedKelasId : (kelasList[0]?.id || ''));
+
+  const activePrintKelas =
+    kelasList.find(k => k.id === currentModalTargetId) ||
+    kelasList[0] || {
+      id: '',
+      namaKelas: 'Semua Kelas',
+      tingkat: '',
+      jurusan: '',
+      tahunAjaran: profile.tahunAjaran || '2025/2026',
+    };
 
   // Agendas filtered by class and search, sorted by date then pertemuanKe
   const filteredAgendas = agendaList
@@ -96,19 +106,6 @@ export const HistoryLaporanView: React.FC<HistoryLaporanViewProps> = ({
       const pDiff = (b.pertemuanKe || 0) - (a.pertemuanKe || 0);
       return sortDescending ? pDiff : -pDiff;
     });
-
-  const handleTriggerPrint = (
-    type: 'jurnal' | 'presensi' | 'nilai' | 'short_pertemuan',
-    agenda?: AgendaMengajar
-  ) => {
-    setPrintType(type);
-    if (agenda) setSelectedAgendaForDetail(agenda);
-    setIsPrintModalOpen(true);
-  };
-
-  const handleExecuteBrowserPrint = () => {
-    window.print();
-  };
 
   return (
     <div className="space-y-6">
@@ -147,7 +144,11 @@ export const HistoryLaporanView: React.FC<HistoryLaporanViewProps> = ({
           )}
 
           <button
-            onClick={() => handleTriggerPrint('jurnal')}
+            onClick={() => {
+              setSelectedSingleAgenda(null);
+              setModalKelasId(selectedKelasId !== 'all' ? selectedKelasId : (kelasList[0]?.id || ''));
+              setIsJurnalModalOpen(true);
+            }}
             className="flex items-center gap-2 px-3.5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl shadow-xs transition-all cursor-pointer"
           >
             <Printer className="w-4 h-4" />
@@ -155,7 +156,10 @@ export const HistoryLaporanView: React.FC<HistoryLaporanViewProps> = ({
           </button>
 
           <button
-            onClick={() => handleTriggerPrint('presensi')}
+            onClick={() => {
+              setModalKelasId(selectedKelasId !== 'all' ? selectedKelasId : (kelasList[0]?.id || ''));
+              setIsPresensiModalOpen(true);
+            }}
             className="flex items-center gap-2 px-3.5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-xs transition-all cursor-pointer"
           >
             <Printer className="w-4 h-4" />
@@ -163,7 +167,10 @@ export const HistoryLaporanView: React.FC<HistoryLaporanViewProps> = ({
           </button>
 
           <button
-            onClick={() => handleTriggerPrint('nilai')}
+            onClick={() => {
+              setModalKelasId(selectedKelasId !== 'all' ? selectedKelasId : (kelasList[0]?.id || ''));
+              setIsNilaiModalOpen(true);
+            }}
             className="flex items-center gap-2 px-3.5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-xl shadow-xs transition-all cursor-pointer"
           >
             <Printer className="w-4 h-4" />
@@ -332,8 +339,13 @@ export const HistoryLaporanView: React.FC<HistoryLaporanViewProps> = ({
                     )}
 
                     <button
-                      onClick={() => handleTriggerPrint('short_pertemuan', agenda)}
-                      className="flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-indigo-50 text-indigo-600 border border-indigo-200 rounded-xl text-xs font-semibold transition-all cursor-pointer"
+                      onClick={() => {
+                        setSelectedSingleAgenda(agenda);
+                        setModalKelasId(agenda.kelasId);
+                        setIsJurnalModalOpen(true);
+                      }}
+                      className="flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-indigo-50 text-indigo-600 border border-indigo-200 rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-2xs"
+                      title="Lihat Rincian, Unduh PDF, atau Cetak Pertemuan Ini"
                     >
                       <Eye className="w-3.5 h-3.5" />
                       <span>Ringkasan & Cetak</span>
@@ -354,69 +366,45 @@ export const HistoryLaporanView: React.FC<HistoryLaporanViewProps> = ({
         )}
       </div>
 
-      {/* Modal Cetak Preview / Print Dialog */}
-      {isPrintModalOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-xs flex flex-col items-center justify-center p-2 sm:p-4 overflow-y-auto">
-          <div className="bg-white rounded-3xl w-full max-w-4xl shadow-2xl overflow-hidden flex flex-col max-h-[95vh] my-auto">
-            {/* Top Bar Controls */}
-            <div className="px-6 py-4 bg-slate-900 text-white flex items-center justify-between shrink-0 no-print">
-              <div>
-                <h3 className="font-bold text-base flex items-center gap-2">
-                  <Printer className="w-5 h-5 text-indigo-400" />
-                  <span>Pratinjau Dokumen PDF Resmi</span>
-                </h3>
-                <p className="text-xs text-slate-400">
-                  Siap diunduh sebagai PDF atau dicetak langsung via browser.
-                </p>
-              </div>
+      {/* 1. Dedicated Jurnal Mengajar Print & Export Modal */}
+      <ShareableJurnalModal
+        isOpen={isJurnalModalOpen}
+        onClose={() => {
+          setIsJurnalModalOpen(false);
+          setSelectedSingleAgenda(null);
+        }}
+        kelasList={kelasList}
+        currentKelasId={currentModalTargetId}
+        onSelectKelas={kId => setModalKelasId(kId)}
+        siswaList={siswaList}
+        agendaList={agendaList}
+        profile={profile}
+        singleAgenda={selectedSingleAgenda}
+      />
 
-              <div className="flex items-center gap-3">
-                {printType === 'short_pertemuan' && selectedAgendaForDetail && onEditAgenda && (
-                  <button
-                    onClick={() => {
-                      const targetAg = selectedAgendaForDetail;
-                      setIsPrintModalOpen(false);
-                      onEditAgenda(targetAg);
-                    }}
-                    className="px-3.5 py-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs rounded-xl shadow-xs cursor-pointer flex items-center gap-1.5 transition-all"
-                    title="Edit agenda pertemuan ini"
-                  >
-                    <Pencil className="w-4 h-4" />
-                    <span>Edit Agenda</span>
-                  </button>
-                )}
+      {/* 2. Official Rekap Presensi Print & Export Modal */}
+      <ShareablePresensiModal
+        isOpen={isPresensiModalOpen}
+        onClose={() => setIsPresensiModalOpen(false)}
+        activeKelas={activePrintKelas}
+        siswaList={siswaList}
+        agendas={agendaList.filter(a => a.kelasId === activePrintKelas.id)}
+        profile={profile}
+        kelasList={kelasList}
+        onSelectKelas={k => setModalKelasId(k.id)}
+      />
 
-                <button
-                  onClick={handleExecuteBrowserPrint}
-                  className="px-5 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold text-xs rounded-xl shadow-md cursor-pointer flex items-center gap-2"
-                >
-                  <Printer className="w-4 h-4" />
-                  <span>Cetak / Simpan PDF</span>
-                </button>
-                <button
-                  onClick={() => setIsPrintModalOpen(false)}
-                  className="p-2 text-slate-400 hover:text-white rounded-xl cursor-pointer"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Printable Area */}
-            <div className="p-6 overflow-y-auto flex-1 bg-slate-100 print:bg-white print:p-0">
-              <PrintDocument
-                type={printType}
-                profile={profile}
-                kelas={activeKelas}
-                siswaList={siswaList}
-                agendaList={agendaList.filter(a => a.kelasId === selectedKelasId)}
-                penilaianList={penilaianList.filter(p => p.kelasId === selectedKelasId)}
-                selectedAgenda={selectedAgendaForDetail || undefined}
-              />
-            </div>
-          </div>
-        </div>
-      )}
+      {/* 3. Official Rekap Nilai Print & Export Modal */}
+      <ShareableNilaiModal
+        isOpen={isNilaiModalOpen}
+        onClose={() => setIsNilaiModalOpen(false)}
+        activeKelas={activePrintKelas}
+        siswaList={siswaList}
+        sessionsList={penilaianList.filter(p => p.kelasId === activePrintKelas.id)}
+        profile={profile}
+        kelasList={kelasList}
+        onSelectKelas={k => setModalKelasId(k.id)}
+      />
 
       {/* Confirmation Modal for Agenda Delete */}
       <ConfirmModal

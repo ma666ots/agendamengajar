@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import * as XLSX from 'xlsx';
 import {
   GraduationCap,
@@ -24,6 +24,11 @@ import {
   Eye,
   EyeOff,
   ClipboardList,
+  Camera,
+  ChevronDown,
+  Image as ImageIcon,
+  Loader2,
+  Copy,
 } from 'lucide-react';
 import {
   Kelas,
@@ -46,6 +51,12 @@ import { initialProfile } from '../data/initialData';
 import { ConfirmModal } from './ConfirmModal';
 import { ImportNilaiModal } from './ImportNilaiModal';
 import { ShareableNilaiModal } from './ShareableNilaiModal';
+import { ScreenshotPreviewModal } from './ScreenshotPreviewModal';
+import {
+  captureElementToCanvas,
+  downloadCanvasAsPng,
+  copyCanvasToClipboard,
+} from '../utils/screenshotUtils';
 
 export interface PenilaianItem extends PenilaianSession {
   isFromAgenda?: boolean;
@@ -112,6 +123,39 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
   const [isShareModalOpen, setIsShareModalOpen] = useState<boolean>(false);
   const [shareTargetSessionId, setShareTargetSessionId] = useState<string>('ALL');
   const [showTaskCards, setShowTaskCards] = useState<boolean>(false);
+
+  // Screenshot Matrix State
+  const matrixContainerRef = useRef<HTMLDivElement>(null);
+  const [isCapturingScreenshot, setIsCapturingScreenshot] = useState<boolean>(false);
+  const [isScreenshotMenuOpen, setIsScreenshotMenuOpen] = useState<boolean>(false);
+  const [previewCanvas, setPreviewCanvas] = useState<HTMLCanvasElement | null>(null);
+  const [isPreviewModalOpen, setIsPreviewModalOpen] = useState<boolean>(false);
+  const [screenshotToast, setScreenshotToast] = useState<{
+    message: string;
+    type: 'success' | 'info' | 'error';
+  } | null>(null);
+
+  // Close screenshot dropdown when clicked outside
+  useEffect(() => {
+    if (!isScreenshotMenuOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('.screenshot-menu-container')) {
+        setIsScreenshotMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isScreenshotMenuOpen]);
+
+  // Clear toast automatically
+  useEffect(() => {
+    if (!screenshotToast) return;
+    const timer = setTimeout(() => {
+      setScreenshotToast(null);
+    }, 3800);
+    return () => clearTimeout(timer);
+  }, [screenshotToast]);
 
   // Modal Form State
   const [mapel, setMapel] = useState<string>('Pemrograman Web');
@@ -452,6 +496,58 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
     XLSX.writeFile(workbook, `Matriks_Nilai_Lengkap_${safeKelas}.xlsx`);
   };
 
+  // Matrix Screenshot Handler (Download PNG / Copy to Clipboard / Preview)
+  const handleCaptureMatrix = async (mode: 'download' | 'copy' | 'preview') => {
+    if (!matrixContainerRef.current || !activeKelas) return;
+    setIsScreenshotMenuOpen(false);
+    setIsCapturingScreenshot(true);
+
+    try {
+      const cleanClassName = activeKelas.namaKelas.replace(/[^a-zA-Z0-9_-]/g, '_');
+      const todayStr = new Date().toISOString().split('T')[0];
+      const defaultFileName = `Matriks_Rekap_Nilai_${cleanClassName}_${todayStr}.png`;
+
+      const canvas = await captureElementToCanvas(matrixContainerRef.current, {
+        scale: 2,
+        backgroundColor: '#ffffff',
+      });
+
+      if (mode === 'preview') {
+        setPreviewCanvas(canvas);
+        setIsPreviewModalOpen(true);
+      } else if (mode === 'download') {
+        downloadCanvasAsPng(canvas, defaultFileName);
+        setScreenshotToast({
+          message: '✓ File screenshot berhasil diunduh sebagai gambar PNG jernih!',
+          type: 'success',
+        });
+      } else if (mode === 'copy') {
+        const ok = await copyCanvasToClipboard(canvas);
+        if (ok) {
+          setScreenshotToast({
+            message: '✓ Screenshot berhasil disalin ke clipboard! Silakan paste (Ctrl+V) di WhatsApp Web.',
+            type: 'success',
+          });
+        } else {
+          // If browser restricts clipboard write (e.g. iframe policy), fallback to download
+          downloadCanvasAsPng(canvas, defaultFileName);
+          setScreenshotToast({
+            message: '✓ Screenshot diunduh sebagai file PNG (karena clipboard browser dibatasi).',
+            type: 'info',
+          });
+        }
+      }
+    } catch (err) {
+      console.error('Error capturing matrix screenshot:', err);
+      setScreenshotToast({
+        message: 'Gagal mengambil screenshot matriks. Silakan coba kembali.',
+        type: 'error',
+      });
+    } finally {
+      setIsCapturingScreenshot(false);
+    }
+  };
+
   const targetDeletingSession = allSessions.find(s => s.id === deletingSessionId);
 
   return (
@@ -708,7 +804,11 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
       </div>
 
       {/* Full-Width Matrix Rekap Nilai Table (w-full 100%) */}
-      <div className="w-full bg-white p-5 sm:p-6 rounded-3xl border border-slate-100 shadow-2xs space-y-4">
+      <div
+        ref={matrixContainerRef}
+        id="matriks-rekap-nilai-table"
+        className="w-full bg-white p-5 sm:p-6 rounded-3xl border border-slate-100 shadow-2xs space-y-4"
+      >
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
             <div>
               <h3 className="font-bold text-slate-800 text-base">
@@ -719,9 +819,82 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-2 shrink-0">
+              {/* Menu Screenshot Matriks */}
+              <div className="relative screenshot-menu-container no-screenshot">
+                <button
+                  onClick={() => setIsScreenshotMenuOpen(prev => !prev)}
+                  disabled={isCapturingScreenshot}
+                  className="px-3 py-1.5 bg-sky-50 hover:bg-sky-100 active:bg-sky-200 text-sky-800 border border-sky-200 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 shadow-2xs disabled:opacity-60"
+                  title="Ambil tangkapan layar (screenshot) matriks nilai ini sebagai gambar PNG"
+                >
+                  {isCapturingScreenshot ? (
+                    <Loader2 className="w-3.5 h-3.5 text-sky-600 animate-spin" />
+                  ) : (
+                    <Camera className="w-3.5 h-3.5 text-sky-600" />
+                  )}
+                  <span>{isCapturingScreenshot ? 'Mengambil...' : 'Screenshot'}</span>
+                  <ChevronDown className="w-3 h-3 text-sky-600" />
+                </button>
+
+                {/* Dropdown Menu Screenshot */}
+                {isScreenshotMenuOpen && (
+                  <div className="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-slate-100 py-1.5 z-30 animate-in fade-in zoom-in-95 duration-150">
+                    <div className="px-3.5 py-1.5 border-b border-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                      Opsi Tangkapan Layar (HD)
+                    </div>
+
+                    <button
+                      onClick={() => handleCaptureMatrix('copy')}
+                      className="w-full px-3.5 py-2.5 text-left text-xs text-slate-700 hover:bg-sky-50/80 hover:text-sky-900 flex items-start gap-2.5 transition-colors cursor-pointer group"
+                    >
+                      <Copy className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <div>
+                        <div className="font-bold text-slate-800 group-hover:text-sky-900 flex items-center gap-1.5">
+                          <span>Salin ke WhatsApp</span>
+                          <span className="text-[10px] px-1.5 py-0.2 bg-emerald-100 text-emerald-800 font-bold rounded">Populer</span>
+                        </div>
+                        <p className="text-[11px] text-slate-400 mt-0.5">
+                          Langsung paste (Ctrl+V) di WhatsApp Web / WA Desktop
+                        </p>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => handleCaptureMatrix('download')}
+                      className="w-full px-3.5 py-2.5 text-left text-xs text-slate-700 hover:bg-sky-50/80 hover:text-sky-900 flex items-start gap-2.5 transition-colors cursor-pointer group"
+                    >
+                      <Download className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" />
+                      <div>
+                        <div className="font-bold text-slate-800 group-hover:text-sky-900">
+                          Download Gambar PNG
+                        </div>
+                        <p className="text-[11px] text-slate-400 mt-0.5">
+                          Simpan file gambar jernih 2x ke komputer / HP
+                        </p>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => handleCaptureMatrix('preview')}
+                      className="w-full px-3.5 py-2.5 text-left text-xs text-slate-700 hover:bg-sky-50/80 hover:text-sky-900 flex items-start gap-2.5 transition-colors cursor-pointer group border-t border-slate-50"
+                    >
+                      <ImageIcon className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                      <div>
+                        <div className="font-bold text-slate-800 group-hover:text-sky-900">
+                          Pratinjau Gambar
+                        </div>
+                        <p className="text-[11px] text-slate-400 mt-0.5">
+                          Lihat hasil sebelum dibagikan ke orang tua/grup
+                        </p>
+                      </div>
+                    </button>
+                  </div>
+                )}
+              </div>
+
               <button
                 onClick={handleExportMatrixExcel}
-                className="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5"
+                className="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 no-screenshot"
                 title="Ekspor Seluruh Nilai Matriks ke File Excel Lengkap"
               >
                 <Download className="w-3.5 h-3.5 text-emerald-600" />
@@ -729,13 +902,13 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
               </button>
               <button
                 onClick={() => handleOpenShareModal('ALL')}
-                className="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5"
+                className="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 no-screenshot"
                 title="Tampilan Menarik untuk Siswa (Print / WA)"
               >
                 <Share2 className="w-3.5 h-3.5 text-amber-600" />
                 <span>Bagikan Rekap</span>
               </button>
-              <span className="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-lg border border-indigo-100">
+              <span className="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-lg border border-indigo-100 no-screenshot">
                 {sessionsInKelas.length} Komponen
               </span>
             </div>
@@ -867,11 +1040,10 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
                                       <button
                                         type="button"
                                         onClick={() => handleToggleChecklist(sess.id, s.id)}
-                                        className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-emerald-600 hover:bg-emerald-700 text-white shadow-2xs border border-emerald-700 transition-all cursor-pointer hover:scale-105"
+                                        className="inline-block h-7 leading-7 px-3.5 font-bold text-xs rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white shadow-xs border border-emerald-700 transition-all cursor-pointer hover:scale-105 whitespace-nowrap text-center"
                                         title="Status: Sudah - Klik untuk ubah ke Belum"
                                       >
-                                        <Check className="w-3.5 h-3.5 stroke-[3]" />
-                                        <span>Sudah</span>
+                                        Sudah
                                       </button>
                                     );
                                   } else {
@@ -879,11 +1051,10 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
                                       <button
                                         type="button"
                                         onClick={() => handleToggleChecklist(sess.id, s.id)}
-                                        className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-rose-600 hover:bg-rose-700 text-white shadow-xs border border-rose-700 transition-all cursor-pointer hover:scale-105 animate-pulse hover:animate-none"
+                                        className="inline-block h-7 leading-7 px-3.5 font-bold text-xs rounded-xl bg-rose-600 hover:bg-rose-700 text-white shadow-xs border border-rose-700 transition-all cursor-pointer hover:scale-105 whitespace-nowrap text-center"
                                         title="Status: Belum Mengumpulkan - Klik untuk tandai Sudah"
                                       >
-                                        <X className="w-3.5 h-3.5 stroke-[3]" />
-                                        <span>Belum</span>
+                                        Belum
                                       </button>
                                     );
                                   }
@@ -901,11 +1072,10 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
                                       <button
                                         type="button"
                                         onClick={() => handleOpenModal(sess)}
-                                        className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-rose-600 hover:bg-rose-700 text-white shadow-xs border border-rose-700 transition-all cursor-pointer hover:scale-105"
+                                        className="inline-block h-7 leading-7 px-3.5 font-bold text-xs rounded-xl bg-rose-600 hover:bg-rose-700 text-white shadow-xs border border-rose-700 transition-all cursor-pointer hover:scale-105 whitespace-nowrap text-center"
                                         title={`Nilai praktik ${sess.namaPenilaian} untuk ${s.nama} belum ada. Klik untuk input.`}
                                       >
-                                        <X className="w-3.5 h-3.5 stroke-[3]" />
-                                        <span>Belum</span>
+                                        Belum
                                       </button>
                                     );
                                   }
@@ -915,7 +1085,7 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
                                     <button
                                       type="button"
                                       onClick={() => handleOpenModal(sess)}
-                                      className={`inline-block font-black text-xs px-3 py-1 rounded-xl border shadow-2xs cursor-pointer hover:scale-105 transition-transform ${getGradeBadgeStyle(
+                                      className={`inline-block h-7 leading-7 px-3 min-w-[38px] font-black text-xs rounded-xl border shadow-2xs cursor-pointer hover:scale-105 transition-transform text-center ${getGradeBadgeStyle(
                                         letter
                                       )}`}
                                       title={`${letter} (${getGradePredikat(letter)}) - Skor: ${gradeItem?.nilai ?? 0} (Klik untuk edit)`}
@@ -938,11 +1108,10 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
                                       <button
                                         type="button"
                                         onClick={() => handleOpenModal(sess)}
-                                        className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-rose-600 hover:bg-rose-700 text-white shadow-xs border border-rose-700 transition-all cursor-pointer hover:scale-105"
+                                        className="inline-block h-7 leading-7 px-3.5 font-bold text-xs rounded-xl bg-rose-600 hover:bg-rose-700 text-white shadow-xs border border-rose-700 transition-all cursor-pointer hover:scale-105 whitespace-nowrap text-center"
                                         title={`Nilai ${sess.namaPenilaian} untuk ${s.nama} belum masuk. Klik untuk input.`}
                                       >
-                                        <X className="w-3.5 h-3.5 stroke-[3]" />
-                                        <span>Belum</span>
+                                        Belum
                                       </button>
                                     );
                                   }
@@ -951,7 +1120,7 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
                                     <button
                                       type="button"
                                       onClick={() => handleOpenModal(sess)}
-                                      className={`font-black text-xs px-3 py-1 rounded-xl cursor-pointer hover:scale-105 transition-transform ${
+                                      className={`inline-block h-7 leading-7 px-3 min-w-[44px] font-black text-xs rounded-xl cursor-pointer hover:scale-105 transition-transform text-center ${
                                         val >= sess.kkm
                                           ? 'text-slate-800 bg-slate-50 border border-slate-200'
                                           : 'text-rose-700 bg-rose-50 border border-rose-200'
@@ -970,17 +1139,9 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
                         {numericSessions.length > 0 && (
                           <td className="p-3 text-center font-black text-indigo-900 text-sm bg-indigo-50/30 whitespace-nowrap">
                             {numericCount > 0 ? (
-                              <div className="flex items-center justify-center gap-1.5">
-                                <span>{avg}</span>
-                                <span
-                                  className={`text-[10px] font-extrabold px-1.5 py-0.5 rounded-md border ${getGradeBadgeStyle(
-                                    numberToGradeHuruf(avg)
-                                  )}`}
-                                  title={`Predikat: ${getGradePredikat(numberToGradeHuruf(avg))}`}
-                                >
-                                  {numberToGradeHuruf(avg)}
-                                </span>
-                              </div>
+                              <span className="inline-block h-7 leading-7 px-2.5 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-950 font-black text-xs text-center">
+                                {avg} ({numberToGradeHuruf(avg)})
+                              </span>
                             ) : (
                               <span className="text-slate-300">-</span>
                             )}
@@ -990,49 +1151,37 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
                         <td className="p-3 text-center whitespace-nowrap bg-amber-50/20">
                           {tugasSelesai === totalTugas ? (
                             <span
-                              className="inline-flex items-center gap-1 font-black text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300"
+                              className="inline-block h-7 leading-7 px-3 font-extrabold text-xs rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 whitespace-nowrap text-center"
                               title={`Lengkap: Seluruh ${totalTugas} tugas sudah diselesaikan`}
                             >
-                              <Check className="w-3.5 h-3.5 stroke-[3] text-emerald-700" />
-                              <span>{tugasSelesai}/{totalTugas}</span>
+                              {tugasSelesai}/{totalTugas}
                             </span>
                           ) : tugasSelesai >= Math.ceil(totalTugas * 0.7) ? (
                             <span
-                              className="inline-flex items-center gap-1 font-black text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300"
+                              className="inline-block h-7 leading-7 px-3 font-extrabold text-xs rounded-full bg-amber-100 text-amber-900 border border-amber-300 whitespace-nowrap text-center"
                               title={`${tugasSelesai} dari ${totalTugas} tugas selesai (${totalTugas - tugasSelesai} belum)`}
                             >
-                              <span>{tugasSelesai}/{totalTugas}</span>
+                              {tugasSelesai}/{totalTugas}
                             </span>
                           ) : (
                             <span
-                              className="inline-flex items-center gap-1 font-black text-xs px-2.5 py-1 rounded-full bg-rose-600 text-white shadow-xs border border-rose-700"
+                              className="inline-block h-7 leading-7 px-3 font-extrabold text-xs rounded-full bg-rose-600 text-white shadow-xs border border-rose-700 whitespace-nowrap text-center"
                               title={`Perhatian: Baru ${tugasSelesai} dari ${totalTugas} tugas selesai (${totalTugas - tugasSelesai} belum)`}
                             >
-                              <X className="w-3.5 h-3.5 stroke-[3]" />
-                              <span>{tugasSelesai}/{totalTugas}</span>
+                              {tugasSelesai}/{totalTugas}
                             </span>
                           )}
                         </td>
 
                         <td className="p-3 text-center pr-4 whitespace-nowrap">
                           <span
-                            className={`px-2.5 py-1 rounded-full text-[11px] font-bold inline-flex items-center gap-1 ${
+                            className={`inline-block h-7 leading-7 px-3.5 rounded-full text-xs font-bold whitespace-nowrap text-center ${
                               isTuntas
                                 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
                                 : 'bg-rose-50 text-rose-700 border border-rose-200'
                             }`}
                           >
-                            {isTuntas ? (
-                              <>
-                                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                                <span>Tuntas</span>
-                              </>
-                            ) : (
-                              <>
-                                <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
-                                <span>Belum</span>
-                              </>
-                            )}
+                            {isTuntas ? 'Tuntas' : 'Belum Tuntas'}
                           </span>
                         </td>
                       </tr>
@@ -1410,6 +1559,38 @@ export const InputNilaiView: React.FC<InputNilaiViewProps> = ({
         profile={profile}
         initialSessionId={shareTargetSessionId}
       />
+
+      {/* Screenshot Preview Modal */}
+      <ScreenshotPreviewModal
+        isOpen={isPreviewModalOpen}
+        onClose={() => setIsPreviewModalOpen(false)}
+        canvas={previewCanvas}
+        title={`Matriks Rekap Nilai Siswa - ${activeKelas?.namaKelas}`}
+        defaultFileName={`Matriks_Nilai_${activeKelas?.namaKelas?.replace(/[^a-zA-Z0-9_-]/g, '_')}_${new Date().toISOString().split('T')[0]}.png`}
+      />
+
+      {/* Floating Screenshot Toast Notification */}
+      {screenshotToast && (
+        <div className="fixed bottom-6 right-6 z-50 animate-in fade-in slide-in-from-bottom-5 duration-200 pointer-events-none">
+          <div
+            className={`px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 text-xs font-bold text-white border pointer-events-auto ${
+              screenshotToast.type === 'success'
+                ? 'bg-emerald-600 border-emerald-500 shadow-emerald-500/20'
+                : screenshotToast.type === 'error'
+                ? 'bg-rose-600 border-rose-500 shadow-rose-500/20'
+                : 'bg-sky-600 border-sky-500 shadow-sky-500/20'
+            }`}
+          >
+            <span>{screenshotToast.message}</span>
+            <button
+              onClick={() => setScreenshotToast(null)}
+              className="text-white/80 hover:text-white cursor-pointer ml-1"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

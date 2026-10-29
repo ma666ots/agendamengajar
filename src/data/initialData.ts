@@ -1533,6 +1533,2753 @@ export const initialJadwal: JadwalMengajar[] = [
   }
 ];
 export const initialAgenda: AgendaMengajar[] = [
+{
+    "id": "ag-xi-pplg2-1",
+    "jadwalId": "j-jumat-xi-pplg-2",
+    "kelasId": "k-xi-pplg-2",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2026-07-31",
+    "pertemuanKe": 1,
+    "materi": "Kontrak Belajar, Pengenalan Web Dasar & Arsitektur Client-Server",
+    "capaianPembelajaran": "Peserta didik mampu memahami alur kerja pengembangan web, etika lab, dan konsep dasar request-response.",
+    "indikator": "Memahami lingkungan kerja lab, tools code editor, dan arsitektur web client-server.",
+    "catatanKejadian": "Pertemuan perdana semester ganjil berjalan tertib dan lancar di Lab PPLG. Hadir 31 siswa, 1 siswa sakit (Retno Prabandani), 1 siswa alpa (Faza Zainul Fathoni), 2 siswa dispensasi kegiatan sekolah (Fadliansyah Hadiq Azzaki, Mikhail Bintang).",
+    "refleksiGuru": "Siswa menunjukkan antusiasme tinggi untuk mempelajari sintaks dan konsep web development.",
+    "tindakLanjut": "Mempersiapkan modul pengenalan struktur dokumen HTML5 dan CSS dasar untuk pertemuan berikutnya.",
+    "presensi": [
+      {
+        "siswaId": "s-xi-pplg2-01",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-03",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-04",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-07",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-08",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-09",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-10",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-11",
+        "status": "dispen",
+        "catatan": "Dispensasi kegiatan sekolah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-12",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-13",
+        "status": "alpa",
+        "catatan": "Tanpa Keterangan (Alpa)"
+      },
+      {
+        "siswaId": "s-xi-pplg2-14",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-15",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-16",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-17",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-18",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-19",
+        "status": "dispen",
+        "catatan": "Dispensasi kegiatan sekolah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-20",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-21",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-22",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-23",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-24",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-25",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-26",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-27",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-28",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-29",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-30",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-31",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-32",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-33",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-34",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-35",
+        "status": "hadir"
+      }
+    ],
+    "adaPenilaian": false,
+    "created_at": "2026-07-31T08:00:00.000Z"
+  },
+  {
+    "id": "ag-xi-pplg2-2",
+    "jadwalId": "j-jumat-xi-pplg-2",
+    "kelasId": "k-xi-pplg-2",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2026-08-07",
+    "pertemuanKe": 2,
+    "materi": "Struktur Semantik HTML5, Heading, Paragraph, dan Manajemen Hyperlink",
+    "capaianPembelajaran": "Peserta didik mampu membuat halaman web terstruktur dengan tag HTML5 semantik.",
+    "indikator": "Mampu menyusun kerangka layout web dengan tag header, nav, main, article, section, dan footer.",
+    "catatanKejadian": "Pembelajaran materi HTML5 semantik berlangsung aktif. Hadir 33 siswa, 1 siswa sakit (Wildan Aziz Solakhudin), 1 siswa alpa (Mikhail Bintang).",
+    "refleksiGuru": "Siswa dapat memahami hierarki elemen dan penulisan tag semantik dengan cepat.",
+    "tindakLanjut": "Memberikan latihan mandiri pembuatan struktur dokumen web profil diri.",
+    "presensi": [
+      {
+        "siswaId": "s-xi-pplg2-01",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-03",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-04",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-07",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-08",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-09",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-10",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-11",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-12",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-13",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-14",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-15",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-16",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-17",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-18",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-19",
+        "status": "alpa",
+        "catatan": "Tanpa Keterangan (Alpa)"
+      },
+      {
+        "siswaId": "s-xi-pplg2-20",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-21",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-22",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-23",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-24",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-25",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-26",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-27",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-28",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-29",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-30",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-31",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-32",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-33",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-34",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-35",
+        "status": "hadir"
+      }
+    ],
+    "adaPenilaian": true,
+    "penilaian": {
+        "id": "pen-xi-pplg2-html-dasar",
+        "agendaId": "ag-xi-pplg2-2",
+        "kelasId": "k-xi-pplg-2",
+        "mapel": "Pemrograman Web",
+        "tanggal": "2026-08-07",
+        "jenisPenilaian": "Tugas",
+        "skalaPenilaian": "angka",
+        "namaPenilaian": "HTML Dasar",
+        "kkm": 75,
+        "daftarNilai": [
+            {
+                "siswaId": "s-xi-pplg2-01",
+                "nilai": 97,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-02",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-03",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-04",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-05",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-06",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-07",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-08",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-09",
+                "nilai": 78,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-10",
+                "nilai": 95,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-11",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-12",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-13",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-14",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-15",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-16",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-17",
+                "nilai": 93,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-18",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-19",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-20",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-21",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-22",
+                "nilai": 97,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-23",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-24",
+                "nilai": 63,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-25",
+                "nilai": 93,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-26",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-27",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-28",
+                "nilai": 87,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-29",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-30",
+                "nilai": 83,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-31",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-32",
+                "nilai": 93,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-33",
+                "nilai": 83,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-34",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-35",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            }
+        ]
+    },
+    "created_at": "2026-08-07T08:00:00.000Z"
+  },
+  {
+    "id": "ag-xi-pplg2-3",
+    "jadwalId": "j-jumat-xi-pplg-2",
+    "kelasId": "k-xi-pplg-2",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2026-08-14",
+    "pertemuanKe": 3,
+    "materi": "Desain Layout Web dengan CSS Modern (Flexbox & Box Model)",
+    "capaianPembelajaran": "Peserta didik mampu merancang tampilan web responsif menggunakan CSS Flexbox dan styling semantik.",
+    "indikator": "Mampu menerapkan styling navigasi, flex container, dan penataan elemen card secara rapi.",
+    "catatanKejadian": "Praktikum CSS layout Flexbox dan penataan elemen card di Lab PPLG. Hadir 32 siswa, 1 siswa sakit (Filga Detra Finanda), 1 siswa alpa (Al Rhazzaq Alif), 1 siswa dispensasi (Mikhail Bintang).",
+    "refleksiGuru": "Siswa sangat tertarik saat melihat elemen halaman dapat tertata secara otomatis dengan Flexbox.",
+    "tindakLanjut": "Mempersiapkan modul formulir input dan interaktivitas JavaScript dasar.",
+    "presensi": [
+      {
+        "siswaId": "s-xi-pplg2-01",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "status": "alpa",
+        "catatan": "Tanpa Keterangan (Alpa)"
+      },
+      {
+        "siswaId": "s-xi-pplg2-03",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-04",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-07",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-08",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-09",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-10",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-11",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-12",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-13",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-14",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-15",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-16",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-17",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-18",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-19",
+        "status": "dispen",
+        "catatan": "Dispensasi kegiatan sekolah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-20",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-21",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-22",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-23",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-24",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-25",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-26",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-27",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-28",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-29",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-30",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-31",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-32",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-33",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-34",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-35",
+        "status": "hadir"
+      }
+    ],
+    "adaPenilaian": true,
+    "penilaian": {
+        "id": "pen-xi-pplg2-tugas-html",
+        "agendaId": "ag-xi-pplg2-3",
+        "kelasId": "k-xi-pplg-2",
+        "mapel": "Pemrograman Web",
+        "tanggal": "2026-08-14",
+        "jenisPenilaian": "Tugas",
+        "skalaPenilaian": "angka",
+        "namaPenilaian": "Tugas HTML",
+        "kkm": 75,
+        "daftarNilai": [
+            {
+                "siswaId": "s-xi-pplg2-01",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-02",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-03",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-04",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-05",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-06",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-07",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-08",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-09",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-10",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-11",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-12",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-13",
+                "nilai": 80,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-14",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-15",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-16",
+                "nilai": 0,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Nilai 0"
+            },
+            {
+                "siswaId": "s-xi-pplg2-17",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-18",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-19",
+                "nilai": 0,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Nilai 0"
+            },
+            {
+                "siswaId": "s-xi-pplg2-20",
+                "nilai": 0,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Nilai 0"
+            },
+            {
+                "siswaId": "s-xi-pplg2-21",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-22",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-23",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-24",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-25",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-26",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-27",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-28",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-29",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-30",
+                "nilai": 0,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Nilai 0"
+            },
+            {
+                "siswaId": "s-xi-pplg2-31",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-32",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-33",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-34",
+                "nilai": 95,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-35",
+                "nilai": 90,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            }
+        ]
+    },
+    "created_at": "2026-08-14T08:00:00.000Z"
+  },
+  {
+    "id": "ag-xi-pplg2-4",
+    "jadwalId": "j-jumat-xi-pplg-2",
+    "kelasId": "k-xi-pplg-2",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2026-08-21",
+    "pertemuanKe": 4,
+    "materi": "Pembuatan Formulir Web Interaktif, Input Controls, dan Validasi HTML5",
+    "capaianPembelajaran": "Peserta didik mampu membuat formulir interaktif lengkap dengan penanganan validasi input pengguna.",
+    "indikator": "Mampu menggunakan berbagai tipe input, select dropdown, textarea, dan atribut required/pattern.",
+    "catatanKejadian": "Praktik pembuatan formulir web interaktif dan validasi HTML5. Hadir 32 siswa, 1 siswa sakit (M. Farhan Dwi Saputra), 1 siswa alpa (Ilham Alzano), 1 siswa dispensasi kegiatan (Fadliansyah Hadiq Azzaki).",
+    "refleksiGuru": "Siswa di lab mampu menyelesaikan form validasi dengan baik.",
+    "tindakLanjut": "Menyiapkan penilaian tugas formatif pembuatan form registrasi data siswa.",
+    "presensi": [
+      {
+        "siswaId": "s-xi-pplg2-01",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-03",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-04",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-07",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-08",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-09",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-10",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-11",
+        "status": "dispen",
+        "catatan": "Dispensasi kegiatan sekolah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-12",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-13",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-14",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-15",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-16",
+        "status": "alpa",
+        "catatan": "Tanpa Keterangan (Alpa)"
+      },
+      {
+        "siswaId": "s-xi-pplg2-17",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-18",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-19",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-20",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-21",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-22",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-23",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-24",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-25",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-26",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-27",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-28",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-29",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-30",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-31",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-32",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-33",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-34",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-35",
+        "status": "hadir"
+      }
+    ],
+    "adaPenilaian": true,
+    "penilaian": {
+        "id": "pen-xi-pplg2-ulangan-html",
+        "agendaId": "ag-xi-pplg2-4",
+        "kelasId": "k-xi-pplg-2",
+        "mapel": "Pemrograman Web",
+        "tanggal": "2026-08-21",
+        "jenisPenilaian": "UH",
+        "skalaPenilaian": "huruf",
+        "namaPenilaian": "Ulangan HTML",
+        "kkm": 75,
+        "daftarNilai": [
+            {
+                "siswaId": "s-xi-pplg2-01",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-02",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-03",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-04",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-05",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-06",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-07",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-08",
+                "nilai": 57,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-09",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-10",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-11",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-12",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-13",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-14",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-15",
+                "nilai": 67,
+                "gradeHuruf": "C+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-16",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-17",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-18",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-19",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-20",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-21",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-22",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-23",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-24",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-25",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-26",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-27",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-28",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-29",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-30",
+                "nilai": 57,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-31",
+                "nilai": 72,
+                "gradeHuruf": "B-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-32",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-33",
+                "nilai": 72,
+                "gradeHuruf": "B-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-34",
+                "nilai": 72,
+                "gradeHuruf": "B-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-35",
+                "nilai": 72,
+                "gradeHuruf": "B-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            }
+        ]
+    },
+    "created_at": "2026-08-21T08:00:00.000Z"
+  },
+  {
+    "id": "ag-xi-pplg2-5",
+    "jadwalId": "j-jumat-xi-pplg-2",
+    "kelasId": "k-xi-pplg-2",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2026-08-28",
+    "pertemuanKe": 5,
+    "materi": "Pengenalan Logika Pemrograman Web JavaScript Dasar (Variabel, DOM & Event)",
+    "capaianPembelajaran": "Peserta didik mampu memanipulasi elemen DOM dan menangani event interaksi klik/input dengan JavaScript.",
+    "indikator": "Mampu menghubungkan skrip JavaScript, mengambil elemen DOM, dan mengubah konten secara dinamis.",
+    "catatanKejadian": "Praktikum pengenalan dasar logika JavaScript dan manipulasi DOM. Hadir 26 siswa, 1 siswa izin (Shaquille Rizky Athaya), 5 siswa sakit (Bayu, Fadliansyah, M. Agung, Nathaniel, Rafa Izza), 2 siswa alpa (Al Rhazzaq Alif, Raditya Yuandra), 1 siswa dispensasi kegiatan Rohis (Mikhail Bintang).",
+    "refleksiGuru": "Pemahaman logika siswa mulai terbangun dengan baik ketika tombol dapat merespons aksi klik.",
+    "tindakLanjut": "Mempersiapkan latihan studi kasus kalkulator mini dan manipulasi class CSS.",
+    "presensi": [
+      {
+        "siswaId": "s-xi-pplg2-01",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "status": "alpa",
+        "catatan": "Tanpa Keterangan (Alpa)"
+      },
+      {
+        "siswaId": "s-xi-pplg2-03",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-04",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-07",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-08",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-09",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-10",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-11",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-12",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-13",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-14",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-15",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-16",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-17",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-18",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-19",
+        "status": "dispen",
+        "catatan": "Dispensasi Kegiatan Rohis"
+      },
+      {
+        "siswaId": "s-xi-pplg2-20",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-21",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-22",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-23",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-24",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-25",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-26",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-27",
+        "status": "alpa",
+        "catatan": "Tanpa Keterangan (Alpa)"
+      },
+      {
+        "siswaId": "s-xi-pplg2-28",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-29",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-30",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-31",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-32",
+        "status": "ijin",
+        "catatan": "Izin"
+      },
+      {
+        "siswaId": "s-xi-pplg2-33",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-34",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-35",
+        "status": "hadir"
+      }
+    ],
+    "adaPenilaian": false,
+    "created_at": "2026-08-28T08:00:00.000Z"
+  },
+  {
+    "id": "ag-xi-pplg2-6",
+    "jadwalId": "j-jumat-xi-pplg-2",
+    "kelasId": "k-xi-pplg-2",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2026-09-04",
+    "pertemuanKe": 6,
+    "materi": "Manipulasi Event Listener, Validasi Form dengan JS, & LocalStorage",
+    "capaianPembelajaran": "Peserta didik mampu membuat fitur simpan data sementara pada browser menggunakan Web Storage API.",
+    "indikator": "Mampu menyimpan, membaca, dan menghapus data JSON dari LocalStorage via JavaScript.",
+    "catatanKejadian": "Praktikum manipulasi event listener dan local storage browser. Hadir 30 siswa, 4 siswa sakit (Diva Hamid, Ilham Alzano, M. Farhan, Retno Prabandani), 1 siswa alpa (Mikhail Bintang).",
+    "refleksiGuru": "Siswa senang melihat data yang mereka masukkan tetap tersimpan meski halaman direfresh.",
+    "tindakLanjut": "Menugaskan penggabungan komponen formulir, tabel data, dan local storage ke dalam proyek mini.",
+    "presensi": [
+      {
+        "siswaId": "s-xi-pplg2-01",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-03",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-04",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-07",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-08",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-09",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-10",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-11",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-12",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-13",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-14",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-15",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-16",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-17",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-18",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-19",
+        "status": "alpa",
+        "catatan": "Tanpa Keterangan (Alpa)"
+      },
+      {
+        "siswaId": "s-xi-pplg2-20",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-21",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-22",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-23",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-24",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-25",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-26",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-27",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-28",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-29",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-30",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-31",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-32",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-33",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-34",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-35",
+        "status": "hadir"
+      }
+    ],
+    "adaPenilaian": true,
+    "penilaian": {
+        "id": "pen-xi-pplg2-tugas-bootstrap",
+        "agendaId": "ag-xi-pplg2-6",
+        "kelasId": "k-xi-pplg-2",
+        "mapel": "Pemrograman Web",
+        "tanggal": "2026-09-04",
+        "jenisPenilaian": "Tugas",
+        "skalaPenilaian": "huruf",
+        "namaPenilaian": "Tugas Bootstrap",
+        "kkm": 75,
+        "daftarNilai": [
+            {
+                "siswaId": "s-xi-pplg2-01",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-02",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-03",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-04",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-05",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-06",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-07",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-08",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-09",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-10",
+                "nilai": 72,
+                "gradeHuruf": "B-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-11",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-12",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-13",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-14",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-15",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-16",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-17",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-18",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-19",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-20",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-21",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-22",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-23",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-24",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-25",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-26",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-27",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-28",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-29",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-30",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-31",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-32",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-33",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-34",
+                "nilai": 72,
+                "gradeHuruf": "B-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-35",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            }
+        ]
+    },
+    "created_at": "2026-09-04T08:00:00.000Z"
+  },
+  {
+    "id": "ag-xi-pplg2-7",
+    "jadwalId": "j-jumat-xi-pplg-2",
+    "kelasId": "k-xi-pplg-2",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2026-09-11",
+    "pertemuanKe": 7,
+    "materi": "Perancangan Antarmuka Web Responsif (Media Queries & Mobile First)",
+    "capaianPembelajaran": "Peserta didik mampu mendesain antarmuka web adaptif yang tampil optimal di perangkat mobile maupun desktop.",
+    "indikator": "Mampu menerapkan CSS media queries untuk mengubah breakpoint layout secara proporsional.",
+    "catatanKejadian": "Penerapan responsive web design dengan media queries. Hadir 29 siswa, 2 siswa sakit (Faza Zainul, Retno Prabandani), 4 siswa dispensasi kegiatan sekolah (Filga Detra, M. Ferdy, Shaquille, Wildan Aziz).",
+    "refleksiGuru": "Sebagian besar siswa berhasil menyesuaikan navbar dan grid menjadi tampilan mobile-friendly.",
+    "tindakLanjut": "Memberikan sesi bimbingan dan review hasil proyek mini web sebelum presentasi penilaian.",
+    "presensi": [
+      {
+        "siswaId": "s-xi-pplg2-01",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-03",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-04",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-07",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-08",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-09",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-10",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-11",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-12",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-13",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-14",
+        "status": "dispen",
+        "catatan": "Dispensasi kegiatan sekolah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-15",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-16",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-17",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-18",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-19",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-20",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-21",
+        "status": "dispen",
+        "catatan": "Dispensasi kegiatan sekolah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-22",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-23",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-24",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-25",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-26",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-27",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-28",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-29",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-30",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-31",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-32",
+        "status": "dispen",
+        "catatan": "Dispensasi kegiatan sekolah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-33",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-34",
+        "status": "dispen",
+        "catatan": "Dispensasi kegiatan sekolah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-35",
+        "status": "hadir"
+      }
+    ],
+    "adaPenilaian": true,
+    "penilaian": {
+        "id": "pen-xi-pplg2-ulangan-bootstrap",
+        "agendaId": "ag-xi-pplg2-7",
+        "kelasId": "k-xi-pplg-2",
+        "mapel": "Pemrograman Web",
+        "tanggal": "2026-09-11",
+        "jenisPenilaian": "UH",
+        "skalaPenilaian": "angka",
+        "namaPenilaian": "Ulangan Bootstrap",
+        "kkm": 75,
+        "daftarNilai": [
+            {
+                "siswaId": "s-xi-pplg2-01",
+                "nilai": 52,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-02",
+                "nilai": 49,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-03",
+                "nilai": 53,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-04",
+                "nilai": 52,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-05",
+                "nilai": 49,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-06",
+                "nilai": 59,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-07",
+                "nilai": 48,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-08",
+                "nilai": 49,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-09",
+                "nilai": 37,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-10",
+                "nilai": 54,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-11",
+                "nilai": 68,
+                "gradeHuruf": "C+",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-12",
+                "nilai": 53,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-13",
+                "nilai": 0,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Nilai 0"
+            },
+            {
+                "siswaId": "s-xi-pplg2-14",
+                "nilai": 0,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Nilai 0"
+            },
+            {
+                "siswaId": "s-xi-pplg2-15",
+                "nilai": 51,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-16",
+                "nilai": 49,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-17",
+                "nilai": 56,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-18",
+                "nilai": 54,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-19",
+                "nilai": 40,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-20",
+                "nilai": 51,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-21",
+                "nilai": 0,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Nilai 0"
+            },
+            {
+                "siswaId": "s-xi-pplg2-22",
+                "nilai": 59,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-23",
+                "nilai": 60,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-24",
+                "nilai": 31,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-25",
+                "nilai": 55,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-26",
+                "nilai": 63,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-27",
+                "nilai": 46,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-28",
+                "nilai": 46,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-29",
+                "nilai": 55,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-30",
+                "nilai": 0,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Nilai 0"
+            },
+            {
+                "siswaId": "s-xi-pplg2-31",
+                "nilai": 59,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-32",
+                "nilai": 0,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Nilai 0"
+            },
+            {
+                "siswaId": "s-xi-pplg2-33",
+                "nilai": 57,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-xi-pplg2-34",
+                "nilai": 0,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Nilai 0"
+            },
+            {
+                "siswaId": "s-xi-pplg2-35",
+                "nilai": 50,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            }
+        ]
+    },
+    "created_at": "2026-09-11T08:00:00.000Z"
+  },
+  {
+    "id": "ag-xi-pplg2-8",
+    "jadwalId": "j-jumat-xi-pplg-2",
+    "kelasId": "k-xi-pplg-2",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2026-09-18",
+    "pertemuanKe": 8,
+    "materi": "Pengujian Web (Cross-Browser Testing), Debugging, & Presentasi Proyek Mini",
+    "capaianPembelajaran": "Peserta didik mampu melakukan pengujian fungsionalitas web, menemukan error console, dan mempresentasikan hasil.",
+    "indikator": "Mampu mendemonstrasikan aplikasi web profil/portofolio lengkap dengan form interaktif dan laporan pengujian.",
+    "catatanKejadian": "Sesi pengujian dan debugging proyek web mini di Lab PPLG. Hadir 34 siswa, 1 siswa sakit (Mikhail Bintang).",
+    "refleksiGuru": "Karya proyek siswa menunjukkan kemajuan pesat dan kompetensi yang tuntas membanggakan.",
+    "tindakLanjut": "Merekapitulasi nilai capaian belajar dan presensi semester ganjil.",
+    "presensi": [
+      {
+        "siswaId": "s-xi-pplg2-01",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-03",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-04",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-07",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-08",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-09",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-10",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-11",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-12",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-13",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-14",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-15",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-16",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-17",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-18",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-19",
+        "status": "sakit",
+        "catatan": "Sakit"
+      },
+      {
+        "siswaId": "s-xi-pplg2-20",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-21",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-22",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-23",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-24",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-25",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-26",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-27",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-28",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-29",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-30",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-31",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-32",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-33",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-34",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-35",
+        "status": "hadir"
+      }
+    ],
+    "adaPenilaian": false,
+    "created_at": "2026-09-18T08:00:00.000Z"
+  },
+  {
+    "id": "ag-xi-pplg2-9",
+    "jadwalId": "j-jumat-xi-pplg-2",
+    "kelasId": "k-xi-pplg-2",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2026-09-25",
+    "pertemuanKe": 9,
+    "materi": "Struktur Kontrol Logika PHP: Percabangan (IF-ELSE, SWITCH) & Perulangan (FOR, WHILE, FOREACH)",
+    "capaianPembelajaran": "Peserta didik mampu mengimplementasikan alur logika pengambilan keputusan dan pengulangan proses data pada bahasa pemrograman PHP.",
+    "indikator": "1. Mampu membuat logika kondisi if, else if, dan switch-case\n2. Mampu menjalankan perulangan for dan while untuk pencetakan data berulang\n3. Mampu memanfaatkan foreach untuk membaca elemen array asosiatif.",
+    "catatanKejadian": "Praktikum struktur kontrol logika pemrograman PHP (percabangan dan perulangan). Hadir 33 siswa, 2 siswa dispensasi kegiatan sekolah (Fadliansyah Hadiq Azzaki, Mikhail Bintang).",
+    "refleksiGuru": "Siswa menunjukkan pemahaman yang baik dan antusiasme tinggi terhadap materi praktikum. Sebagian besar siswa dapat menyelesaikan tahapan kerja mandiri dengan lancar, sementara siswa yang mengalami kendala teknis mendapatkan pendampingan langsung oleh guru.",
+    "tindakLanjut": "Memberikan latihan mandiri / pengayaan berbasis studi kasus, serta mempersiapkan modul pengantar untuk Pengelolaan Array, Fungsi Modular & Pengolahan Data Form (Method GET & POST) pada pertemuan ke-10.",
+    "presensi": [
+      {
+        "siswaId": "s-xi-pplg2-01",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-03",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-04",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-07",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-08",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-09",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-10",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-11",
+        "status": "dispen",
+        "catatan": "Dispensasi kegiatan sekolah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-12",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-13",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-14",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-15",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-16",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-17",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-18",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-19",
+        "status": "dispen",
+        "catatan": "Dispensasi kegiatan sekolah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-20",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-21",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-22",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-23",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-24",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-25",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-26",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-27",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-28",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-29",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-30",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-31",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-32",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-33",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-34",
+        "status": "hadir"
+      },
+      {
+        "siswaId": "s-xi-pplg2-35",
+        "status": "hadir"
+      }
+    ],
+    "adaPenilaian": false,
+    "created_at": "2026-09-25T08:00:00.000Z"
+  },
   {
     "refleksiGuru": "Siswa menunjukkan antusiasme tinggi untuk mempelajari sintaks dan dasar-dasar coding web.",
     "presensi": [
@@ -2155,7 +4902,258 @@ export const initialAgenda: AgendaMengajar[] = [
     "materi": "Penyisipan Media Gambar, Audio, Video & Iframe Responsif",
     "capaianPembelajaran": "Peserta didik mampu mengintegrasikan aset multimedia ke dalam halaman web secara terstruktur.",
     "tanggal": "2025-08-11",
-    "adaPenilaian": false,
+    "adaPenilaian": true,
+    "penilaian": {
+        "id": "pen-k1-praktek-html",
+        "agendaId": "ag-k1-4",
+        "kelasId": "k1",
+        "mapel": "Pemrograman Web",
+        "tanggal": "2025-08-11",
+        "jenisPenilaian": "Tugas",
+        "skalaPenilaian": "huruf",
+        "namaPenilaian": "Praktek HTML",
+        "kkm": 75,
+        "daftarNilai": [
+            {
+                "siswaId": "s-k1-01",
+                "nilai": 98,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-02",
+                "nilai": 98,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-03",
+                "nilai": 98,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-04",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-05",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-06",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-07",
+                "nilai": 98,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-08",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-09",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-10",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-11",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-12",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-13",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-14",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-15",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-16",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-17",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-18",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-19",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-20",
+                "nilai": 98,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-21",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-22",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-23",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-24",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-25",
+                "nilai": 72,
+                "gradeHuruf": "B-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-26",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-27",
+                "nilai": 57,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-28",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-29",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-30",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-31",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-32",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-33",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-34",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            }
+        ]
+    },
     "catatanKejadian": "Semua siswa antusias mendesain tampilan web kaya visual. 1 siswa izin (Maritza Nauval).",
     "refleksiGuru": "Penggunaan media visual secara signifikan meningkatkan daya tarik siswa dalam belajar pemrograman."
   },
@@ -2308,7 +5306,258 @@ export const initialAgenda: AgendaMengajar[] = [
       }
     ],
     "tanggal": "2025-09-01",
-    "adaPenilaian": false,
+    "adaPenilaian": true,
+    "penilaian": {
+        "id": "pen-k1-ulangan-html",
+        "agendaId": "ag-k1-5",
+        "kelasId": "k1",
+        "mapel": "Pemrograman Web",
+        "tanggal": "2025-09-01",
+        "jenisPenilaian": "UH",
+        "skalaPenilaian": "angka",
+        "namaPenilaian": "Ulangan HTML",
+        "kkm": 75,
+        "daftarNilai": [
+            {
+                "siswaId": "s-k1-01",
+                "nilai": 89,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-02",
+                "nilai": 81,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-03",
+                "nilai": 98,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-04",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-05",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-06",
+                "nilai": 78,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-07",
+                "nilai": 86,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-08",
+                "nilai": 87,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-09",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-10",
+                "nilai": 85,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-11",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-12",
+                "nilai": 89,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-13",
+                "nilai": 81,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-14",
+                "nilai": 76,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-15",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-16",
+                "nilai": 93,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-17",
+                "nilai": 74,
+                "gradeHuruf": "B-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-18",
+                "nilai": 88,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-19",
+                "nilai": 80,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-20",
+                "nilai": 93,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-21",
+                "nilai": 87,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-22",
+                "nilai": 80,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-23",
+                "nilai": 89,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-24",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-25",
+                "nilai": 87,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-26",
+                "nilai": 89,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-27",
+                "nilai": 92,
+                "gradeHuruf": "A",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-28",
+                "nilai": 82,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-29",
+                "nilai": 84,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-30",
+                "nilai": 83,
+                "gradeHuruf": "B+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-31",
+                "nilai": 89,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-32",
+                "nilai": 86,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-33",
+                "nilai": 89,
+                "gradeHuruf": "A-",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-34",
+                "nilai": 95,
+                "gradeHuruf": "A+",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            }
+        ]
+    },
     "jadwalId": "j1",
     "pertemuanKe": 5,
     "materi": "Penyusunan Tabel Data & Elemen Formulir Input (Form) HTML",
@@ -2469,7 +5718,258 @@ export const initialAgenda: AgendaMengajar[] = [
     "tanggal": "2025-09-08",
     "created_at": "2025-09-08T09:15:00.000Z",
     "id": "ag-k1-6",
-    "adaPenilaian": false,
+    "adaPenilaian": true,
+    "penilaian": {
+        "id": "pen-k1-tugas-bootstrap",
+        "agendaId": "ag-k1-6",
+        "kelasId": "k1",
+        "mapel": "Pemrograman Web",
+        "tanggal": "2025-09-08",
+        "jenisPenilaian": "Tugas",
+        "skalaPenilaian": "huruf",
+        "namaPenilaian": "Tugas Bootstrap",
+        "kkm": 75,
+        "daftarNilai": [
+            {
+                "siswaId": "s-k1-01",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-02",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-03",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-04",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-05",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-06",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-07",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-08",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-09",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-10",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-11",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-12",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-13",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-14",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-15",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-16",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-17",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-18",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-19",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-20",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-21",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-22",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-23",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-24",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-25",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-26",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-27",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-28",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-29",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-30",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-31",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-32",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            },
+            {
+                "siswaId": "s-k1-33",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum mengumpulkan"
+            },
+            {
+                "siswaId": "s-k1-34",
+                "nilai": 77,
+                "gradeHuruf": "B",
+                "statusTugas": "Sudah",
+                "catatan": "Tuntas memuaskan"
+            }
+        ]
+    },
     "jadwalId": "j1",
     "refleksiGuru": "Penerapan CSS mengubah tampilan web menjadi jauh lebih modern dan estetik.",
     "catatanKejadian": "Praktikum styling halaman web. 4 siswa dispensasi event sekolah, 1 siswa magang industri.",
@@ -2487,7 +5987,258 @@ export const initialAgenda: AgendaMengajar[] = [
     "id": "ag-k1-7",
     "kelasId": "k1",
     "pertemuanKe": 7,
-    "adaPenilaian": false,
+    "adaPenilaian": true,
+    "penilaian": {
+        "id": "pen-k1-ulangan-bootstrap",
+        "agendaId": "ag-k1-7",
+        "kelasId": "k1",
+        "mapel": "Pemrograman Web",
+        "tanggal": "2026-09-15",
+        "jenisPenilaian": "UH",
+        "skalaPenilaian": "angka",
+        "namaPenilaian": "Ulangan Bootstrap",
+        "kkm": 75,
+        "daftarNilai": [
+            {
+                "siswaId": "s-k1-01",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-02",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-03",
+                "nilai": 59,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-04",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-05",
+                "nilai": 54,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-06",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-07",
+                "nilai": 62,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-08",
+                "nilai": 44,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-09",
+                "nilai": 55,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-10",
+                "nilai": 48,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-11",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-12",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-13",
+                "nilai": 37,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-14",
+                "nilai": 45,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-15",
+                "nilai": 43,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-16",
+                "nilai": 58,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-17",
+                "nilai": 44,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-18",
+                "nilai": 55,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-19",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-20",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-21",
+                "nilai": 59,
+                "gradeHuruf": "C-",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-22",
+                "nilai": 39,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-23",
+                "nilai": 52,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-24",
+                "nilai": 39,
+                "gradeHuruf": "E",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-25",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-26",
+                "nilai": 49,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-27",
+                "nilai": 49,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-28",
+                "nilai": 43,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-29",
+                "nilai": 50,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-30",
+                "nilai": 47,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-31",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            },
+            {
+                "siswaId": "s-k1-32",
+                "nilai": 46,
+                "gradeHuruf": "D",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-33",
+                "nilai": 60,
+                "gradeHuruf": "C",
+                "statusTugas": "Sudah",
+                "catatan": "Perlu bimbingan"
+            },
+            {
+                "siswaId": "s-k1-34",
+                "nilai": 0,
+                "gradeHuruf": "-",
+                "statusTugas": "Belum",
+                "catatan": "Belum ulangan"
+            }
+        ]
+    },
     "presensi": [
       {
         "status": "hadir",
@@ -9359,98 +13110,312 @@ export const initialAgenda: AgendaMengajar[] = [
 
 export const initialPenilaianExtra: PenilaianSession[] = [
   {
-    "mapel": "Dasar Pemrograman Web",
+    "id": "pen-xi-pplg1-ulangan-php",
+    "kelasId": "k-xi-pplg-1",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2025-10-01",
+    "jenisPenilaian": "UH",
+    "skalaPenilaian": "angka",
+    "namaPenilaian": "Ulangan PHP",
+    "kkm": 75,
+    "daftarNilai": [
+      {
+        "siswaId": "s-xi-pplg1-01",
+        "nilai": 72,
+        "gradeHuruf": "B-",
+        "statusTugas": "Sudah",
+        "catatan": "Remedial"
+      },
+      {
+        "siswaId": "s-xi-pplg1-02",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-03",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-04",
+        "nilai": 84,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-05",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-06",
+        "nilai": 80,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-07",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-08",
+        "nilai": 86,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-09",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-10",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-11",
+        "nilai": 78,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-12",
+        "nilai": 72,
+        "gradeHuruf": "B-",
+        "statusTugas": "Sudah",
+        "catatan": "Remedial"
+      },
+      {
+        "siswaId": "s-xi-pplg1-13",
+        "nilai": 80,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-14",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-15",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-16",
+        "nilai": 80,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-17",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-18",
+        "nilai": 92,
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-xi-pplg1-19",
+        "nilai": 78,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-20",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-21",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-22",
+        "nilai": 78,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-23",
+        "nilai": 58,
+        "gradeHuruf": "C-",
+        "statusTugas": "Sudah",
+        "catatan": "Remedial"
+      },
+      {
+        "siswaId": "s-xi-pplg1-24",
+        "nilai": 80,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-25",
+        "nilai": 82,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-26",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-27",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-28",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-29",
+        "nilai": 82,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-30",
+        "nilai": 80,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas"
+      },
+      {
+        "siswaId": "s-xi-pplg1-31",
+        "nilai": 68,
+        "gradeHuruf": "C+",
+        "statusTugas": "Sudah",
+        "catatan": "Remedial"
+      },
+      {
+        "siswaId": "s-xi-pplg1-32",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-33",
+        "nilai": 92,
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-xi-pplg1-34",
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan (Susulan)"
+      },
+      {
+        "siswaId": "s-xi-pplg1-35",
+        "nilai": 88,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      }
+    ]
+  },
+  {
+    "tanggal": "2025-09-09",
+    "kkm": 75,
+    "agendaId": "ag-xii-pplg3-8",
+    "jenisPenilaian": "Tugas",
+    "skalaPenilaian": "angka",
     "daftarNilai": [
       {
         "nilai": 85,
-        "siswaId": "s101"
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xii-pplg3-01"
       },
       {
-        "siswaId": "s102",
-        "nilai": 82
+        "nilai": 92,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xii-pplg3-02"
       },
       {
-        "nilai": 78,
-        "siswaId": "s103"
+        "nilai": 86,
+        "siswaId": "s-xii-pplg3-03",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "nilai": 93,
+        "siswaId": "s-xii-pplg3-04",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xii-pplg3-05",
+        "nilai": 87
+      },
+      {
+        "nilai": 94,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xii-pplg3-06"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xii-pplg3-07",
+        "nilai": 88
       },
       {
         "nilai": 95,
-        "siswaId": "s104"
-      },
-      {
-        "nilai": 76,
-        "siswaId": "s105"
-      },
-      {
-        "nilai": 88,
-        "siswaId": "s106"
-      },
-      {
-        "siswaId": "s107",
-        "nilai": 74
-      },
-      {
-        "nilai": 91,
-        "siswaId": "s108"
-      }
-    ],
-    "id": "pen-ex-1",
-    "kkm": 75,
-    "kelasId": "k1",
-    "tanggal": "2026-07-20",
-    "namaPenilaian": "Ulangan Harian 1 - HTML & CSS",
-    "jenisPenilaian": "UH"
-  },
-  {
-    "agendaId": "ag-xii-pplg3-8",
-    "kelasId": "k-xii-pplg-3",
-    "skalaPenilaian": "angka",
-    "jenisPenilaian": "Tugas",
-    "id": "pen-xii-pplg3-tugas1",
-    "daftarNilai": [
-      {
-        "nilai": 85,
-        "siswaId": "s-xii-pplg3-01",
-        "catatan": "Tuntas memuaskan"
-      },
-      {
-        "siswaId": "s-xii-pplg3-02",
-        "catatan": "Tuntas memuaskan",
-        "nilai": 92
-      },
-      {
-        "siswaId": "s-xii-pplg3-03",
-        "nilai": 86,
-        "catatan": "Tuntas memuaskan"
-      },
-      {
-        "catatan": "Tuntas memuaskan",
-        "siswaId": "s-xii-pplg3-04",
-        "nilai": 93
-      },
-      {
-        "nilai": 87,
-        "siswaId": "s-xii-pplg3-05",
-        "catatan": "Tuntas memuaskan"
-      },
-      {
-        "siswaId": "s-xii-pplg3-06",
-        "catatan": "Tuntas memuaskan",
-        "nilai": 94
-      },
-      {
-        "nilai": 88,
-        "siswaId": "s-xii-pplg3-07",
-        "catatan": "Tuntas memuaskan"
-      },
-      {
-        "catatan": "Tuntas memuaskan",
         "siswaId": "s-xii-pplg3-08",
-        "nilai": 95
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "catatan": "Tuntas memuaskan",
         "nilai": 89,
+        "catatan": "Tuntas memuaskan",
         "siswaId": "s-xii-pplg3-09"
       },
       {
@@ -9464,24 +13429,24 @@ export const initialPenilaianExtra: PenilaianSession[] = [
         "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xii-pplg3-12",
+        "nilai": 97,
         "catatan": "Tuntas memuaskan",
-        "nilai": 97
+        "siswaId": "s-xii-pplg3-12"
       },
       {
-        "catatan": "Tuntas memuaskan",
         "siswaId": "s-xii-pplg3-13",
+        "catatan": "Tuntas memuaskan",
         "nilai": 91
       },
       {
-        "nilai": 85,
+        "siswaId": "s-xii-pplg3-14",
         "catatan": "Tuntas memuaskan",
-        "siswaId": "s-xii-pplg3-14"
+        "nilai": 85
       },
       {
         "siswaId": "s-xii-pplg3-15",
-        "nilai": 92,
-        "catatan": "Tuntas memuaskan"
+        "catatan": "Tuntas memuaskan",
+        "nilai": 92
       },
       {
         "nilai": 86,
@@ -9489,133 +13454,129 @@ export const initialPenilaianExtra: PenilaianSession[] = [
         "catatan": "Tuntas memuaskan"
       },
       {
+        "catatan": "Tuntas memuaskan",
         "siswaId": "s-xii-pplg3-17",
+        "nilai": 93
+      },
+      {
+        "siswaId": "s-xii-pplg3-18",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 87
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "nilai": 94,
+        "siswaId": "s-xii-pplg3-19"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xii-pplg3-20",
+        "nilai": 88
+      },
+      {
+        "nilai": 95,
+        "siswaId": "s-xii-pplg3-21",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "nilai": 89,
+        "siswaId": "s-xii-pplg3-22",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-xii-pplg3-23",
+        "nilai": 96,
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-xii-pplg3-24",
+        "nilai": 90,
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "nilai": 97,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xii-pplg3-25"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "nilai": 91,
+        "siswaId": "s-xii-pplg3-26"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xii-pplg3-27",
+        "nilai": 85
+      },
+      {
+        "siswaId": "s-xii-pplg3-28",
+        "nilai": 92,
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-xii-pplg3-29",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 86
+      },
+      {
+        "siswaId": "s-xii-pplg3-30",
         "nilai": 93,
         "catatan": "Tuntas memuaskan"
       },
       {
         "nilai": 87,
-        "siswaId": "s-xii-pplg3-18",
+        "siswaId": "s-xii-pplg3-31",
         "catatan": "Tuntas memuaskan"
       },
       {
         "nilai": 94,
         "catatan": "Tuntas memuaskan",
-        "siswaId": "s-xii-pplg3-19"
+        "siswaId": "s-xii-pplg3-32"
       },
       {
-        "nilai": 88,
         "catatan": "Tuntas memuaskan",
-        "siswaId": "s-xii-pplg3-20"
+        "siswaId": "s-xii-pplg3-33",
+        "nilai": 88
       },
       {
-        "siswaId": "s-xii-pplg3-21",
+        "catatan": "Tuntas memuaskan",
         "nilai": 95,
-        "catatan": "Tuntas memuaskan"
-      },
-      {
-        "siswaId": "s-xii-pplg3-22",
-        "catatan": "Tuntas memuaskan",
-        "nilai": 89
-      },
-      {
-        "nilai": 96,
-        "catatan": "Tuntas memuaskan",
-        "siswaId": "s-xii-pplg3-23"
-      },
-      {
-        "nilai": 90,
-        "siswaId": "s-xii-pplg3-24",
-        "catatan": "Tuntas memuaskan"
-      },
-      {
-        "nilai": 97,
-        "siswaId": "s-xii-pplg3-25",
-        "catatan": "Tuntas memuaskan"
-      },
-      {
-        "catatan": "Tuntas memuaskan",
-        "siswaId": "s-xii-pplg3-26",
-        "nilai": 91
-      },
-      {
-        "siswaId": "s-xii-pplg3-27",
-        "catatan": "Tuntas memuaskan",
-        "nilai": 85
-      },
-      {
-        "catatan": "Tuntas memuaskan",
-        "nilai": 92,
-        "siswaId": "s-xii-pplg3-28"
-      },
-      {
-        "nilai": 86,
-        "catatan": "Tuntas memuaskan",
-        "siswaId": "s-xii-pplg3-29"
-      },
-      {
-        "nilai": 93,
-        "catatan": "Tuntas memuaskan",
-        "siswaId": "s-xii-pplg3-30"
-      },
-      {
-        "catatan": "Tuntas memuaskan",
-        "siswaId": "s-xii-pplg3-31",
-        "nilai": 87
-      },
-      {
-        "siswaId": "s-xii-pplg3-32",
-        "catatan": "Tuntas memuaskan",
-        "nilai": 94
-      },
-      {
-        "nilai": 88,
-        "catatan": "Tuntas memuaskan",
-        "siswaId": "s-xii-pplg3-33"
-      },
-      {
-        "siswaId": "s-xii-pplg3-34",
-        "nilai": 95,
-        "catatan": "Tuntas memuaskan"
+        "siswaId": "s-xii-pplg3-34"
       },
       {
         "nilai": 89,
-        "siswaId": "s-xii-pplg3-35",
-        "catatan": "Tuntas memuaskan"
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xii-pplg3-35"
       }
     ],
-    "kkm": 75,
     "mapel": "Pemrograman Web",
     "namaPenilaian": "Proyek Mini Pemrograman Web REST API",
-    "tanggal": "2025-09-09"
+    "id": "pen-xii-pplg3-tugas1",
+    "kelasId": "k-xii-pplg-3"
   },
   {
-    "jenisPenilaian": "Sumatif",
-    "mapel": "Pemrograman Web",
     "tanggal": "2026-09-21",
-    "namaPenilaian": "Evaluasi Portofolio Proyek Web Tengah Semester (UTS)",
-    "skalaPenilaian": "angka",
-    "kkm": 75,
     "id": "pen-xii-pplg2-uts",
-    "agendaId": "ag-xii-pplg2-18",
+    "mapel": "Pemrograman Web",
+    "namaPenilaian": "Evaluasi Portofolio Proyek Web Tengah Semester (UTS)",
     "daftarNilai": [
       {
         "siswaId": "s-xii-pplg2-01",
-        "nilai": 88,
         "catatan": "Proyek web lengkap dengan REST API & UI responsif",
+        "nilai": 88,
         "statusTugas": "Sudah"
       },
       {
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "siswaId": "s-xii-pplg2-02",
         "nilai": 92,
-        "statusTugas": "Sudah"
+        "statusTugas": "Sudah",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
+        "siswaId": "s-xii-pplg2-02"
       },
       {
         "statusTugas": "Sudah",
         "siswaId": "s-xii-pplg2-03",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "nilai": 85
+        "nilai": 85,
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
       },
       {
         "siswaId": "s-xii-pplg2-04",
@@ -9624,70 +13585,70 @@ export const initialPenilaianExtra: PenilaianSession[] = [
         "statusTugas": "Sudah"
       },
       {
-        "siswaId": "s-xii-pplg2-05",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "statusTugas": "Sudah",
-        "nilai": 84
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
+        "nilai": 84,
+        "siswaId": "s-xii-pplg2-05"
       },
       {
+        "siswaId": "s-xii-pplg2-06",
         "nilai": 87,
         "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "siswaId": "s-xii-pplg2-06",
         "statusTugas": "Sudah"
       },
       {
-        "nilai": 89,
+        "statusTugas": "Sudah",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "siswaId": "s-xii-pplg2-07",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "statusTugas": "Sudah"
+        "nilai": 89
       },
       {
+        "siswaId": "s-xii-pplg2-08",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "nilai": 91,
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "statusTugas": "Sudah",
-        "siswaId": "s-xii-pplg2-08"
+        "statusTugas": "Sudah"
       },
       {
         "statusTugas": "Sudah",
+        "siswaId": "s-xii-pplg2-09",
         "nilai": 86,
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
+      },
+      {
+        "siswaId": "s-xii-pplg2-10",
         "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "siswaId": "s-xii-pplg2-09"
+        "statusTugas": "Sudah",
+        "nilai": 93
       },
       {
         "statusTugas": "Sudah",
         "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "nilai": 93,
-        "siswaId": "s-xii-pplg2-10"
-      },
-      {
         "nilai": 85,
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "siswaId": "s-xii-pplg2-11",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xii-pplg2-12",
-        "nilai": 90,
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "statusTugas": "Sudah"
+        "siswaId": "s-xii-pplg2-11"
       },
       {
         "statusTugas": "Sudah",
+        "siswaId": "s-xii-pplg2-12",
         "catatan": "Proyek web lengkap dengan REST API & UI responsif",
+        "nilai": 90
+      },
+      {
         "nilai": 88,
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
+        "statusTugas": "Sudah",
         "siswaId": "s-xii-pplg2-13"
       },
       {
-        "siswaId": "s-xii-pplg2-14",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "nilai": 86,
-        "statusTugas": "Sudah"
+        "siswaId": "s-xii-pplg2-14",
+        "statusTugas": "Sudah",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
       },
       {
-        "statusTugas": "Sudah",
         "catatan": "Proyek web lengkap dengan REST API & UI responsif",
+        "nilai": 91,
         "siswaId": "s-xii-pplg2-15",
-        "nilai": 91
+        "statusTugas": "Sudah"
       },
       {
         "statusTugas": "Sudah",
@@ -9696,546 +13657,552 @@ export const initialPenilaianExtra: PenilaianSession[] = [
         "nilai": 87
       },
       {
-        "nilai": 85,
+        "siswaId": "s-xii-pplg2-17",
         "statusTugas": "Sudah",
         "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "siswaId": "s-xii-pplg2-17"
+        "nilai": 85
       },
       {
-        "statusTugas": "Sudah",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "nilai": 94,
         "siswaId": "s-xii-pplg2-18",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
+        "statusTugas": "Sudah"
       },
       {
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "nilai": 86,
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "statusTugas": "Sudah",
         "siswaId": "s-xii-pplg2-19"
       },
       {
+        "statusTugas": "Sudah",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "siswaId": "s-xii-pplg2-20",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "nilai": 85,
-        "statusTugas": "Sudah"
-      },
-      {
-        "statusTugas": "Sudah",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "siswaId": "s-xii-pplg2-21",
-        "nilai": 84
-      },
-      {
-        "nilai": 83,
-        "siswaId": "s-xii-pplg2-22",
-        "statusTugas": "Sudah",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
-      },
-      {
-        "statusTugas": "Sudah",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "siswaId": "s-xii-pplg2-23",
         "nilai": 85
       },
       {
-        "siswaId": "s-xii-pplg2-24",
         "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "nilai": 92,
+        "siswaId": "s-xii-pplg2-21",
+        "nilai": 84,
         "statusTugas": "Sudah"
       },
       {
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
+        "statusTugas": "Sudah",
+        "nilai": 83,
+        "siswaId": "s-xii-pplg2-22"
+      },
+      {
+        "nilai": 85,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xii-pplg2-23",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
+      },
+      {
+        "nilai": 92,
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
+        "siswaId": "s-xii-pplg2-24",
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 90,
         "statusTugas": "Sudah",
         "siswaId": "s-xii-pplg2-25",
-        "nilai": 90,
         "catatan": "Proyek web lengkap dengan REST API & UI responsif"
       },
       {
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "nilai": 88,
         "siswaId": "s-xii-pplg2-26",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "statusTugas": "Sudah"
       },
       {
-        "nilai": 89,
         "statusTugas": "Sudah",
         "siswaId": "s-xii-pplg2-27",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
+        "nilai": 89
       },
       {
+        "statusTugas": "Sudah",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "nilai": 87,
-        "siswaId": "s-xii-pplg2-28",
-        "statusTugas": "Sudah",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
+        "siswaId": "s-xii-pplg2-28"
       },
       {
         "statusTugas": "Sudah",
-        "nilai": 93,
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "siswaId": "s-xii-pplg2-29",
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
+        "nilai": 93
       },
       {
-        "statusTugas": "Sudah",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "siswaId": "s-xii-pplg2-30",
         "nilai": 86,
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
+        "statusTugas": "Sudah"
       },
       {
-        "statusTugas": "Sudah",
-        "siswaId": "s-xii-pplg2-31",
         "nilai": 91,
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
+        "siswaId": "s-xii-pplg2-31",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
+        "statusTugas": "Sudah"
       },
       {
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
         "nilai": 88,
         "statusTugas": "Sudah",
-        "siswaId": "s-xii-pplg2-32"
+        "siswaId": "s-xii-pplg2-32",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
       },
       {
-        "statusTugas": "Sudah",
         "nilai": 89,
-        "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "siswaId": "s-xii-pplg2-33"
+        "siswaId": "s-xii-pplg2-33",
+        "statusTugas": "Sudah",
+        "catatan": "Proyek web lengkap dengan REST API & UI responsif"
       },
       {
         "statusTugas": "Sudah",
-        "nilai": 87,
         "catatan": "Proyek web lengkap dengan REST API & UI responsif",
-        "siswaId": "s-xii-pplg2-34"
+        "siswaId": "s-xii-pplg2-34",
+        "nilai": 87
       }
     ],
-    "kelasId": "k-xii-pplg-2"
+    "skalaPenilaian": "angka",
+    "agendaId": "ag-xii-pplg2-18",
+    "kelasId": "k-xii-pplg-2",
+    "kkm": 75,
+    "jenisPenilaian": "Sumatif"
   },
   {
+    "agendaId": "ag-xii-pplg3-8",
+    "kelasId": "k-xii-pplg-3",
+    "kkm": 75,
+    "tanggal": "2025-09-17",
+    "jenisPenilaian": "UH",
+    "namaPenilaian": "Pengujian & Presentasi Proyek Web",
     "daftarNilai": [
       {
         "statusTugas": "Sudah",
-        "siswaId": "s-xii-pplg3-01",
         "gradeHuruf": "A",
-        "nilai": 85
+        "nilai": 85,
+        "siswaId": "s-xii-pplg3-01"
       },
       {
-        "nilai": 85,
+        "statusTugas": "Sudah",
         "siswaId": "s-xii-pplg3-02",
         "gradeHuruf": "A+",
-        "statusTugas": "Sudah"
-      },
-      {
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B+",
-        "nilai": 85,
-        "siswaId": "s-xii-pplg3-03"
-      },
-      {
-        "siswaId": "s-xii-pplg3-04",
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-",
         "nilai": 85
       },
       {
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xii-pplg3-03",
+        "nilai": 85
+      },
+      {
+        "gradeHuruf": "A-",
         "nilai": 85,
         "statusTugas": "Sudah",
+        "siswaId": "s-xii-pplg3-04"
+      },
+      {
+        "statusTugas": "Sudah",
         "gradeHuruf": "B",
+        "nilai": 85,
         "siswaId": "s-xii-pplg3-05"
       },
       {
         "gradeHuruf": "A",
+        "siswaId": "s-xii-pplg3-06",
         "statusTugas": "Sudah",
-        "nilai": 85,
-        "siswaId": "s-xii-pplg3-06"
+        "nilai": 85
       },
       {
+        "siswaId": "s-xii-pplg3-07",
         "gradeHuruf": "A",
         "nilai": 85,
-        "siswaId": "s-xii-pplg3-07",
         "statusTugas": "Sudah"
       },
       {
-        "gradeHuruf": "A+",
+        "nilai": 85,
         "siswaId": "s-xii-pplg3-08",
-        "statusTugas": "Sudah",
-        "nilai": 85
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah"
       },
       {
+        "statusTugas": "Sudah",
         "gradeHuruf": "B+",
         "siswaId": "s-xii-pplg3-09",
-        "statusTugas": "Sudah",
         "nilai": 85
       },
       {
         "statusTugas": "Sudah",
-        "siswaId": "s-xii-pplg3-10",
         "gradeHuruf": "A-",
-        "nilai": 85
+        "nilai": 85,
+        "siswaId": "s-xii-pplg3-10"
       },
       {
+        "gradeHuruf": "B",
         "statusTugas": "Sudah",
-        "nilai": 85,
         "siswaId": "s-xii-pplg3-11",
-        "gradeHuruf": "B"
+        "nilai": 85
       },
       {
         "siswaId": "s-xii-pplg3-12",
         "nilai": 85,
-        "gradeHuruf": "A",
-        "statusTugas": "Sudah"
-      },
-      {
         "statusTugas": "Sudah",
-        "nilai": 85,
-        "siswaId": "s-xii-pplg3-13",
         "gradeHuruf": "A"
       },
       {
-        "gradeHuruf": "A+",
+        "gradeHuruf": "A",
+        "siswaId": "s-xii-pplg3-13",
         "statusTugas": "Sudah",
+        "nilai": 85
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A+",
         "siswaId": "s-xii-pplg3-14",
         "nilai": 85
       },
       {
         "siswaId": "s-xii-pplg3-15",
-        "nilai": 85,
+        "statusTugas": "Sudah",
         "gradeHuruf": "B+",
-        "statusTugas": "Sudah"
+        "nilai": 85
       },
       {
-        "gradeHuruf": "A-",
         "siswaId": "s-xii-pplg3-16",
-        "nilai": 85,
-        "statusTugas": "Sudah"
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A-",
+        "nilai": 85
       },
       {
         "nilai": 85,
+        "siswaId": "s-xii-pplg3-17",
         "statusTugas": "Sudah",
-        "gradeHuruf": "B",
-        "siswaId": "s-xii-pplg3-17"
+        "gradeHuruf": "B"
       },
       {
-        "statusTugas": "Sudah",
+        "gradeHuruf": "A",
         "nilai": 85,
         "siswaId": "s-xii-pplg3-18",
-        "gradeHuruf": "A"
+        "statusTugas": "Sudah"
       },
       {
         "gradeHuruf": "A",
-        "siswaId": "s-xii-pplg3-19",
+        "nilai": 85,
         "statusTugas": "Sudah",
-        "nilai": 85
+        "siswaId": "s-xii-pplg3-19"
       },
       {
         "gradeHuruf": "A+",
+        "nilai": 85,
         "statusTugas": "Sudah",
-        "siswaId": "s-xii-pplg3-20",
-        "nilai": 85
+        "siswaId": "s-xii-pplg3-20"
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 85,
+        "siswaId": "s-xii-pplg3-21",
+        "gradeHuruf": "B+"
+      },
+      {
+        "siswaId": "s-xii-pplg3-22",
+        "nilai": 85,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A-"
+      },
+      {
+        "siswaId": "s-xii-pplg3-23",
+        "gradeHuruf": "B",
+        "nilai": 85,
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 85,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A",
+        "siswaId": "s-xii-pplg3-24"
+      },
+      {
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "nilai": 85,
+        "siswaId": "s-xii-pplg3-25"
+      },
+      {
+        "siswaId": "s-xii-pplg3-26",
+        "nilai": 85,
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah"
       },
       {
         "gradeHuruf": "B+",
-        "siswaId": "s-xii-pplg3-21",
         "nilai": 85,
-        "statusTugas": "Sudah"
-      },
-      {
-        "nilai": 85,
-        "siswaId": "s-xii-pplg3-22",
-        "gradeHuruf": "A-",
-        "statusTugas": "Sudah"
-      },
-      {
-        "nilai": 85,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah",
-        "siswaId": "s-xii-pplg3-23"
-      },
-      {
-        "gradeHuruf": "A",
-        "siswaId": "s-xii-pplg3-24",
-        "nilai": 85,
-        "statusTugas": "Sudah"
-      },
-      {
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A",
-        "siswaId": "s-xii-pplg3-25",
-        "nilai": 85
-      },
-      {
-        "gradeHuruf": "A+",
-        "siswaId": "s-xii-pplg3-26",
-        "nilai": 85,
-        "statusTugas": "Sudah"
-      },
-      {
         "siswaId": "s-xii-pplg3-27",
-        "statusTugas": "Sudah",
-        "nilai": 85,
-        "gradeHuruf": "B+"
+        "statusTugas": "Sudah"
       },
       {
-        "siswaId": "s-xii-pplg3-28",
         "gradeHuruf": "A-",
+        "nilai": 85,
         "statusTugas": "Sudah",
-        "nilai": 85
+        "siswaId": "s-xii-pplg3-28"
       },
       {
-        "nilai": 85,
+        "statusTugas": "Sudah",
         "gradeHuruf": "B",
         "siswaId": "s-xii-pplg3-29",
+        "nilai": 85
+      },
+      {
+        "siswaId": "s-xii-pplg3-30",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A",
+        "nilai": 85
+      },
+      {
+        "nilai": 85,
+        "siswaId": "s-xii-pplg3-31",
+        "gradeHuruf": "A",
         "statusTugas": "Sudah"
       },
       {
-        "gradeHuruf": "A",
-        "nilai": 85,
         "statusTugas": "Sudah",
-        "siswaId": "s-xii-pplg3-30"
+        "gradeHuruf": "A+",
+        "nilai": 85,
+        "siswaId": "s-xii-pplg3-32"
       },
       {
-        "siswaId": "s-xii-pplg3-31",
-        "statusTugas": "Sudah",
-        "nilai": 85,
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xii-pplg3-32",
-        "statusTugas": "Sudah",
-        "nilai": 85,
-        "gradeHuruf": "A+"
-      },
-      {
-        "statusTugas": "Sudah",
-        "nilai": 85,
+        "gradeHuruf": "B+",
         "siswaId": "s-xii-pplg3-33",
-        "gradeHuruf": "B+"
+        "statusTugas": "Sudah",
+        "nilai": 85
       },
       {
-        "gradeHuruf": "A-",
-        "nilai": 85,
         "statusTugas": "Sudah",
+        "nilai": 85,
+        "gradeHuruf": "A-",
         "siswaId": "s-xii-pplg3-34"
       },
       {
-        "nilai": 85,
         "statusTugas": "Sudah",
+        "nilai": 85,
         "gradeHuruf": "B",
         "siswaId": "s-xii-pplg3-35"
       }
     ],
     "skalaPenilaian": "huruf",
-    "mapel": "Pemrograman Web",
-    "kkm": 75,
-    "jenisPenilaian": "UH",
-    "tanggal": "2025-09-17",
-    "agendaId": "ag-xii-pplg3-8",
-    "namaPenilaian": "Pengujian & Presentasi Proyek Web",
-    "kelasId": "k-xii-pplg-3",
-    "id": "pen-xii-pplg3-proyek"
+    "id": "pen-xii-pplg3-proyek",
+    "mapel": "Pemrograman Web"
   },
   {
-    "id": "pen-xi-pplg1-html-dasar",
+    "kkm": 75,
+    "namaPenilaian": "HTML Dasar (6/8)",
     "tanggal": "2025-08-06",
+    "skalaPenilaian": "angka",
     "daftarNilai": [
       {
+        "catatan": "",
         "siswaId": "s-xi-pplg1-01",
-        "nilai": 84,
         "statusTugas": "Sudah",
+        "nilai": 84
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 84,
+        "siswaId": "s-xi-pplg1-02",
         "catatan": ""
       },
       {
-        "nilai": 84,
-        "statusTugas": "Sudah",
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-02"
-      },
-      {
-        "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg1-03",
         "catatan": "",
-        "nilai": 79
-      },
-      {
-        "catatan": "",
-        "statusTugas": "Belum",
-        "siswaId": "s-xi-pplg1-04",
-        "nilai": 0
-      },
-      {
-        "nilai": 78,
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-05",
+        "nilai": 79,
         "statusTugas": "Sudah"
       },
       {
-        "siswaId": "s-xi-pplg1-06",
-        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-04",
         "catatan": "",
+        "nilai": 0,
+        "statusTugas": "Belum"
+      },
+      {
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-05",
+        "statusTugas": "Sudah",
+        "nilai": 78
+      },
+      {
+        "siswaId": "s-xi-pplg1-06",
+        "catatan": "",
+        "statusTugas": "Sudah",
         "nilai": 54
       },
       {
+        "catatan": "",
         "nilai": 85,
         "siswaId": "s-xi-pplg1-07",
-        "statusTugas": "Sudah",
-        "catatan": ""
+        "statusTugas": "Sudah"
       },
       {
         "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg1-08",
-        "catatan": "",
-        "nilai": 88
+        "nilai": 88,
+        "catatan": ""
       },
       {
+        "nilai": 0,
         "statusTugas": "Belum",
         "catatan": "Belum mengumpulkan",
-        "nilai": 0,
         "siswaId": "s-xi-pplg1-09"
       },
       {
-        "statusTugas": "Belum",
-        "siswaId": "s-xi-pplg1-10",
+        "nilai": 0,
         "catatan": "Belum mengumpulkan",
-        "nilai": 0
+        "statusTugas": "Belum",
+        "siswaId": "s-xi-pplg1-10"
       },
       {
-        "siswaId": "s-xi-pplg1-11",
-        "catatan": "",
         "statusTugas": "Sudah",
-        "nilai": 71
+        "nilai": 71,
+        "siswaId": "s-xi-pplg1-11",
+        "catatan": ""
       },
       {
         "nilai": 79,
-        "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg1-12",
-        "catatan": ""
-      },
-      {
-        "nilai": 0,
-        "siswaId": "s-xi-pplg1-13",
-        "catatan": "Belum mengumpulkan",
-        "statusTugas": "Belum"
-      },
-      {
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan",
-        "siswaId": "s-xi-pplg1-14",
-        "nilai": 0
-      },
-      {
         "catatan": "",
-        "siswaId": "s-xi-pplg1-15",
-        "nilai": 84,
         "statusTugas": "Sudah"
       },
       {
-        "nilai": 85,
-        "statusTugas": "Sudah",
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-16"
+        "statusTugas": "Belum",
+        "nilai": 0,
+        "siswaId": "s-xi-pplg1-13",
+        "catatan": "Belum mengumpulkan"
       },
       {
+        "nilai": 0,
+        "catatan": "Belum mengumpulkan",
+        "statusTugas": "Belum",
+        "siswaId": "s-xi-pplg1-14"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "nilai": 84,
+        "siswaId": "s-xi-pplg1-15"
+      },
+      {
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-16",
+        "catatan": "",
+        "nilai": 85
+      },
+      {
+        "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg1-17",
-        "catatan": "",
-        "statusTugas": "Sudah",
-        "nilai": 86
+        "nilai": 86,
+        "catatan": ""
       },
       {
-        "catatan": "",
         "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg1-18",
+        "catatan": "",
         "nilai": 94
       },
       {
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-19",
         "nilai": 91,
-        "catatan": ""
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-19"
       },
       {
         "siswaId": "s-xi-pplg1-20",
         "catatan": "Belum mengumpulkan",
-        "nilai": 0,
-        "statusTugas": "Belum"
-      },
-      {
-        "statusTugas": "Sudah",
-        "catatan": "",
-        "nilai": 86,
-        "siswaId": "s-xi-pplg1-21"
-      },
-      {
-        "statusTugas": "Sudah",
-        "catatan": "",
-        "nilai": 70,
-        "siswaId": "s-xi-pplg1-22"
-      },
-      {
-        "statusTugas": "Sudah",
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-23",
-        "nilai": 83
-      },
-      {
-        "siswaId": "s-xi-pplg1-24",
-        "nilai": 88,
-        "statusTugas": "Sudah",
-        "catatan": ""
-      },
-      {
-        "statusTugas": "Sudah",
-        "nilai": 90,
-        "siswaId": "s-xi-pplg1-25",
-        "catatan": ""
-      },
-      {
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-26",
-        "statusTugas": "Sudah",
-        "nilai": 90
-      },
-      {
-        "nilai": 90,
-        "siswaId": "s-xi-pplg1-27",
-        "catatan": "",
-        "statusTugas": "Sudah"
-      },
-      {
-        "statusTugas": "Sudah",
-        "nilai": 88,
-        "siswaId": "s-xi-pplg1-28",
-        "catatan": ""
-      },
-      {
-        "nilai": 88,
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-29",
-        "catatan": ""
-      },
-      {
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-30",
-        "statusTugas": "Sudah",
-        "nilai": 79
-      },
-      {
-        "catatan": "Belum mengumpulkan",
-        "siswaId": "s-xi-pplg1-31",
         "statusTugas": "Belum",
         "nilai": 0
       },
       {
-        "nilai": 0,
-        "siswaId": "s-xi-pplg1-32",
+        "catatan": "",
+        "nilai": 86,
+        "siswaId": "s-xi-pplg1-21",
+        "statusTugas": "Sudah"
+      },
+      {
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-22",
+        "nilai": 70,
+        "catatan": ""
+      },
+      {
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-23",
+        "nilai": 83,
+        "catatan": ""
+      },
+      {
+        "siswaId": "s-xi-pplg1-24",
+        "catatan": "",
+        "statusTugas": "Sudah",
+        "nilai": 88
+      },
+      {
+        "catatan": "",
+        "nilai": 90,
+        "siswaId": "s-xi-pplg1-25",
+        "statusTugas": "Sudah"
+      },
+      {
+        "catatan": "",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-26",
+        "nilai": 90
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 90,
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-27"
+      },
+      {
+        "nilai": 88,
+        "siswaId": "s-xi-pplg1-28",
+        "statusTugas": "Sudah",
+        "catatan": ""
+      },
+      {
+        "nilai": 88,
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-29"
+      },
+      {
+        "catatan": "",
+        "statusTugas": "Sudah",
+        "nilai": 79,
+        "siswaId": "s-xi-pplg1-30"
+      },
+      {
+        "statusTugas": "Belum",
         "catatan": "Belum mengumpulkan",
-        "statusTugas": "Belum"
+        "siswaId": "s-xi-pplg1-31",
+        "nilai": 0
+      },
+      {
+        "statusTugas": "Belum",
+        "nilai": 0,
+        "catatan": "Belum mengumpulkan",
+        "siswaId": "s-xi-pplg1-32"
       },
       {
         "catatan": "",
         "siswaId": "s-xi-pplg1-33",
-        "statusTugas": "Sudah",
-        "nilai": 88
+        "nilai": 88,
+        "statusTugas": "Sudah"
       },
       {
-        "nilai": 88,
-        "catatan": "",
+        "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg1-34",
-        "statusTugas": "Sudah"
+        "catatan": "",
+        "nilai": 88
       },
       {
         "nilai": 85,
@@ -10244,277 +14211,273 @@ export const initialPenilaianExtra: PenilaianSession[] = [
         "catatan": ""
       }
     ],
-    "skalaPenilaian": "angka",
-    "kkm": 75,
+    "jenisPenilaian": "Tugas",
+    "id": "pen-xi-pplg1-html-dasar",
     "kelasId": "k-xi-pplg-1",
-    "mapel": "Pemrograman Web",
-    "namaPenilaian": "HTML Dasar (6/8)",
-    "jenisPenilaian": "Tugas"
+    "mapel": "Pemrograman Web"
   },
   {
+    "skalaPenilaian": "huruf",
     "tanggal": "2025-08-13",
-    "id": "pen-xi-pplg1-html-praktek",
+    "mapel": "Pemrograman Web",
+    "jenisPenilaian": "Tugas",
+    "namaPenilaian": "HTML Praktek",
     "daftarNilai": [
       {
         "catatan": "",
-        "gradeHuruf": "B",
         "siswaId": "s-xi-pplg1-01",
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "nilai": 75
+      },
+      {
+        "catatan": "",
         "nilai": 75,
+        "siswaId": "s-xi-pplg1-02",
+        "gradeHuruf": "B",
         "statusTugas": "Sudah"
       },
       {
-        "nilai": 75,
-        "siswaId": "s-xi-pplg1-02",
-        "catatan": "",
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B"
-      },
-      {
-        "statusTugas": "Sudah",
-        "nilai": 90,
-        "gradeHuruf": "A",
         "siswaId": "s-xi-pplg1-03",
-        "catatan": ""
+        "nilai": 90,
+        "catatan": "",
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah"
       },
       {
         "statusTugas": "Belum",
-        "catatan": "Belum praktek",
         "nilai": 0,
+        "catatan": "Belum praktek",
         "siswaId": "s-xi-pplg1-04"
       },
       {
-        "catatan": "",
         "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-05",
-        "gradeHuruf": "B",
-        "nilai": 75
-      },
-      {
+        "catatan": "",
         "nilai": 75,
-        "statusTugas": "Sudah",
         "gradeHuruf": "B",
-        "siswaId": "s-xi-pplg1-06",
-        "catatan": ""
+        "siswaId": "s-xi-pplg1-05"
       },
       {
         "gradeHuruf": "B",
         "catatan": "",
-        "siswaId": "s-xi-pplg1-07",
+        "siswaId": "s-xi-pplg1-06",
         "nilai": 75,
         "statusTugas": "Sudah"
       },
       {
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C",
-        "siswaId": "s-xi-pplg1-08",
-        "nilai": 60,
-        "catatan": ""
-      },
-      {
-        "statusTugas": "Belum",
-        "catatan": "Belum praktek",
-        "nilai": 0,
-        "siswaId": "s-xi-pplg1-09"
-      },
-      {
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum praktek",
-        "siswaId": "s-xi-pplg1-10"
-      },
-      {
-        "siswaId": "s-xi-pplg1-11",
-        "catatan": "",
-        "nilai": 60,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C"
-      },
-      {
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah",
         "nilai": 75,
+        "siswaId": "s-xi-pplg1-07",
+        "gradeHuruf": "B",
         "catatan": "",
-        "siswaId": "s-xi-pplg1-12"
+        "statusTugas": "Sudah"
       },
       {
+        "nilai": 60,
+        "siswaId": "s-xi-pplg1-08",
+        "catatan": "",
+        "gradeHuruf": "C",
+        "statusTugas": "Sudah"
+      },
+      {
+        "catatan": "Belum praktek",
         "statusTugas": "Belum",
-        "nilai": 0,
-        "catatan": "Belum praktek",
-        "siswaId": "s-xi-pplg1-13"
+        "siswaId": "s-xi-pplg1-09",
+        "nilai": 0
       },
       {
-        "siswaId": "s-xi-pplg1-14",
-        "nilai": 0,
         "catatan": "Belum praktek",
+        "nilai": 0,
+        "siswaId": "s-xi-pplg1-10",
         "statusTugas": "Belum"
       },
       {
-        "statusTugas": "Belum",
+        "statusTugas": "Sudah",
+        "nilai": 60,
+        "siswaId": "s-xi-pplg1-11",
+        "gradeHuruf": "C",
+        "catatan": ""
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 75,
+        "siswaId": "s-xi-pplg1-12",
+        "gradeHuruf": "B",
+        "catatan": ""
+      },
+      {
+        "catatan": "Belum praktek",
+        "siswaId": "s-xi-pplg1-13",
+        "nilai": 0,
+        "statusTugas": "Belum"
+      },
+      {
+        "catatan": "Belum praktek",
+        "siswaId": "s-xi-pplg1-14",
+        "nilai": 0,
+        "statusTugas": "Belum"
+      },
+      {
         "catatan": "Belum praktek",
         "siswaId": "s-xi-pplg1-15",
+        "statusTugas": "Belum",
         "nilai": 0
       },
       {
         "gradeHuruf": "B",
-        "nilai": 75,
-        "siswaId": "s-xi-pplg1-16",
+        "statusTugas": "Sudah",
         "catatan": "",
-        "statusTugas": "Sudah"
+        "siswaId": "s-xi-pplg1-16",
+        "nilai": 75
       },
       {
+        "statusTugas": "Sudah",
+        "nilai": 90,
         "gradeHuruf": "A",
+        "siswaId": "s-xi-pplg1-17",
+        "catatan": ""
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-18",
+        "gradeHuruf": "B",
+        "nilai": 75
+      },
+      {
+        "siswaId": "s-xi-pplg1-19",
         "catatan": "",
         "nilai": 90,
-        "siswaId": "s-xi-pplg1-17",
+        "gradeHuruf": "A",
         "statusTugas": "Sudah"
       },
       {
-        "nilai": 75,
-        "siswaId": "s-xi-pplg1-18",
+        "catatan": "Belum praktek",
+        "siswaId": "s-xi-pplg1-20",
+        "statusTugas": "Belum",
+        "nilai": 0
+      },
+      {
+        "siswaId": "s-xi-pplg1-21",
         "catatan": "",
+        "nilai": 95,
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah"
+      },
+      {
+        "gradeHuruf": "C",
+        "siswaId": "s-xi-pplg1-22",
+        "nilai": 60,
+        "statusTugas": "Sudah",
+        "catatan": ""
+      },
+      {
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-23",
+        "nilai": 75
+      },
+      {
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-24",
+        "nilai": 75
+      },
+      {
+        "nilai": 70,
+        "gradeHuruf": "B-",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-25",
+        "catatan": ""
+      },
+      {
+        "nilai": 75,
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-26",
         "statusTugas": "Sudah",
         "gradeHuruf": "B"
       },
       {
-        "nilai": 90,
-        "siswaId": "s-xi-pplg1-19",
-        "catatan": "",
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "nilai": 0,
-        "siswaId": "s-xi-pplg1-20",
-        "catatan": "Belum praktek",
-        "statusTugas": "Belum"
-      },
-      {
-        "gradeHuruf": "A+",
-        "statusTugas": "Sudah",
-        "nilai": 95,
-        "siswaId": "s-xi-pplg1-21",
-        "catatan": ""
-      },
-      {
-        "nilai": 60,
-        "statusTugas": "Sudah",
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-22",
-        "gradeHuruf": "C"
-      },
-      {
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-23",
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah",
-        "nilai": 75
-      },
-      {
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B",
-        "nilai": 75,
-        "siswaId": "s-xi-pplg1-24",
-        "catatan": ""
-      },
-      {
-        "nilai": 70,
-        "siswaId": "s-xi-pplg1-25",
-        "gradeHuruf": "B-",
-        "statusTugas": "Sudah",
-        "catatan": ""
-      },
-      {
-        "siswaId": "s-xi-pplg1-26",
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah",
-        "nilai": 75,
-        "catatan": ""
-      },
-      {
-        "statusTugas": "Sudah",
-        "catatan": "",
         "siswaId": "s-xi-pplg1-27",
-        "gradeHuruf": "B",
-        "nilai": 75
+        "catatan": "",
+        "nilai": 75,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B"
       },
       {
-        "statusTugas": "Sudah",
         "catatan": "",
+        "nilai": 70,
         "siswaId": "s-xi-pplg1-28",
         "gradeHuruf": "B-",
-        "nilai": 70
-      },
-      {
-        "gradeHuruf": "B",
-        "siswaId": "s-xi-pplg1-29",
-        "catatan": "",
-        "nilai": 75,
         "statusTugas": "Sudah"
       },
       {
+        "nilai": 75,
         "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-29",
+        "catatan": "",
+        "gradeHuruf": "B"
+      },
+      {
         "catatan": "",
         "siswaId": "s-xi-pplg1-30",
         "gradeHuruf": "B",
+        "statusTugas": "Sudah",
         "nilai": 75
       },
       {
-        "siswaId": "s-xi-pplg1-31",
+        "gradeHuruf": "B",
         "statusTugas": "Sudah",
         "catatan": "",
-        "gradeHuruf": "B",
-        "nilai": 75
+        "nilai": 75,
+        "siswaId": "s-xi-pplg1-31"
       },
       {
+        "statusTugas": "Belum",
         "nilai": 0,
         "siswaId": "s-xi-pplg1-32",
-        "statusTugas": "Belum",
         "catatan": "Belum praktek"
       },
       {
-        "gradeHuruf": "B",
+        "nilai": 75,
+        "siswaId": "s-xi-pplg1-33",
         "statusTugas": "Sudah",
         "catatan": "",
-        "nilai": 75,
-        "siswaId": "s-xi-pplg1-33"
+        "gradeHuruf": "B"
       },
       {
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah",
-        "nilai": 75,
+        "siswaId": "s-xi-pplg1-34",
         "catatan": "",
-        "siswaId": "s-xi-pplg1-34"
+        "nilai": 75,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B"
       },
       {
-        "statusTugas": "Sudah",
         "nilai": 60,
         "siswaId": "s-xi-pplg1-35",
         "catatan": "",
-        "gradeHuruf": "C"
+        "gradeHuruf": "C",
+        "statusTugas": "Sudah"
       }
     ],
-    "mapel": "Pemrograman Web",
     "kkm": 75,
-    "kelasId": "k-xi-pplg-1",
-    "skalaPenilaian": "huruf",
-    "namaPenilaian": "HTML Praktek",
-    "jenisPenilaian": "Tugas"
+    "id": "pen-xi-pplg1-html-praktek",
+    "kelasId": "k-xi-pplg-1"
   },
   {
-    "namaPenilaian": "Ulangan Bootstrap",
-    "jenisPenilaian": "UH",
     "tanggal": "2025-08-27",
-    "kkm": 75,
+    "namaPenilaian": "Ulangan Bootstrap",
+    "id": "pen-xi-pplg1-ulangan-bootstrap",
     "mapel": "Pemrograman Web",
     "skalaPenilaian": "angka",
-    "id": "pen-xi-pplg1-ulangan-bootstrap",
     "kelasId": "k-xi-pplg-1",
     "daftarNilai": [
       {
         "statusTugas": "Sudah",
         "catatan": "",
-        "siswaId": "s-xi-pplg1-01",
-        "nilai": 48
+        "nilai": 48,
+        "siswaId": "s-xi-pplg1-01"
       },
       {
         "nilai": 0,
@@ -10523,64 +14486,64 @@ export const initialPenilaianExtra: PenilaianSession[] = [
         "statusTugas": "Belum"
       },
       {
-        "nilai": 53,
-        "catatan": "",
         "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-03"
-      },
-      {
-        "siswaId": "s-xi-pplg1-04",
         "catatan": "",
-        "nilai": 53,
-        "statusTugas": "Sudah"
+        "siswaId": "s-xi-pplg1-03",
+        "nilai": 53
       },
       {
-        "nilai": 0,
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-04",
+        "nilai": 53
+      },
+      {
         "siswaId": "s-xi-pplg1-05",
         "catatan": "",
-        "statusTugas": "Belum"
-      },
-      {
-        "nilai": 42,
-        "siswaId": "s-xi-pplg1-06",
-        "statusTugas": "Sudah",
-        "catatan": ""
-      },
-      {
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-07",
         "statusTugas": "Belum",
         "nilai": 0
       },
       {
-        "nilai": 0,
+        "statusTugas": "Sudah",
         "catatan": "",
-        "statusTugas": "Belum",
-        "siswaId": "s-xi-pplg1-08"
+        "nilai": 42,
+        "siswaId": "s-xi-pplg1-06"
       },
       {
+        "siswaId": "s-xi-pplg1-07",
+        "statusTugas": "Belum",
+        "catatan": "",
+        "nilai": 0
+      },
+      {
+        "siswaId": "s-xi-pplg1-08",
         "nilai": 0,
-        "siswaId": "s-xi-pplg1-09",
         "catatan": "",
         "statusTugas": "Belum"
       },
       {
-        "catatan": "",
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-10",
-        "nilai": 41
+        "siswaId": "s-xi-pplg1-09",
+        "nilai": 0,
+        "statusTugas": "Belum",
+        "catatan": ""
       },
       {
+        "nilai": 41,
+        "catatan": "",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-10"
+      },
+      {
+        "statusTugas": "Sudah",
         "catatan": "",
         "nilai": 53,
-        "siswaId": "s-xi-pplg1-11",
-        "statusTugas": "Sudah"
+        "siswaId": "s-xi-pplg1-11"
       },
       {
-        "nilai": 47,
-        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-12",
         "catatan": "",
-        "siswaId": "s-xi-pplg1-12"
+        "statusTugas": "Sudah",
+        "nilai": 47
       },
       {
         "nilai": 53,
@@ -10590,81 +14553,81 @@ export const initialPenilaianExtra: PenilaianSession[] = [
       },
       {
         "nilai": 41,
-        "catatan": "",
+        "siswaId": "s-xi-pplg1-14",
         "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-14"
+        "catatan": ""
       },
       {
-        "statusTugas": "Sudah",
+        "catatan": "",
         "nilai": 64,
         "siswaId": "s-xi-pplg1-15",
-        "catatan": ""
+        "statusTugas": "Sudah"
       },
       {
-        "statusTugas": "Sudah",
         "nilai": 62,
-        "siswaId": "s-xi-pplg1-16",
-        "catatan": ""
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-16"
       },
       {
-        "nilai": 0,
         "siswaId": "s-xi-pplg1-17",
-        "statusTugas": "Belum",
-        "catatan": ""
+        "catatan": "",
+        "nilai": 0,
+        "statusTugas": "Belum"
       },
       {
-        "nilai": 0,
+        "siswaId": "s-xi-pplg1-18",
         "catatan": "",
         "statusTugas": "Belum",
-        "siswaId": "s-xi-pplg1-18"
+        "nilai": 0
       },
       {
-        "nilai": 0,
         "siswaId": "s-xi-pplg1-19",
         "statusTugas": "Belum",
-        "catatan": ""
+        "catatan": "",
+        "nilai": 0
       },
       {
-        "statusTugas": "Belum",
+        "catatan": "",
         "siswaId": "s-xi-pplg1-20",
         "nilai": 0,
-        "catatan": ""
+        "statusTugas": "Belum"
       },
       {
+        "siswaId": "s-xi-pplg1-21",
+        "catatan": "",
         "statusTugas": "Belum",
-        "nilai": 0,
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-21"
+        "nilai": 0
       },
       {
-        "catatan": "",
-        "nilai": 70,
         "siswaId": "s-xi-pplg1-22",
+        "nilai": 70,
+        "catatan": "",
         "statusTugas": "Sudah"
       },
       {
         "nilai": 51,
-        "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg1-23",
+        "statusTugas": "Sudah",
         "catatan": ""
+      },
+      {
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-24",
+        "statusTugas": "Belum",
+        "nilai": 0
+      },
+      {
+        "siswaId": "s-xi-pplg1-25",
+        "catatan": "",
+        "nilai": 53,
+        "statusTugas": "Sudah"
       },
       {
         "statusTugas": "Belum",
-        "siswaId": "s-xi-pplg1-24",
         "nilai": 0,
-        "catatan": ""
-      },
-      {
-        "nilai": 53,
-        "siswaId": "s-xi-pplg1-25",
-        "statusTugas": "Sudah",
-        "catatan": ""
-      },
-      {
-        "siswaId": "s-xi-pplg1-26",
         "catatan": "",
-        "nilai": 0,
-        "statusTugas": "Belum"
+        "siswaId": "s-xi-pplg1-26"
       },
       {
         "statusTugas": "Belum",
@@ -10673,1636 +14636,3073 @@ export const initialPenilaianExtra: PenilaianSession[] = [
         "siswaId": "s-xi-pplg1-27"
       },
       {
-        "statusTugas": "Belum",
         "nilai": 0,
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-28"
-      },
-      {
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-29",
-        "nilai": 52,
-        "statusTugas": "Sudah"
+        "siswaId": "s-xi-pplg1-28",
+        "statusTugas": "Belum",
+        "catatan": ""
       },
       {
         "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-29",
+        "nilai": 52,
+        "catatan": ""
+      },
+      {
         "nilai": 49,
+        "statusTugas": "Sudah",
         "catatan": "",
         "siswaId": "s-xi-pplg1-30"
       },
       {
         "nilai": 57,
-        "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg1-31",
-        "catatan": ""
+        "catatan": "",
+        "statusTugas": "Sudah"
       },
       {
         "nilai": 0,
-        "statusTugas": "Belum",
         "catatan": "",
-        "siswaId": "s-xi-pplg1-32"
+        "siswaId": "s-xi-pplg1-32",
+        "statusTugas": "Belum"
       },
       {
         "catatan": "",
-        "nilai": 0,
+        "siswaId": "s-xi-pplg1-33",
         "statusTugas": "Belum",
-        "siswaId": "s-xi-pplg1-33"
+        "nilai": 0
       },
       {
         "siswaId": "s-xi-pplg1-34",
-        "statusTugas": "Belum",
-        "nilai": 0,
-        "catatan": ""
-      },
-      {
         "catatan": "",
-        "siswaId": "s-xi-pplg1-35",
         "nilai": 0,
         "statusTugas": "Belum"
+      },
+      {
+        "statusTugas": "Belum",
+        "nilai": 0,
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-35"
       }
-    ]
+    ],
+    "kkm": 75,
+    "jenisPenilaian": "UH"
   },
   {
-    "id": "pen-xi-pplg1-ibm",
-    "tanggal": "2025-09-03",
-    "mapel": "Pemrograman Web",
-    "skalaPenilaian": "ceklis",
-    "kkm": 75,
     "daftarNilai": [
       {
         "siswaId": "s-xi-pplg1-01",
-        "nilai": 100,
         "statusTugas": "Sudah",
-        "catatan": "Sertifikasi / Kursus IBM Selesai"
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "nilai": 100
       },
       {
         "siswaId": "s-xi-pplg1-02",
-        "catatan": "Sertifikasi / Kursus IBM Selesai",
-        "statusTugas": "Sudah",
-        "nilai": 100
-      },
-      {
-        "catatan": "Sertifikasi / Kursus IBM Selesai",
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-03",
-        "nilai": 100
-      },
-      {
         "nilai": 100,
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "statusTugas": "Sudah"
+      },
+      {
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "nilai": 100,
+        "siswaId": "s-xi-pplg1-03",
+        "statusTugas": "Sudah"
+      },
+      {
+        "statusTugas": "Sudah",
         "catatan": "Sertifikasi / Kursus IBM Selesai",
         "siswaId": "s-xi-pplg1-04",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg1-05",
-        "statusTugas": "Sudah",
-        "catatan": "Sertifikasi / Kursus IBM Selesai",
         "nilai": 100
       },
       {
-        "siswaId": "s-xi-pplg1-06",
         "nilai": 100,
+        "statusTugas": "Sudah",
         "catatan": "Sertifikasi / Kursus IBM Selesai",
-        "statusTugas": "Sudah"
+        "siswaId": "s-xi-pplg1-05"
       },
       {
         "statusTugas": "Sudah",
-        "catatan": "Sertifikasi / Kursus IBM Selesai",
         "nilai": 100,
-        "siswaId": "s-xi-pplg1-07"
+        "siswaId": "s-xi-pplg1-06",
+        "catatan": "Sertifikasi / Kursus IBM Selesai"
       },
       {
-        "catatan": "Belum selesai",
-        "siswaId": "s-xi-pplg1-08",
+        "nilai": 100,
+        "siswaId": "s-xi-pplg1-07",
+        "statusTugas": "Sudah",
+        "catatan": "Sertifikasi / Kursus IBM Selesai"
+      },
+      {
+        "statusTugas": "Belum",
         "nilai": 0,
-        "statusTugas": "Belum"
+        "catatan": "Belum selesai",
+        "siswaId": "s-xi-pplg1-08"
       },
       {
         "nilai": 0,
         "catatan": "Belum selesai",
-        "siswaId": "s-xi-pplg1-09",
-        "statusTugas": "Belum"
+        "statusTugas": "Belum",
+        "siswaId": "s-xi-pplg1-09"
       },
       {
         "siswaId": "s-xi-pplg1-10",
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "statusTugas": "Sudah",
+        "nilai": 100
+      },
+      {
         "nilai": 100,
+        "siswaId": "s-xi-pplg1-11",
         "catatan": "Sertifikasi / Kursus IBM Selesai",
         "statusTugas": "Sudah"
       },
       {
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "siswaId": "s-xi-pplg1-12",
+        "nilai": 100,
+        "statusTugas": "Sudah"
+      },
+      {
         "statusTugas": "Sudah",
+        "nilai": 100,
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "siswaId": "s-xi-pplg1-13"
+      },
+      {
+        "statusTugas": "Belum",
+        "nilai": 0,
+        "catatan": "Belum selesai",
+        "siswaId": "s-xi-pplg1-14"
+      },
+      {
+        "catatan": "Belum selesai",
+        "siswaId": "s-xi-pplg1-15",
+        "statusTugas": "Belum",
+        "nilai": 0
+      },
+      {
         "catatan": "Sertifikasi / Kursus IBM Selesai",
         "nilai": 100,
-        "siswaId": "s-xi-pplg1-11"
+        "siswaId": "s-xi-pplg1-16",
+        "statusTugas": "Sudah"
+      },
+      {
+        "siswaId": "s-xi-pplg1-17",
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "statusTugas": "Sudah",
+        "nilai": 100
+      },
+      {
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "siswaId": "s-xi-pplg1-18",
+        "nilai": 100,
+        "statusTugas": "Sudah"
       },
       {
         "nilai": 100,
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-12",
-        "catatan": "Sertifikasi / Kursus IBM Selesai"
+        "siswaId": "s-xi-pplg1-19",
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "statusTugas": "Sudah"
       },
       {
-        "statusTugas": "Sudah",
+        "nilai": 0,
+        "siswaId": "s-xi-pplg1-20",
+        "statusTugas": "Belum",
+        "catatan": "Sedang proses"
+      },
+      {
+        "siswaId": "s-xi-pplg1-21",
         "nilai": 100,
-        "siswaId": "s-xi-pplg1-13",
+        "statusTugas": "Sudah",
         "catatan": "Sertifikasi / Kursus IBM Selesai"
       },
       {
-        "siswaId": "s-xi-pplg1-14",
+        "nilai": 100,
+        "siswaId": "s-xi-pplg1-22",
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "statusTugas": "Sudah"
+      },
+      {
         "catatan": "Belum selesai",
         "nilai": 0,
+        "siswaId": "s-xi-pplg1-23",
         "statusTugas": "Belum"
       },
       {
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "siswaId": "s-xi-pplg1-15",
-        "catatan": "Belum selesai"
-      },
-      {
-        "nilai": 100,
-        "statusTugas": "Sudah",
-        "catatan": "Sertifikasi / Kursus IBM Selesai",
-        "siswaId": "s-xi-pplg1-16"
-      },
-      {
-        "nilai": 100,
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-17",
-        "catatan": "Sertifikasi / Kursus IBM Selesai"
-      },
-      {
-        "nilai": 100,
-        "siswaId": "s-xi-pplg1-18",
-        "statusTugas": "Sudah",
-        "catatan": "Sertifikasi / Kursus IBM Selesai"
-      },
-      {
-        "catatan": "Sertifikasi / Kursus IBM Selesai",
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-19",
-        "nilai": 100
-      },
-      {
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Sedang proses",
-        "siswaId": "s-xi-pplg1-20"
-      },
-      {
-        "catatan": "Sertifikasi / Kursus IBM Selesai",
-        "siswaId": "s-xi-pplg1-21",
-        "statusTugas": "Sudah",
-        "nilai": 100
-      },
-      {
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-22",
-        "catatan": "Sertifikasi / Kursus IBM Selesai",
-        "nilai": 100
-      },
-      {
-        "statusTugas": "Belum",
-        "catatan": "Belum selesai",
-        "nilai": 0,
-        "siswaId": "s-xi-pplg1-23"
-      },
-      {
-        "catatan": "Sertifikasi / Kursus IBM Selesai",
         "siswaId": "s-xi-pplg1-24",
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "nilai": 100,
+        "statusTugas": "Sudah"
+      },
+      {
+        "catatan": "Belum selesai",
+        "statusTugas": "Belum",
+        "siswaId": "s-xi-pplg1-25",
+        "nilai": 0
+      },
+      {
+        "nilai": 100,
         "statusTugas": "Sudah",
-        "nilai": 100
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "siswaId": "s-xi-pplg1-26"
       },
       {
         "nilai": 0,
         "statusTugas": "Belum",
         "catatan": "Belum selesai",
-        "siswaId": "s-xi-pplg1-25"
+        "siswaId": "s-xi-pplg1-27"
       },
       {
-        "nilai": 100,
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-26",
-        "catatan": "Sertifikasi / Kursus IBM Selesai"
-      },
-      {
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "siswaId": "s-xi-pplg1-27",
-        "catatan": "Belum selesai"
-      },
-      {
-        "statusTugas": "Sudah",
         "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "siswaId": "s-xi-pplg1-28",
         "nilai": 100,
-        "siswaId": "s-xi-pplg1-28"
+        "statusTugas": "Sudah"
       },
       {
-        "nilai": 100,
-        "siswaId": "s-xi-pplg1-29",
         "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-29",
+        "nilai": 100,
         "catatan": "Sertifikasi / Kursus IBM Selesai"
       },
       {
         "siswaId": "s-xi-pplg1-30",
+        "catatan": "Belum selesai",
+        "statusTugas": "Belum",
+        "nilai": 0
+      },
+      {
+        "nilai": 0,
+        "siswaId": "s-xi-pplg1-31",
+        "catatan": "Belum selesai",
+        "statusTugas": "Belum"
+      },
+      {
+        "siswaId": "s-xi-pplg1-32",
         "statusTugas": "Belum",
         "nilai": 0,
         "catatan": "Belum selesai"
       },
       {
-        "statusTugas": "Belum",
-        "nilai": 0,
-        "catatan": "Belum selesai",
-        "siswaId": "s-xi-pplg1-31"
-      },
-      {
-        "nilai": 0,
-        "catatan": "Belum selesai",
-        "statusTugas": "Belum",
-        "siswaId": "s-xi-pplg1-32"
-      },
-      {
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-33",
-        "nilai": 100,
-        "catatan": "Sertifikasi / Kursus IBM Selesai"
-      },
-      {
-        "siswaId": "s-xi-pplg1-34",
         "statusTugas": "Sudah",
         "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "siswaId": "s-xi-pplg1-33",
         "nilai": 100
       },
       {
-        "siswaId": "s-xi-pplg1-35",
         "nilai": 100,
+        "siswaId": "s-xi-pplg1-34",
         "catatan": "Sertifikasi / Kursus IBM Selesai",
         "statusTugas": "Sudah"
+      },
+      {
+        "siswaId": "s-xi-pplg1-35",
+        "catatan": "Sertifikasi / Kursus IBM Selesai",
+        "statusTugas": "Sudah",
+        "nilai": 100
       }
     ],
+    "id": "pen-xi-pplg1-ibm",
+    "kelasId": "k-xi-pplg-1",
+    "kkm": 75,
     "namaPenilaian": "IBM",
+    "skalaPenilaian": "ceklis",
+    "mapel": "Pemrograman Web",
     "jenisPenilaian": "Ceklis",
-    "kelasId": "k-xi-pplg-1"
+    "tanggal": "2025-09-03"
   },
   {
+    "skalaPenilaian": "huruf",
+    "kkm": 75,
+    "namaPenilaian": "Bootstrap Praktek",
+    "jenisPenilaian": "Tugas",
+    "tanggal": "2025-09-10",
+    "mapel": "Pemrograman Web",
+    "id": "pen-xi-pplg1-bootstrap-praktek",
+    "kelasId": "k-xi-pplg-1",
     "daftarNilai": [
       {
-        "catatan": "",
+        "nilai": 75,
         "siswaId": "s-xi-pplg1-01",
-        "nilai": 75,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "nilai": 75,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B",
-        "siswaId": "s-xi-pplg1-02",
-        "catatan": ""
-      },
-      {
-        "statusTugas": "Sudah",
         "catatan": "",
-        "nilai": 75,
-        "siswaId": "s-xi-pplg1-03",
+        "statusTugas": "Sudah",
         "gradeHuruf": "B"
       },
       {
-        "nilai": 0,
-        "catatan": "Belum praktek",
+        "nilai": 75,
+        "siswaId": "s-xi-pplg1-02",
+        "catatan": "",
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 75,
+        "gradeHuruf": "B",
+        "siswaId": "s-xi-pplg1-03",
+        "statusTugas": "Sudah",
+        "catatan": ""
+      },
+      {
+        "statusTugas": "Belum",
         "siswaId": "s-xi-pplg1-04",
-        "statusTugas": "Belum"
+        "nilai": 0,
+        "catatan": "Belum praktek"
       },
       {
         "catatan": "",
         "siswaId": "s-xi-pplg1-05",
         "statusTugas": "Sudah",
-        "nilai": 75,
-        "gradeHuruf": "B"
-      },
-      {
-        "nilai": 70,
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-06",
-        "catatan": "",
-        "gradeHuruf": "B-"
-      },
-      {
-        "nilai": 75,
-        "siswaId": "s-xi-pplg1-07",
-        "catatan": "",
         "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg1-08",
-        "catatan": "",
-        "statusTugas": "Sudah",
-        "nilai": 75,
-        "gradeHuruf": "B"
-      },
-      {
-        "nilai": 0,
-        "siswaId": "s-xi-pplg1-09",
-        "statusTugas": "Belum",
-        "catatan": "Belum praktek"
-      },
-      {
-        "catatan": "",
-        "gradeHuruf": "B",
-        "siswaId": "s-xi-pplg1-10",
-        "statusTugas": "Sudah",
         "nilai": 75
       },
       {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B-",
+        "nilai": 70,
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-06"
+      },
+      {
+        "siswaId": "s-xi-pplg1-07",
+        "statusTugas": "Sudah",
+        "nilai": 75,
+        "catatan": "",
+        "gradeHuruf": "B"
+      },
+      {
         "catatan": "",
         "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-11",
+        "siswaId": "s-xi-pplg1-08",
+        "nilai": 75,
+        "gradeHuruf": "B"
+      },
+      {
+        "statusTugas": "Belum",
+        "catatan": "Belum praktek",
+        "siswaId": "s-xi-pplg1-09",
+        "nilai": 0
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 75,
+        "siswaId": "s-xi-pplg1-10",
+        "gradeHuruf": "B",
+        "catatan": ""
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B-",
         "nilai": 70,
-        "gradeHuruf": "B-"
+        "siswaId": "s-xi-pplg1-11",
+        "catatan": ""
       },
       {
         "gradeHuruf": "B-",
-        "statusTugas": "Sudah",
         "nilai": 70,
-        "siswaId": "s-xi-pplg1-12",
-        "catatan": ""
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-12"
       },
       {
         "nilai": 0,
         "siswaId": "s-xi-pplg1-13",
+        "catatan": "Belum praktek",
+        "statusTugas": "Belum"
+      },
+      {
+        "gradeHuruf": "B",
+        "nilai": 75,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-14",
+        "catatan": ""
+      },
+      {
+        "gradeHuruf": "B",
+        "nilai": 75,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-15",
+        "catatan": ""
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-16",
+        "nilai": 80,
+        "gradeHuruf": "B+"
+      },
+      {
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-17",
+        "statusTugas": "Sudah",
+        "nilai": 75,
+        "gradeHuruf": "B"
+      },
+      {
+        "nilai": 75,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg1-18",
+        "catatan": "",
+        "gradeHuruf": "B"
+      },
+      {
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-19",
+        "nilai": 75,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B"
+      },
+      {
+        "nilai": 0,
+        "siswaId": "s-xi-pplg1-20",
         "statusTugas": "Belum",
         "catatan": "Belum praktek"
       },
       {
-        "siswaId": "s-xi-pplg1-14",
-        "catatan": "",
-        "gradeHuruf": "B",
-        "nilai": 75,
-        "statusTugas": "Sudah"
-      },
-      {
-        "catatan": "",
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-15",
-        "nilai": 75,
-        "gradeHuruf": "B"
-      },
-      {
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B+",
-        "nilai": 80,
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-16"
-      },
-      {
-        "statusTugas": "Sudah",
-        "nilai": 75,
-        "gradeHuruf": "B",
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-17"
-      },
-      {
-        "gradeHuruf": "B",
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-18",
-        "statusTugas": "Sudah",
-        "nilai": 75
-      },
-      {
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-19",
-        "gradeHuruf": "B",
-        "nilai": 75,
-        "catatan": ""
-      },
-      {
-        "siswaId": "s-xi-pplg1-20",
-        "catatan": "Belum praktek",
-        "nilai": 0,
-        "statusTugas": "Belum"
-      },
-      {
         "nilai": 70,
-        "gradeHuruf": "B-",
+        "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg1-21",
-        "catatan": "",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg1-22",
-        "nilai": 75,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B",
-        "catatan": ""
-      },
-      {
-        "nilai": 70,
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-23",
         "catatan": "",
         "gradeHuruf": "B-"
       },
       {
+        "siswaId": "s-xi-pplg1-22",
+        "catatan": "",
+        "gradeHuruf": "B",
         "nilai": 75,
-        "siswaId": "s-xi-pplg1-24",
-        "statusTugas": "Sudah",
-        "catatan": "",
-        "gradeHuruf": "B"
-      },
-      {
-        "gradeHuruf": "B+",
-        "statusTugas": "Sudah",
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-25",
-        "nilai": 80
-      },
-      {
-        "gradeHuruf": "B+",
-        "nilai": 80,
-        "statusTugas": "Sudah",
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-26"
+        "statusTugas": "Sudah"
       },
       {
         "gradeHuruf": "B-",
+        "statusTugas": "Sudah",
         "catatan": "",
-        "siswaId": "s-xi-pplg1-27",
         "nilai": 70,
-        "statusTugas": "Sudah"
+        "siswaId": "s-xi-pplg1-23"
       },
       {
-        "gradeHuruf": "B+",
-        "nilai": 80,
+        "siswaId": "s-xi-pplg1-24",
         "catatan": "",
-        "siswaId": "s-xi-pplg1-28",
+        "nilai": 75,
+        "gradeHuruf": "B",
         "statusTugas": "Sudah"
       },
       {
-        "nilai": 80,
         "statusTugas": "Sudah",
         "gradeHuruf": "B+",
-        "siswaId": "s-xi-pplg1-29",
+        "nilai": 80,
+        "siswaId": "s-xi-pplg1-25",
         "catatan": ""
       },
       {
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-26",
+        "nilai": 80
+      },
+      {
+        "siswaId": "s-xi-pplg1-27",
+        "catatan": "",
+        "statusTugas": "Sudah",
         "nilai": 70,
-        "catatan": "",
-        "gradeHuruf": "B-",
-        "statusTugas": "Sudah",
-        "siswaId": "s-xi-pplg1-30"
-      },
-      {
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B-",
-        "nilai": 70,
-        "catatan": "",
-        "siswaId": "s-xi-pplg1-31"
-      },
-      {
-        "siswaId": "s-xi-pplg1-32",
-        "nilai": 0,
-        "catatan": "Belum praktek",
-        "statusTugas": "Belum"
+        "gradeHuruf": "B-"
       },
       {
         "catatan": "",
-        "siswaId": "s-xi-pplg1-33",
-        "gradeHuruf": "B",
-        "nilai": 75,
-        "statusTugas": "Sudah"
-      },
-      {
-        "catatan": "",
-        "gradeHuruf": "B",
-        "siswaId": "s-xi-pplg1-34",
-        "statusTugas": "Sudah",
-        "nilai": 75
-      },
-      {
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B",
-        "siswaId": "s-xi-pplg1-35",
-        "catatan": "",
-        "nilai": 75
-      }
-    ],
-    "jenisPenilaian": "Tugas",
-    "namaPenilaian": "Bootstrap Praktek",
-    "kkm": 75,
-    "skalaPenilaian": "huruf",
-    "kelasId": "k-xi-pplg-1",
-    "tanggal": "2025-09-10",
-    "id": "pen-xi-pplg1-bootstrap-praktek",
-    "mapel": "Pemrograman Web"
-  },
-  {
-    "id": "pen-xi-pplg2-tugas-html",
-    "kelasId": "k-xi-pplg-2",
-    "mapel": "Pemrograman Web",
-    "tanggal": "2025-08-08",
-    "jenisPenilaian": "Tugas",
-    "skalaPenilaian": "angka",
-    "namaPenilaian": "Tugas HTML",
-    "kkm": 75,
-    "daftarNilai": [
-      {
-        "siswaId": "s-xi-pplg2-01",
-        "nilai": 85,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-02",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-03",
-        "nilai": 88,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-04",
-        "nilai": 90,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-05",
-        "nilai": 85,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-06",
-        "nilai": 88,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-07",
-        "nilai": 85,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-08",
-        "nilai": 85,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-09",
-        "nilai": 90,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-10",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-11",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-12",
-        "nilai": 88,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-13",
+        "siswaId": "s-xi-pplg1-28",
         "nilai": 80,
         "statusTugas": "Sudah",
         "gradeHuruf": "B+"
       },
       {
-        "siswaId": "s-xi-pplg2-14",
-        "nilai": 85,
         "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "nilai": 80,
+        "gradeHuruf": "B+",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-29"
       },
       {
-        "siswaId": "s-xi-pplg2-15",
-        "nilai": 85,
+        "siswaId": "s-xi-pplg1-30",
+        "catatan": "",
+        "nilai": 70,
         "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "gradeHuruf": "B-"
       },
       {
-        "siswaId": "s-xi-pplg2-16",
+        "catatan": "",
+        "siswaId": "s-xi-pplg1-31",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B-",
+        "nilai": 70
+      },
+      {
         "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
+        "catatan": "Belum praktek",
+        "siswaId": "s-xi-pplg1-32",
+        "statusTugas": "Belum"
       },
       {
-        "siswaId": "s-xi-pplg2-17",
-        "nilai": 90,
+        "nilai": 75,
+        "gradeHuruf": "B",
+        "siswaId": "s-xi-pplg1-33",
         "statusTugas": "Sudah",
+        "catatan": ""
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "",
+        "nilai": 75,
+        "siswaId": "s-xi-pplg1-34",
+        "gradeHuruf": "B"
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 75,
+        "gradeHuruf": "B",
+        "siswaId": "s-xi-pplg1-35",
+        "catatan": ""
+      }
+    ]
+  },
+  {
+    "kelasId": "k-xi-pplg-2",
+    "agendaId": "ag-xi-pplg2-2",
+    "daftarNilai": [
+      {
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A+",
+        "siswaId": "s-xi-pplg2-01",
+        "nilai": 97
+      },
+      {
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan",
+        "siswaId": "s-xi-pplg2-02",
+        "nilai": 0,
+        "gradeHuruf": "-"
+      },
+      {
+        "siswaId": "s-xi-pplg2-03",
+        "nilai": 0,
+        "catatan": "Belum mengumpulkan",
+        "gradeHuruf": "-",
+        "statusTugas": "Belum"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-04",
+        "nilai": 82,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B+"
+      },
+      {
+        "gradeHuruf": "A",
+        "siswaId": "s-xi-pplg2-05",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 92
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-06",
+        "nilai": 88,
+        "gradeHuruf": "A-"
+      },
+      {
+        "gradeHuruf": "B+",
+        "nilai": 82,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-07",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 85,
+        "siswaId": "s-xi-pplg2-08"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-09",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B",
+        "nilai": 78
+      },
+      {
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 95,
+        "siswaId": "s-xi-pplg2-10"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 92,
+        "siswaId": "s-xi-pplg2-11",
         "gradeHuruf": "A"
       },
       {
+        "gradeHuruf": "A",
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-12",
+        "nilai": 92
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A-",
+        "siswaId": "s-xi-pplg2-13",
+        "nilai": 88,
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan",
+        "nilai": 0,
+        "siswaId": "s-xi-pplg2-14",
+        "gradeHuruf": "-"
+      },
+      {
+        "nilai": 90,
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-15",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B+",
+        "nilai": 82,
+        "siswaId": "s-xi-pplg2-16",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A",
+        "nilai": 93,
+        "siswaId": "s-xi-pplg2-17",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
         "siswaId": "s-xi-pplg2-18",
         "nilai": 90,
-        "statusTugas": "Sudah",
         "gradeHuruf": "A"
       },
       {
         "siswaId": "s-xi-pplg2-19",
-        "nilai": 0,
         "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
+        "gradeHuruf": "-",
+        "catatan": "Belum mengumpulkan",
+        "nilai": 0
       },
       {
-        "siswaId": "s-xi-pplg2-20",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "nilai": 85,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-20"
       },
       {
+        "statusTugas": "Sudah",
+        "nilai": 82,
+        "gradeHuruf": "B+",
         "siswaId": "s-xi-pplg2-21",
-        "nilai": 85,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "catatan": "Tuntas memuaskan"
       },
       {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 97,
         "siswaId": "s-xi-pplg2-22",
-        "nilai": 88,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "gradeHuruf": "A+"
       },
       {
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "A-",
         "siswaId": "s-xi-pplg2-23",
-        "nilai": 90,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-24",
         "nilai": 85,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "statusTugas": "Sudah"
       },
       {
-        "siswaId": "s-xi-pplg2-25",
-        "nilai": 90,
+        "nilai": 63,
+        "gradeHuruf": "C",
         "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-24",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-25",
+        "nilai": 93,
         "gradeHuruf": "A"
       },
       {
-        "siswaId": "s-xi-pplg2-26",
-        "nilai": 88,
+        "gradeHuruf": "A",
+        "nilai": 92,
         "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "siswaId": "s-xi-pplg2-26",
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-27",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A",
+        "nilai": 90,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-27"
       },
       {
         "siswaId": "s-xi-pplg2-28",
-        "nilai": 85,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "catatan": "Tuntas memuaskan",
+        "nilai": 87,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah"
       },
       {
         "siswaId": "s-xi-pplg2-29",
-        "nilai": 90,
+        "catatan": "Tuntas memuaskan",
+        "nilai": 92,
         "statusTugas": "Sudah",
         "gradeHuruf": "A"
       },
       {
         "siswaId": "s-xi-pplg2-30",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
+        "catatan": "Tuntas memuaskan",
+        "nilai": 83,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B+"
       },
       {
         "siswaId": "s-xi-pplg2-31",
-        "nilai": 88,
+        "catatan": "Tuntas memuaskan",
+        "nilai": 92,
         "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "gradeHuruf": "A"
       },
       {
+        "catatan": "Tuntas memuaskan",
+        "nilai": 93,
         "siswaId": "s-xi-pplg2-32",
-        "nilai": 90,
         "statusTugas": "Sudah",
         "gradeHuruf": "A"
       },
       {
+        "catatan": "Tuntas memuaskan",
         "siswaId": "s-xi-pplg2-33",
-        "nilai": 90,
         "statusTugas": "Sudah",
-        "gradeHuruf": "A"
+        "nilai": 83,
+        "gradeHuruf": "B+"
       },
       {
-        "siswaId": "s-xi-pplg2-34",
-        "nilai": 95,
+        "gradeHuruf": "A-",
         "statusTugas": "Sudah",
-        "gradeHuruf": "A+"
+        "nilai": 88,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-34"
       },
       {
+        "statusTugas": "Sudah",
+        "nilai": 82,
         "siswaId": "s-xi-pplg2-35",
-        "nilai": 90,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "B+"
       }
-    ]
+    ],
+    "mapel": "Pemrograman Web",
+    "tanggal": "2026-08-07",
+    "skalaPenilaian": "angka",
+    "namaPenilaian": "HTML Dasar",
+    "kkm": 75,
+    "jenisPenilaian": "Tugas",
+    "id": "pen-xi-pplg2-html-dasar"
   },
   {
-    "id": "pen-xi-pplg2-tugas-html-2",
-    "kelasId": "k-xi-pplg-2",
-    "mapel": "Pemrograman Web",
-    "tanggal": "2025-08-15",
-    "jenisPenilaian": "Tugas",
-    "skalaPenilaian": "huruf",
-    "namaPenilaian": "Tugas HTML 2",
     "kkm": 75,
+    "agendaId": "ag-xi-pplg2-3",
+    "tanggal": "2026-08-14",
     "daftarNilai": [
       {
-        "siswaId": "s-xi-pplg2-01",
-        "nilai": 70,
-        "gradeHuruf": "C",
-        "statusTugas": "Sudah"
+        "catatan": "Tuntas memuaskan",
+        "nilai": 85,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A-",
+        "siswaId": "s-xi-pplg2-01"
       },
       {
-        "siswaId": "s-xi-pplg2-02",
-        "nilai": 0,
+        "gradeHuruf": "-",
         "statusTugas": "Belum",
+        "nilai": 0,
+        "siswaId": "s-xi-pplg2-02",
         "catatan": "Belum mengumpulkan"
       },
       {
+        "gradeHuruf": "A-",
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg2-03",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
+        "nilai": 88
       },
       {
         "siswaId": "s-xi-pplg2-04",
-        "nilai": 70,
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "A",
+        "nilai": 90,
+        "statusTugas": "Sudah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 85,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah"
+      },
+      {
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-06",
+        "nilai": 88
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A-",
+        "siswaId": "s-xi-pplg2-07",
+        "nilai": 85,
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-08",
+        "gradeHuruf": "A-",
+        "nilai": 85
+      },
+      {
+        "nilai": 90,
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-09",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "statusTugas": "Belum",
+        "nilai": 0,
+        "catatan": "Belum mengumpulkan",
+        "siswaId": "s-xi-pplg2-10",
+        "gradeHuruf": "-"
+      },
+      {
+        "nilai": 0,
+        "siswaId": "s-xi-pplg2-11",
+        "catatan": "Belum mengumpulkan",
+        "gradeHuruf": "-",
+        "statusTugas": "Belum"
+      },
+      {
+        "nilai": 88,
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-12",
+        "gradeHuruf": "A-"
+      },
+      {
+        "nilai": 80,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-13",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "B+"
+      },
+      {
+        "gradeHuruf": "A-",
+        "siswaId": "s-xi-pplg2-14",
+        "nilai": 85,
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 85,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-15"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Nilai 0",
+        "siswaId": "s-xi-pplg2-16",
+        "nilai": 0,
+        "gradeHuruf": "E"
+      },
+      {
+        "siswaId": "s-xi-pplg2-17",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "A",
+        "nilai": 90,
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 90,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A",
+        "siswaId": "s-xi-pplg2-18",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "gradeHuruf": "E",
+        "statusTugas": "Sudah",
+        "catatan": "Nilai 0",
+        "nilai": 0,
+        "siswaId": "s-xi-pplg2-19"
+      },
+      {
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "siswaId": "s-xi-pplg2-20",
+        "catatan": "Nilai 0",
+        "statusTugas": "Sudah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-21",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 85,
+        "gradeHuruf": "A-"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A-",
+        "siswaId": "s-xi-pplg2-22",
+        "nilai": 88
+      },
+      {
+        "nilai": 90,
+        "siswaId": "s-xi-pplg2-23",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 85,
+        "siswaId": "s-xi-pplg2-24",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "A-"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "A",
+        "nilai": 90,
+        "siswaId": "s-xi-pplg2-25"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "A-",
+        "siswaId": "s-xi-pplg2-26",
+        "statusTugas": "Sudah",
+        "nilai": 88
+      },
+      {
+        "gradeHuruf": "-",
+        "catatan": "Belum mengumpulkan",
+        "nilai": 0,
+        "siswaId": "s-xi-pplg2-27",
+        "statusTugas": "Belum"
+      },
+      {
+        "nilai": 85,
+        "gradeHuruf": "A-",
+        "siswaId": "s-xi-pplg2-28",
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah"
+      },
+      {
+        "gradeHuruf": "A",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-29",
+        "nilai": 90,
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 0,
+        "gradeHuruf": "E",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-30",
+        "catatan": "Nilai 0"
+      },
+      {
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-31",
+        "gradeHuruf": "A-",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 88
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 90,
+        "siswaId": "s-xi-pplg2-32"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "A",
+        "siswaId": "s-xi-pplg2-33",
+        "nilai": 90
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "A+",
+        "nilai": 95,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-34"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "A",
+        "siswaId": "s-xi-pplg2-35",
+        "nilai": 90
+      }
+    ],
+    "jenisPenilaian": "Tugas",
+    "namaPenilaian": "Tugas HTML",
+    "mapel": "Pemrograman Web",
+    "id": "pen-xi-pplg2-tugas-html",
+    "kelasId": "k-xi-pplg-2",
+    "skalaPenilaian": "angka"
+  },
+  {
+    "mapel": "Pemrograman Web",
+    "id": "pen-xi-pplg2-ulangan-html",
+    "tanggal": "2026-08-21",
+    "skalaPenilaian": "huruf",
+    "kkm": 75,
+    "kelasId": "k-xi-pplg-2",
+    "agendaId": "ag-xi-pplg2-4",
+    "namaPenilaian": "Ulangan HTML",
+    "daftarNilai": [
+      {
+        "gradeHuruf": "C",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 62,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-01"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "catatan": "Belum mengumpulkan",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B",
+        "siswaId": "s-xi-pplg2-03",
+        "nilai": 77
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-04",
+        "nilai": 62,
         "gradeHuruf": "C",
         "statusTugas": "Sudah"
       },
       {
         "siswaId": "s-xi-pplg2-05",
-        "nilai": 70,
-        "gradeHuruf": "C",
-        "statusTugas": "Sudah"
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
+        "nilai": 62,
+        "gradeHuruf": "C"
       },
       {
         "siswaId": "s-xi-pplg2-06",
-        "nilai": 70,
+        "catatan": "Tuntas memuaskan",
+        "nilai": 62,
         "gradeHuruf": "C",
         "statusTugas": "Sudah"
       },
       {
+        "catatan": "Tuntas memuaskan",
         "siswaId": "s-xi-pplg2-07",
-        "nilai": 86,
+        "nilai": 82,
         "gradeHuruf": "B+",
         "statusTugas": "Sudah"
       },
       {
-        "siswaId": "s-xi-pplg2-08",
-        "nilai": 65,
         "gradeHuruf": "C-",
-        "statusTugas": "Sudah"
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-08",
+        "nilai": 57
       },
       {
-        "siswaId": "s-xi-pplg2-09",
-        "nilai": 70,
+        "statusTugas": "Sudah",
+        "nilai": 62,
         "gradeHuruf": "C",
-        "statusTugas": "Sudah"
+        "siswaId": "s-xi-pplg2-09",
+        "catatan": "Tuntas memuaskan"
       },
       {
         "siswaId": "s-xi-pplg2-10",
-        "nilai": 94,
+        "catatan": "Tuntas memuaskan",
         "gradeHuruf": "A",
+        "nilai": 92,
         "statusTugas": "Sudah"
       },
       {
-        "siswaId": "s-xi-pplg2-11",
-        "nilai": 82,
+        "statusTugas": "Sudah",
         "gradeHuruf": "B",
-        "statusTugas": "Sudah"
+        "siswaId": "s-xi-pplg2-11",
+        "nilai": 77,
+        "catatan": "Tuntas memuaskan"
       },
       {
         "siswaId": "s-xi-pplg2-12",
-        "nilai": 70,
+        "nilai": 62,
+        "catatan": "Tuntas memuaskan",
         "gradeHuruf": "C",
         "statusTugas": "Sudah"
       },
       {
+        "nilai": 62,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "C",
         "siswaId": "s-xi-pplg2-13",
-        "nilai": 70,
-        "gradeHuruf": "C",
-        "statusTugas": "Sudah"
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-14",
-        "nilai": 0,
         "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
+        "gradeHuruf": "-",
+        "catatan": "Belum mengumpulkan",
+        "nilai": 0,
+        "siswaId": "s-xi-pplg2-14"
       },
       {
+        "catatan": "Tuntas memuaskan",
         "siswaId": "s-xi-pplg2-15",
-        "nilai": 74,
+        "nilai": 67,
         "gradeHuruf": "C+",
         "statusTugas": "Sudah"
       },
       {
         "siswaId": "s-xi-pplg2-16",
-        "nilai": 82,
+        "statusTugas": "Sudah",
         "gradeHuruf": "B",
-        "statusTugas": "Sudah"
+        "catatan": "Tuntas memuaskan",
+        "nilai": 77
       },
       {
+        "catatan": "Tuntas memuaskan",
         "siswaId": "s-xi-pplg2-17",
-        "nilai": 82,
         "gradeHuruf": "B",
-        "statusTugas": "Sudah"
+        "statusTugas": "Sudah",
+        "nilai": 77
       },
       {
-        "siswaId": "s-xi-pplg2-18",
-        "nilai": 86,
+        "statusTugas": "Sudah",
         "gradeHuruf": "B+",
-        "statusTugas": "Sudah"
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-18",
+        "nilai": 82
       },
       {
-        "siswaId": "s-xi-pplg2-19",
-        "nilai": 0,
         "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
+        "catatan": "Belum mengumpulkan",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "siswaId": "s-xi-pplg2-19"
       },
       {
+        "statusTugas": "Belum",
+        "gradeHuruf": "-",
+        "catatan": "Belum mengumpulkan",
         "siswaId": "s-xi-pplg2-20",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
+        "nilai": 0
       },
       {
-        "siswaId": "s-xi-pplg2-21",
-        "nilai": 82,
         "gradeHuruf": "B",
+        "nilai": 77,
+        "siswaId": "s-xi-pplg2-21",
+        "catatan": "Tuntas memuaskan",
         "statusTugas": "Sudah"
       },
       {
         "siswaId": "s-xi-pplg2-22",
-        "nilai": 86,
+        "catatan": "Tuntas memuaskan",
+        "nilai": 82,
         "gradeHuruf": "B+",
         "statusTugas": "Sudah"
       },
       {
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
         "siswaId": "s-xi-pplg2-23",
-        "nilai": 94,
         "gradeHuruf": "A",
-        "statusTugas": "Sudah"
+        "nilai": 92
       },
       {
-        "siswaId": "s-xi-pplg2-24",
-        "nilai": 82,
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 77,
         "gradeHuruf": "B",
-        "statusTugas": "Sudah"
+        "siswaId": "s-xi-pplg2-24"
       },
       {
+        "catatan": "Tuntas memuaskan",
         "siswaId": "s-xi-pplg2-25",
-        "nilai": 86,
-        "gradeHuruf": "B+",
-        "statusTugas": "Sudah"
+        "nilai": 82,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B+"
       },
       {
+        "nilai": 82,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B+",
         "siswaId": "s-xi-pplg2-26",
-        "nilai": 86,
-        "gradeHuruf": "B+",
-        "statusTugas": "Sudah"
+        "catatan": "Tuntas memuaskan"
       },
       {
+        "nilai": 77,
+        "gradeHuruf": "B",
         "siswaId": "s-xi-pplg2-27",
-        "nilai": 82,
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 77,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B",
+        "siswaId": "s-xi-pplg2-28",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "nilai": 77,
+        "siswaId": "s-xi-pplg2-29",
+        "catatan": "Tuntas memuaskan",
         "gradeHuruf": "B",
         "statusTugas": "Sudah"
       },
       {
-        "siswaId": "s-xi-pplg2-28",
-        "nilai": 82,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-30",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "C-",
+        "nilai": 57
+      },
+      {
+        "nilai": 72,
+        "siswaId": "s-xi-pplg2-31",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "B-",
+        "statusTugas": "Sudah"
+      },
+      {
+        "gradeHuruf": "A",
+        "nilai": 92,
+        "siswaId": "s-xi-pplg2-32",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "nilai": 72,
+        "siswaId": "s-xi-pplg2-33",
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B-"
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 72,
+        "gradeHuruf": "B-",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-34"
+      },
+      {
+        "nilai": 72,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-35",
+        "gradeHuruf": "B-",
+        "catatan": "Tuntas memuaskan"
+      }
+    ],
+    "jenisPenilaian": "UH"
+  },
+  {
+    "kkm": 75,
+    "tanggal": "2026-09-04",
+    "mapel": "Pemrograman Web",
+    "id": "pen-xi-pplg2-tugas-bootstrap",
+    "namaPenilaian": "Tugas Bootstrap",
+    "kelasId": "k-xi-pplg-2",
+    "jenisPenilaian": "Tugas",
+    "agendaId": "ag-xi-pplg2-6",
+    "daftarNilai": [
+      {
+        "nilai": 62,
+        "gradeHuruf": "C",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-01",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "C",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 62,
+        "siswaId": "s-xi-pplg2-02"
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 77,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-03",
+        "gradeHuruf": "B"
+      },
+      {
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-04",
+        "statusTugas": "Sudah"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-05",
+        "nilai": 77,
+        "gradeHuruf": "B"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B",
+        "nilai": 77
+      },
+      {
+        "gradeHuruf": "B",
+        "nilai": 77,
+        "siswaId": "s-xi-pplg2-07",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "gradeHuruf": "B",
+        "nilai": 77,
+        "siswaId": "s-xi-pplg2-08",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "gradeHuruf": "B",
+        "siswaId": "s-xi-pplg2-09",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 77,
+        "statusTugas": "Sudah"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-10",
+        "gradeHuruf": "B-",
+        "nilai": 72
+      },
+      {
+        "catatan": "Belum mengumpulkan",
+        "statusTugas": "Belum",
+        "siswaId": "s-xi-pplg2-11",
+        "gradeHuruf": "-",
+        "nilai": 0
+      },
+      {
+        "nilai": 77,
+        "siswaId": "s-xi-pplg2-12",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "B"
+      },
+      {
+        "gradeHuruf": "-",
+        "nilai": 0,
+        "catatan": "Belum mengumpulkan",
+        "statusTugas": "Belum",
+        "siswaId": "s-xi-pplg2-13"
+      },
+      {
+        "siswaId": "s-xi-pplg2-14",
+        "catatan": "Tuntas memuaskan",
+        "nilai": 77,
         "gradeHuruf": "B",
         "statusTugas": "Sudah"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-15",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B",
+        "nilai": 77
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-16",
+        "gradeHuruf": "C",
+        "nilai": 62
+      },
+      {
+        "nilai": 77,
+        "siswaId": "s-xi-pplg2-17",
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B"
+      },
+      {
+        "gradeHuruf": "B",
+        "nilai": 77,
+        "siswaId": "s-xi-pplg2-18",
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah"
+      },
+      {
+        "gradeHuruf": "-",
+        "nilai": 0,
+        "statusTugas": "Belum",
+        "siswaId": "s-xi-pplg2-19",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "nilai": 62,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-20",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "C"
+      },
+      {
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "nilai": 77,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-21"
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "C",
+        "siswaId": "s-xi-pplg2-22",
+        "nilai": 62,
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "gradeHuruf": "B",
+        "nilai": 77,
+        "siswaId": "s-xi-pplg2-23",
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-24",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 62,
+        "gradeHuruf": "C",
+        "siswaId": "s-xi-pplg2-25",
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 77,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B",
+        "siswaId": "s-xi-pplg2-26",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "nilai": 62,
+        "gradeHuruf": "C",
+        "siswaId": "s-xi-pplg2-27",
+        "catatan": "Tuntas memuaskan",
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 77,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-28",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "B"
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "siswaId": "s-xi-pplg2-29",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "catatan": "Belum mengumpulkan",
+        "siswaId": "s-xi-pplg2-30",
+        "nilai": 0,
+        "statusTugas": "Belum",
+        "gradeHuruf": "-"
+      },
+      {
+        "nilai": 77,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-31",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "B"
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 92,
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-32",
+        "gradeHuruf": "A"
+      },
+      {
+        "catatan": "Tuntas memuaskan",
+        "siswaId": "s-xi-pplg2-33",
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "nilai": 77
+      },
+      {
+        "siswaId": "s-xi-pplg2-34",
+        "nilai": 72,
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "B-",
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 77,
+        "siswaId": "s-xi-pplg2-35",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan",
+        "gradeHuruf": "B"
+      }
+    ],
+    "skalaPenilaian": "huruf"
+  },
+  {
+    "namaPenilaian": "Ulangan Bootstrap",
+    "agendaId": "ag-xi-pplg2-7",
+    "mapel": "Pemrograman Web",
+    "kelasId": "k-xi-pplg-2",
+    "kkm": 75,
+    "daftarNilai": [
+      {
+        "nilai": 52,
+        "siswaId": "s-xi-pplg2-01",
+        "catatan": "Perlu bimbingan",
+        "gradeHuruf": "D",
+        "statusTugas": "Sudah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-02",
+        "nilai": 49,
+        "catatan": "Perlu bimbingan",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "D"
+      },
+      {
+        "catatan": "Perlu bimbingan",
+        "siswaId": "s-xi-pplg2-03",
+        "gradeHuruf": "D",
+        "nilai": 53,
+        "statusTugas": "Sudah"
+      },
+      {
+        "gradeHuruf": "D",
+        "catatan": "Perlu bimbingan",
+        "nilai": 52,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-04"
+      },
+      {
+        "siswaId": "s-xi-pplg2-05",
+        "catatan": "Perlu bimbingan",
+        "nilai": 49,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "D"
+      },
+      {
+        "siswaId": "s-xi-pplg2-06",
+        "gradeHuruf": "C-",
+        "catatan": "Perlu bimbingan",
+        "nilai": 59,
+        "statusTugas": "Sudah"
+      },
+      {
+        "nilai": 48,
+        "gradeHuruf": "D",
+        "siswaId": "s-xi-pplg2-07",
+        "catatan": "Perlu bimbingan",
+        "statusTugas": "Sudah"
+      },
+      {
+        "siswaId": "s-xi-pplg2-08",
+        "nilai": 49,
+        "catatan": "Perlu bimbingan",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "D"
+      },
+      {
+        "siswaId": "s-xi-pplg2-09",
+        "catatan": "Perlu bimbingan",
+        "nilai": 37,
+        "gradeHuruf": "E",
+        "statusTugas": "Sudah"
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "D",
+        "catatan": "Perlu bimbingan",
+        "siswaId": "s-xi-pplg2-10",
+        "nilai": 54
+      },
+      {
+        "gradeHuruf": "C+",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan",
+        "siswaId": "s-xi-pplg2-11",
+        "nilai": 68
+      },
+      {
+        "nilai": 53,
+        "gradeHuruf": "D",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-12",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "catatan": "Nilai 0",
+        "siswaId": "s-xi-pplg2-13",
+        "gradeHuruf": "E",
+        "statusTugas": "Sudah",
+        "nilai": 0
+      },
+      {
+        "gradeHuruf": "E",
+        "statusTugas": "Sudah",
+        "nilai": 0,
+        "siswaId": "s-xi-pplg2-14",
+        "catatan": "Nilai 0"
+      },
+      {
+        "gradeHuruf": "D",
+        "statusTugas": "Sudah",
+        "nilai": 51,
+        "catatan": "Perlu bimbingan",
+        "siswaId": "s-xi-pplg2-15"
+      },
+      {
+        "gradeHuruf": "D",
+        "catatan": "Perlu bimbingan",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-16",
+        "nilai": 49
+      },
+      {
+        "gradeHuruf": "C-",
+        "siswaId": "s-xi-pplg2-17",
+        "nilai": 56,
+        "catatan": "Perlu bimbingan",
+        "statusTugas": "Sudah"
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "D",
+        "nilai": 54,
+        "siswaId": "s-xi-pplg2-18",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-xi-pplg2-19",
+        "nilai": 40,
+        "catatan": "Perlu bimbingan",
+        "statusTugas": "Sudah",
+        "gradeHuruf": "D"
+      },
+      {
+        "statusTugas": "Sudah",
+        "nilai": 51,
+        "catatan": "Perlu bimbingan",
+        "siswaId": "s-xi-pplg2-20",
+        "gradeHuruf": "D"
+      },
+      {
+        "catatan": "Nilai 0",
+        "gradeHuruf": "E",
+        "siswaId": "s-xi-pplg2-21",
+        "statusTugas": "Sudah",
+        "nilai": 0
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan",
+        "siswaId": "s-xi-pplg2-22",
+        "gradeHuruf": "C-",
+        "nilai": 59
+      },
+      {
+        "catatan": "Perlu bimbingan",
+        "nilai": 60,
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-23",
+        "gradeHuruf": "C"
+      },
+      {
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan",
+        "siswaId": "s-xi-pplg2-24",
+        "nilai": 31,
+        "gradeHuruf": "E"
+      },
+      {
+        "catatan": "Perlu bimbingan",
+        "siswaId": "s-xi-pplg2-25",
+        "nilai": 55,
+        "statusTugas": "Sudah",
+        "gradeHuruf": "C-"
+      },
+      {
+        "gradeHuruf": "C",
+        "statusTugas": "Sudah",
+        "nilai": 63,
+        "siswaId": "s-xi-pplg2-26",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "D",
+        "nilai": 46,
+        "catatan": "Perlu bimbingan",
+        "siswaId": "s-xi-pplg2-27"
+      },
+      {
+        "statusTugas": "Sudah",
+        "gradeHuruf": "D",
+        "catatan": "Perlu bimbingan",
+        "siswaId": "s-xi-pplg2-28",
+        "nilai": 46
       },
       {
         "siswaId": "s-xi-pplg2-29",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-30",
-        "nilai": 65,
+        "nilai": 55,
+        "catatan": "Perlu bimbingan",
         "gradeHuruf": "C-",
         "statusTugas": "Sudah"
       },
       {
-        "siswaId": "s-xi-pplg2-31",
-        "nilai": 77,
-        "gradeHuruf": "B-",
-        "statusTugas": "Sudah"
+        "gradeHuruf": "E",
+        "statusTugas": "Sudah",
+        "nilai": 0,
+        "siswaId": "s-xi-pplg2-30",
+        "catatan": "Nilai 0"
       },
       {
+        "gradeHuruf": "C-",
+        "nilai": 59,
+        "catatan": "Perlu bimbingan",
+        "statusTugas": "Sudah",
+        "siswaId": "s-xi-pplg2-31"
+      },
+      {
+        "nilai": 0,
         "siswaId": "s-xi-pplg2-32",
-        "nilai": 94,
-        "gradeHuruf": "A",
-        "statusTugas": "Sudah"
+        "statusTugas": "Sudah",
+        "catatan": "Nilai 0",
+        "gradeHuruf": "E"
       },
       {
+        "catatan": "Perlu bimbingan",
         "siswaId": "s-xi-pplg2-33",
-        "nilai": 77,
-        "gradeHuruf": "B-",
+        "gradeHuruf": "C-",
+        "nilai": 57,
         "statusTugas": "Sudah"
       },
       {
         "siswaId": "s-xi-pplg2-34",
-        "nilai": 77,
-        "gradeHuruf": "B-",
-        "statusTugas": "Sudah"
+        "catatan": "Nilai 0",
+        "gradeHuruf": "E",
+        "statusTugas": "Sudah",
+        "nilai": 0
       },
       {
+        "statusTugas": "Sudah",
+        "nilai": 50,
+        "gradeHuruf": "D",
         "siswaId": "s-xi-pplg2-35",
+        "catatan": "Perlu bimbingan"
+      }
+    ],
+    "id": "pen-xi-pplg2-ulangan-bootstrap",
+    "skalaPenilaian": "angka",
+    "jenisPenilaian": "UH",
+    "tanggal": "2026-09-11"
+  },
+  {
+    "id": "pen-k1-tugas-html",
+    "agendaId": "ag-k1-3",
+    "kelasId": "k1",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2025-08-04",
+    "jenisPenilaian": "Tugas",
+    "skalaPenilaian": "huruf",
+    "namaPenilaian": "Tugas HTML",
+    "kkm": 75,
+    "daftarNilai": [
+      {
+        "siswaId": "s-k1-01",
         "nilai": 77,
-        "gradeHuruf": "B-",
-        "statusTugas": "Sudah"
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-02",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-03",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-04",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-05",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-06",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-07",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-08",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-09",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-10",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-11",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-12",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-13",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-14",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-15",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-16",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-17",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-18",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-19",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-20",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-21",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-22",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-23",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-24",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-25",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-26",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-27",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-28",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-29",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-30",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-31",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-32",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-33",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-34",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
       }
     ]
   },
   {
-    "id": "pen-xi-pplg2-ulangan-html",
-    "kelasId": "k-xi-pplg-2",
+    "id": "pen-k1-praktek-html",
+    "agendaId": "ag-k1-4",
+    "kelasId": "k1",
     "mapel": "Pemrograman Web",
-    "tanggal": "2025-08-22",
+    "tanggal": "2025-08-11",
+    "jenisPenilaian": "Tugas",
+    "skalaPenilaian": "huruf",
+    "namaPenilaian": "Praktek HTML",
+    "kkm": 75,
+    "daftarNilai": [
+      {
+        "siswaId": "s-k1-01",
+        "nilai": 98,
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-02",
+        "nilai": 98,
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-03",
+        "nilai": 98,
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-04",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-05",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-06",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-07",
+        "nilai": 98,
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-08",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-09",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-10",
+        "nilai": 82,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-11",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-12",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-13",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-14",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-15",
+        "nilai": 62,
+        "gradeHuruf": "C",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-16",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-17",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-18",
+        "nilai": 92,
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-19",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-20",
+        "nilai": 98,
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-21",
+        "nilai": 82,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-22",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-23",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-24",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-25",
+        "nilai": 72,
+        "gradeHuruf": "B-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-26",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-27",
+        "nilai": 57,
+        "gradeHuruf": "C-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-28",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-29",
+        "nilai": 92,
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-30",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-31",
+        "nilai": 92,
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-32",
+        "nilai": 82,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-33",
+        "nilai": 82,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-34",
+        "nilai": 82,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      }
+    ]
+  },
+  {
+    "id": "pen-k1-ulangan-html",
+    "agendaId": "ag-k1-5",
+    "kelasId": "k1",
+    "mapel": "Pemrograman Web",
+    "tanggal": "2025-09-01",
     "jenisPenilaian": "UH",
     "skalaPenilaian": "angka",
     "namaPenilaian": "Ulangan HTML",
     "kkm": 75,
     "daftarNilai": [
       {
-        "siswaId": "s-xi-pplg2-01",
-        "nilai": 97,
+        "siswaId": "s-k1-01",
+        "nilai": 89,
+        "gradeHuruf": "A-",
         "statusTugas": "Sudah",
-        "gradeHuruf": "A+"
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-02",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum ulangan"
+        "siswaId": "s-k1-02",
+        "nilai": 81,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-03",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum ulangan"
+        "siswaId": "s-k1-03",
+        "nilai": 98,
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-04",
+        "siswaId": "s-k1-04",
         "nilai": 82,
+        "gradeHuruf": "B+",
         "statusTugas": "Sudah",
-        "gradeHuruf": "B+"
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-05",
-        "nilai": 92,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-06",
+        "siswaId": "s-k1-05",
         "nilai": 88,
+        "gradeHuruf": "A-",
         "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-07",
-        "nilai": 82,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B+"
-      },
-      {
-        "siswaId": "s-xi-pplg2-08",
-        "nilai": 85,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-09",
+        "siswaId": "s-k1-06",
         "nilai": 78,
+        "gradeHuruf": "B",
         "statusTugas": "Sudah",
-        "gradeHuruf": "B"
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-10",
-        "nilai": 95,
+        "siswaId": "s-k1-07",
+        "nilai": 86,
+        "gradeHuruf": "A-",
         "statusTugas": "Sudah",
-        "gradeHuruf": "A+"
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-11",
-        "nilai": 92,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-12",
-        "nilai": 92,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-13",
-        "nilai": 88,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-14",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum ulangan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-15",
-        "nilai": 90,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-16",
-        "nilai": 82,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B+"
-      },
-      {
-        "siswaId": "s-xi-pplg2-17",
-        "nilai": 93,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-18",
-        "nilai": 90,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-19",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum ulangan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-20",
-        "nilai": 85,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-21",
-        "nilai": 82,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B+"
-      },
-      {
-        "siswaId": "s-xi-pplg2-22",
-        "nilai": 97,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A+"
-      },
-      {
-        "siswaId": "s-xi-pplg2-23",
-        "nilai": 85,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-24",
-        "nilai": 63,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C"
-      },
-      {
-        "siswaId": "s-xi-pplg2-25",
-        "nilai": 93,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-26",
-        "nilai": 92,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-27",
-        "nilai": 90,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-28",
+        "siswaId": "s-k1-08",
         "nilai": 87,
+        "gradeHuruf": "A-",
         "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-29",
-        "nilai": 92,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-30",
-        "nilai": 83,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B+"
-      },
-      {
-        "siswaId": "s-xi-pplg2-31",
-        "nilai": 92,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-32",
-        "nilai": 93,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "A"
-      },
-      {
-        "siswaId": "s-xi-pplg2-33",
-        "nilai": 83,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "B+"
-      },
-      {
-        "siswaId": "s-xi-pplg2-34",
+        "siswaId": "s-k1-09",
         "nilai": 88,
+        "gradeHuruf": "A-",
         "statusTugas": "Sudah",
-        "gradeHuruf": "A-"
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-35",
-        "nilai": 82,
+        "siswaId": "s-k1-10",
+        "nilai": 85,
+        "gradeHuruf": "A-",
         "statusTugas": "Sudah",
-        "gradeHuruf": "B+"
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-11",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
+      },
+      {
+        "siswaId": "s-k1-12",
+        "nilai": 89,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-13",
+        "nilai": 81,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-14",
+        "nilai": 76,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-15",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
+      },
+      {
+        "siswaId": "s-k1-16",
+        "nilai": 93,
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-17",
+        "nilai": 74,
+        "gradeHuruf": "B-",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-18",
+        "nilai": 88,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-19",
+        "nilai": 80,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-20",
+        "nilai": 93,
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-21",
+        "nilai": 87,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-22",
+        "nilai": 80,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-23",
+        "nilai": 89,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-24",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
+      },
+      {
+        "siswaId": "s-k1-25",
+        "nilai": 87,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-26",
+        "nilai": 89,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-27",
+        "nilai": 92,
+        "gradeHuruf": "A",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-28",
+        "nilai": 82,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-29",
+        "nilai": 84,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-30",
+        "nilai": 83,
+        "gradeHuruf": "B+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-31",
+        "nilai": 89,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-32",
+        "nilai": 86,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-33",
+        "nilai": 89,
+        "gradeHuruf": "A-",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-34",
+        "nilai": 95,
+        "gradeHuruf": "A+",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
       }
     ]
   },
   {
-    "id": "pen-xi-pplg2-tugas-bootstrap",
-    "kelasId": "k-xi-pplg-2",
+    "id": "pen-k1-tugas-bootstrap",
+    "agendaId": "ag-k1-6",
+    "kelasId": "k1",
     "mapel": "Pemrograman Web",
-    "tanggal": "2025-09-05",
+    "tanggal": "2025-09-08",
     "jenisPenilaian": "Tugas",
     "skalaPenilaian": "huruf",
     "namaPenilaian": "Tugas Bootstrap",
     "kkm": 75,
     "daftarNilai": [
       {
-        "siswaId": "s-xi-pplg2-01",
-        "nilai": 70,
-        "gradeHuruf": "C",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-02",
-        "nilai": 70,
-        "gradeHuruf": "C",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-03",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-04",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-05",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-06",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-07",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-08",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-09",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-10",
+        "siswaId": "s-k1-01",
         "nilai": 77,
-        "gradeHuruf": "B-",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-11",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-12",
-        "nilai": 82,
         "gradeHuruf": "B",
-        "statusTugas": "Sudah"
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-13",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-14",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-15",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-16",
-        "nilai": 70,
-        "gradeHuruf": "C",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-17",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-18",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-19",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-20",
-        "nilai": 70,
-        "gradeHuruf": "C",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-21",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-22",
-        "nilai": 70,
-        "gradeHuruf": "C",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-23",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-24",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-25",
-        "nilai": 70,
-        "gradeHuruf": "C",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-26",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-27",
-        "nilai": 70,
-        "gradeHuruf": "C",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-28",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-29",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-30",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum mengumpulkan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-31",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-32",
-        "nilai": 94,
-        "gradeHuruf": "A",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-33",
-        "nilai": 82,
-        "gradeHuruf": "B",
-        "statusTugas": "Sudah"
-      },
-      {
-        "siswaId": "s-xi-pplg2-34",
+        "siswaId": "s-k1-02",
         "nilai": 77,
-        "gradeHuruf": "B-",
-        "statusTugas": "Sudah"
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
       },
       {
-        "siswaId": "s-xi-pplg2-35",
-        "nilai": 82,
+        "siswaId": "s-k1-03",
+        "nilai": 77,
         "gradeHuruf": "B",
-        "statusTugas": "Sudah"
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-04",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-05",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-06",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-07",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-08",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-09",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-10",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-11",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-12",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-13",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-14",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-15",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-16",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-17",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-18",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-19",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-20",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-21",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-22",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-23",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-24",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-25",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-26",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-27",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-28",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-29",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-30",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-31",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-32",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
+      },
+      {
+        "siswaId": "s-k1-33",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum mengumpulkan"
+      },
+      {
+        "siswaId": "s-k1-34",
+        "nilai": 77,
+        "gradeHuruf": "B",
+        "statusTugas": "Sudah",
+        "catatan": "Tuntas memuaskan"
       }
     ]
   },
   {
-    "id": "pen-xi-pplg2-ulangan-bootstrap",
-    "kelasId": "k-xi-pplg-2",
+    "id": "pen-k1-ulangan-bootstrap",
+    "agendaId": "ag-k1-7",
+    "kelasId": "k1",
     "mapel": "Pemrograman Web",
-    "tanggal": "2025-09-12",
+    "tanggal": "2026-09-15",
     "jenisPenilaian": "UH",
     "skalaPenilaian": "angka",
     "namaPenilaian": "Ulangan Bootstrap",
     "kkm": 75,
     "daftarNilai": [
       {
-        "siswaId": "s-xi-pplg2-01",
-        "nilai": 52,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
+        "siswaId": "s-k1-01",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
       },
       {
-        "siswaId": "s-xi-pplg2-02",
-        "nilai": 49,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "D"
+        "siswaId": "s-k1-02",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
       },
       {
-        "siswaId": "s-xi-pplg2-03",
-        "nilai": 53,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-04",
-        "nilai": 52,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-05",
-        "nilai": 49,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "D"
-      },
-      {
-        "siswaId": "s-xi-pplg2-06",
+        "siswaId": "s-k1-03",
         "nilai": 59,
+        "gradeHuruf": "C-",
         "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
+        "catatan": "Perlu bimbingan"
       },
       {
-        "siswaId": "s-xi-pplg2-07",
+        "siswaId": "s-k1-04",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
+      },
+      {
+        "siswaId": "s-k1-05",
+        "nilai": 54,
+        "gradeHuruf": "D",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-06",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
+      },
+      {
+        "siswaId": "s-k1-07",
+        "nilai": 62,
+        "gradeHuruf": "C",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-08",
+        "nilai": 44,
+        "gradeHuruf": "D",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-09",
+        "nilai": 55,
+        "gradeHuruf": "C-",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-10",
         "nilai": 48,
+        "gradeHuruf": "D",
         "statusTugas": "Sudah",
-        "gradeHuruf": "D"
+        "catatan": "Perlu bimbingan"
       },
       {
-        "siswaId": "s-xi-pplg2-08",
-        "nilai": 49,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "D"
+        "siswaId": "s-k1-11",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
       },
       {
-        "siswaId": "s-xi-pplg2-09",
+        "siswaId": "s-k1-12",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
+      },
+      {
+        "siswaId": "s-k1-13",
         "nilai": 37,
+        "gradeHuruf": "E",
         "statusTugas": "Sudah",
-        "gradeHuruf": "D"
+        "catatan": "Perlu bimbingan"
       },
       {
-        "siswaId": "s-xi-pplg2-10",
-        "nilai": 54,
+        "siswaId": "s-k1-14",
+        "nilai": 45,
+        "gradeHuruf": "D",
         "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
+        "catatan": "Perlu bimbingan"
       },
       {
-        "siswaId": "s-xi-pplg2-11",
-        "nilai": 68,
+        "siswaId": "s-k1-15",
+        "nilai": 43,
+        "gradeHuruf": "D",
         "statusTugas": "Sudah",
-        "gradeHuruf": "C+"
+        "catatan": "Perlu bimbingan"
       },
       {
-        "siswaId": "s-xi-pplg2-12",
-        "nilai": 53,
+        "siswaId": "s-k1-16",
+        "nilai": 58,
+        "gradeHuruf": "C-",
         "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
+        "catatan": "Perlu bimbingan"
       },
       {
-        "siswaId": "s-xi-pplg2-13",
+        "siswaId": "s-k1-17",
+        "nilai": 44,
+        "gradeHuruf": "D",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-18",
+        "nilai": 55,
+        "gradeHuruf": "C-",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-19",
         "nilai": 0,
+        "gradeHuruf": "-",
         "statusTugas": "Belum",
         "catatan": "Belum ulangan"
       },
       {
-        "siswaId": "s-xi-pplg2-14",
+        "siswaId": "s-k1-20",
         "nilai": 0,
+        "gradeHuruf": "-",
         "statusTugas": "Belum",
         "catatan": "Belum ulangan"
       },
       {
-        "siswaId": "s-xi-pplg2-15",
-        "nilai": 51,
+        "siswaId": "s-k1-21",
+        "nilai": 59,
+        "gradeHuruf": "C-",
         "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
+        "catatan": "Perlu bimbingan"
       },
       {
-        "siswaId": "s-xi-pplg2-16",
+        "siswaId": "s-k1-22",
+        "nilai": 39,
+        "gradeHuruf": "E",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-23",
+        "nilai": 52,
+        "gradeHuruf": "D",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-24",
+        "nilai": 39,
+        "gradeHuruf": "E",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-25",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
+      },
+      {
+        "siswaId": "s-k1-26",
         "nilai": 49,
+        "gradeHuruf": "D",
         "statusTugas": "Sudah",
-        "gradeHuruf": "D"
+        "catatan": "Perlu bimbingan"
       },
       {
-        "siswaId": "s-xi-pplg2-17",
-        "nilai": 56,
+        "siswaId": "s-k1-27",
+        "nilai": 49,
+        "gradeHuruf": "D",
         "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
+        "catatan": "Perlu bimbingan"
       },
       {
-        "siswaId": "s-xi-pplg2-18",
-        "nilai": 54,
+        "siswaId": "s-k1-28",
+        "nilai": 43,
+        "gradeHuruf": "D",
         "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
+        "catatan": "Perlu bimbingan"
       },
       {
-        "siswaId": "s-xi-pplg2-19",
-        "nilai": 40,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "D"
-      },
-      {
-        "siswaId": "s-xi-pplg2-20",
-        "nilai": 51,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-21",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum ulangan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-22",
-        "nilai": 59,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-23",
-        "nilai": 60,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C"
-      },
-      {
-        "siswaId": "s-xi-pplg2-24",
-        "nilai": 31,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "D"
-      },
-      {
-        "siswaId": "s-xi-pplg2-25",
-        "nilai": 55,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-26",
-        "nilai": 63,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C"
-      },
-      {
-        "siswaId": "s-xi-pplg2-27",
-        "nilai": 46,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "D"
-      },
-      {
-        "siswaId": "s-xi-pplg2-28",
-        "nilai": 46,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "D"
-      },
-      {
-        "siswaId": "s-xi-pplg2-29",
-        "nilai": 55,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-30",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum ulangan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-31",
-        "nilai": 59,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-32",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum ulangan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-33",
-        "nilai": 57,
-        "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
-      },
-      {
-        "siswaId": "s-xi-pplg2-34",
-        "nilai": 0,
-        "statusTugas": "Belum",
-        "catatan": "Belum ulangan"
-      },
-      {
-        "siswaId": "s-xi-pplg2-35",
+        "siswaId": "s-k1-29",
         "nilai": 50,
+        "gradeHuruf": "D",
         "statusTugas": "Sudah",
-        "gradeHuruf": "C-"
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-30",
+        "nilai": 47,
+        "gradeHuruf": "D",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-31",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
+      },
+      {
+        "siswaId": "s-k1-32",
+        "nilai": 46,
+        "gradeHuruf": "D",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-33",
+        "nilai": 60,
+        "gradeHuruf": "C",
+        "statusTugas": "Sudah",
+        "catatan": "Perlu bimbingan"
+      },
+      {
+        "siswaId": "s-k1-34",
+        "nilai": 0,
+        "gradeHuruf": "-",
+        "statusTugas": "Belum",
+        "catatan": "Belum ulangan"
       }
     ]
   }

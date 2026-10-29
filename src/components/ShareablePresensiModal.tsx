@@ -20,8 +20,14 @@ import {
   MessageCircle,
   FileText,
   Loader2,
+  Camera,
 } from 'lucide-react';
 import { Kelas, Siswa, AgendaMengajar, TeacherProfile, PresensiStatus } from '../types';
+import {
+  captureElementToCanvas,
+  downloadCanvasAsPng,
+  copyCanvasToClipboard,
+} from '../utils/screenshotUtils';
 
 interface ShareablePresensiModalProps {
   isOpen: boolean;
@@ -31,6 +37,8 @@ interface ShareablePresensiModalProps {
   agendas: AgendaMengajar[];
   profile: TeacherProfile;
   filterDescription?: string;
+  kelasList?: Kelas[];
+  onSelectKelas?: (kelas: Kelas) => void;
 }
 
 // Ultra-reliable clipboard helper with multiple fallbacks for iframes & secure/insecure contexts
@@ -94,6 +102,8 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
   agendas,
   profile,
   filterDescription,
+  kelasList,
+  onSelectKelas,
 }) => {
   const [activeTab, setActiveTab] = useState<'card' | 'whatsapp' | 'individual'>('card');
   const [copiedWA, setCopiedWA] = useState<boolean>(false);
@@ -102,6 +112,8 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
   const [selectedSiswaId, setSelectedSiswaId] = useState<string>(siswaList[0]?.id || '');
   const [nomorHpOrtu, setNomorHpOrtu] = useState<string>('');
   const [isExportingPdf, setIsExportingPdf] = useState<boolean>(false);
+  const [isCapturingScreenshot, setIsCapturingScreenshot] = useState<boolean>(false);
+  const [copiedScreenshot, setCopiedScreenshot] = useState<boolean>(false);
 
   // Filter students for the active class and sort alphabetically
   const classSiswa = useMemo(() => {
@@ -162,15 +174,16 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
           absenceDetails.push({ pertemuanKe: ag.pertemuanKe, tanggal: ag.tanggal, materi: ag.materi, status, keterangan });
         } else if (status === 'magang') {
           mg++;
+          absenceDetails.push({ pertemuanKe: ag.pertemuanKe, tanggal: ag.tanggal, materi: ag.materi, status, keterangan });
         } else {
           h++;
         }
       });
 
       const total = agendas.length;
-      const effectivePresence = h + dp + mg;
-      const persenHadir = total > 0 ? Math.round((effectivePresence / total) * 100) : 100;
-      const isPerfect = sk === 0 && ij === 0 && al === 0;
+      // Dispen dimasukkan tidak ikut tatap muka kelas, sehingga % Hadir murni tatap muka kelas
+      const persenHadir = total > 0 ? Math.round((h / total) * 100) : 100;
+      const isPerfect = sk === 0 && ij === 0 && al === 0 && dp === 0 && mg === 0;
 
       return {
         siswa: s,
@@ -207,7 +220,7 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
     });
 
     const totalEntries = studentStats.length * (agendas.length || 1);
-    const overallRate = totalEntries > 0 ? Math.round(((totalH + totalD + totalM) / totalEntries) * 100) : 100;
+    const overallRate = totalEntries > 0 ? Math.round((totalH / totalEntries) * 100) : 100;
     const perfectCount = studentStats.filter(st => st.isPerfect).length;
 
     return {
@@ -265,6 +278,7 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
         if (st.ijin > 0) notes.push(`${st.ijin}I`);
         if (st.alpa > 0) notes.push(`${st.alpa}A`);
         if (st.dispen > 0) notes.push(`${st.dispen}D`);
+        if (st.magang > 0) notes.push(`${st.magang}M`);
         msg += `${i + 1}. *${st.siswa.nama}* [${notes.join(', ')}] ➔ Hadir: *${st.persenHadir}%*\n`;
       });
       msg += `\n`;
@@ -300,7 +314,8 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
     msg += `• Sakit (S)        : ${currentStudentStats.sakit} kali\n`;
     msg += `• Izin (I)         : ${currentStudentStats.ijin} kali\n`;
     msg += `• Alpa / Tanpa Ket.: ${currentStudentStats.alpa} kali\n`;
-    if (currentStudentStats.dispen > 0) msg += `• Dispensasi       : ${currentStudentStats.dispen} kali\n`;
+    if (currentStudentStats.dispen > 0) msg += `• Dispensasi (D)   : ${currentStudentStats.dispen} kali\n`;
+    if (currentStudentStats.magang > 0) msg += `• Magang / PKL (M) : ${currentStudentStats.magang} kali\n`;
 
     if (currentStudentStats.absenceDetails.length > 0) {
       msg += `\n📋 *Riwayat Ketidakhadiran:*\n`;
@@ -312,7 +327,9 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
             ? 'Izin'
             : dt.status === 'alpa'
             ? 'Alpa'
-            : 'Dispensasi';
+            : dt.status === 'dispen'
+            ? 'Dispensasi'
+            : 'Magang / PKL';
         msg += `• P${dt.pertemuanKe} (${dt.tanggal}): [${statusLabel}]${dt.keterangan ? ` - "${dt.keterangan}"` : ''}\n`;
       });
     }
@@ -513,7 +530,7 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
       agendas.forEach(ag => {
         headerRow.push(`P${ag.pertemuanKe}`);
       });
-      headerRow.push('H', 'S', 'I', 'A', '% Hadir');
+      headerRow.push('H', 'S', 'I', 'A', 'D', 'M', '% Hadir');
 
       const body = displayedStudents.map((st, idx) => {
         const row: (string | number)[] = [
@@ -526,7 +543,7 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
           const code = status === 'hadir' ? 'H' : status === 'sakit' ? 'S' : status === 'ijin' ? 'I' : status === 'alpa' ? 'A' : status === 'dispen' ? 'D' : 'M';
           row.push(code);
         });
-        row.push(st.hadir, st.sakit, st.ijin, st.alpa, `${st.persenHadir}%`);
+        row.push(st.hadir, st.sakit, st.ijin, st.alpa, st.dispen, st.magang, `${st.persenHadir}%`);
         return row;
       });
 
@@ -679,6 +696,33 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
     }
   };
 
+  // Capture Presensi Card as Image (Download or Copy to Clipboard)
+  const handleCapturePresensiScreenshot = async (mode: 'download' | 'copy') => {
+    const el = document.getElementById('printable-presensi-card');
+    if (!el) return;
+    setIsCapturingScreenshot(true);
+    try {
+      const cleanKelas = activeKelas.namaKelas.replace(/[^a-zA-Z0-9_-]/g, '_');
+      const filename = `Rekap_Presensi_${cleanKelas}_${new Date().toISOString().split('T')[0]}.png`;
+      const canvas = await captureElementToCanvas(el, { scale: 2 });
+      if (mode === 'download') {
+        downloadCanvasAsPng(canvas, filename);
+      } else {
+        const ok = await copyCanvasToClipboard(canvas);
+        if (ok) {
+          setCopiedScreenshot(true);
+          setTimeout(() => setCopiedScreenshot(false), 2500);
+        } else {
+          downloadCanvasAsPng(canvas, filename);
+        }
+      }
+    } catch (err) {
+      console.error('Error capturing presensi screenshot:', err);
+    } finally {
+      setIsCapturingScreenshot(false);
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -729,40 +773,62 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
         {/* Toolbar: Navigation Tabs */}
         <div className="p-4 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0 no-print">
           {/* Tabs */}
-          <div className="flex items-center gap-1.5 p-1 bg-slate-200/80 rounded-2xl self-start">
-            <button
-              onClick={() => setActiveTab('card')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                activeTab === 'card'
-                  ? 'bg-white text-indigo-700 shadow-2xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <FileSpreadsheet className="w-3.5 h-3.5" />
-              <span>Dokumen Cetak & Ringkasan</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('whatsapp')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                activeTab === 'whatsapp'
-                  ? 'bg-emerald-600 text-white shadow-2xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Format WhatsApp Kelas</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('individual')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                activeTab === 'individual'
-                  ? 'bg-white text-indigo-700 shadow-2xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <UserCheck className="w-3.5 h-3.5" />
-              <span>Slip Per Siswa (Orang Tua)</span>
-            </button>
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex items-center gap-1.5 p-1 bg-slate-200/80 rounded-2xl self-start">
+              <button
+                onClick={() => setActiveTab('card')}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                  activeTab === 'card'
+                    ? 'bg-white text-indigo-700 shadow-2xs'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <FileSpreadsheet className="w-3.5 h-3.5" />
+                <span>Dokumen Cetak & Ringkasan</span>
+              </button>
+              <button
+                onClick={() => setActiveTab('whatsapp')}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                  activeTab === 'whatsapp'
+                    ? 'bg-emerald-600 text-white shadow-2xs'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>Format WhatsApp Kelas</span>
+              </button>
+              <button
+                onClick={() => setActiveTab('individual')}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                  activeTab === 'individual'
+                    ? 'bg-white text-indigo-700 shadow-2xs'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <UserCheck className="w-3.5 h-3.5" />
+                <span>Slip Per Siswa (Orang Tua)</span>
+              </button>
+            </div>
+
+            {/* Optional Class Picker */}
+            {kelasList && kelasList.length > 1 && onSelectKelas && (
+              <div className="flex items-center gap-1 overflow-x-auto scrollbar-none pl-1">
+                <span className="text-[11px] font-bold text-slate-400 mr-1">Kelas:</span>
+                {kelasList.map(k => (
+                  <button
+                    key={k.id}
+                    onClick={() => onSelectKelas(k)}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
+                      k.id === activeKelas.id
+                        ? 'bg-indigo-600 text-white shadow-2xs'
+                        : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'
+                    }`}
+                  >
+                    {k.namaKelas}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="text-xs text-slate-500 font-medium">
@@ -813,8 +879,44 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
 
                 <div className="flex flex-wrap items-center gap-2">
                   <button
+                    onClick={() => handleCapturePresensiScreenshot('copy')}
+                    disabled={isCapturingScreenshot}
+                    className={`px-3 py-2 rounded-xl text-xs font-bold shadow-2xs cursor-pointer flex items-center gap-1.5 transition-all ${
+                      copiedScreenshot
+                        ? 'bg-emerald-700 text-white'
+                        : 'bg-emerald-600 hover:bg-emerald-700 text-white'
+                    }`}
+                    title="Salin gambar rekap presensi langsung ke clipboard untuk ditempel di WhatsApp"
+                  >
+                    {copiedScreenshot ? (
+                      <>
+                        <Check className="w-3.5 h-3.5" />
+                        <span>Tersalin ke WA!</span>
+                      </>
+                    ) : isCapturingScreenshot ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                        <span>Menyalin...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3.5 h-3.5" />
+                        <span>Salin ke WA</span>
+                      </>
+                    )}
+                  </button>
+                  <button
+                    onClick={() => handleCapturePresensiScreenshot('download')}
+                    disabled={isCapturingScreenshot}
+                    className="px-3.5 py-2 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl shadow-2xs cursor-pointer flex items-center gap-1.5 transition-all disabled:opacity-60"
+                    title="Simpan rekap presensi sebagai file gambar .png"
+                  >
+                    <Camera className="w-3.5 h-3.5" />
+                    <span>Screenshot PNG</span>
+                  </button>
+                  <button
                     onClick={handleExportExcel}
-                    className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-2xs cursor-pointer flex items-center gap-1.5 transition-all"
+                    className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-xl shadow-2xs cursor-pointer flex items-center gap-1.5 transition-all"
                     title="Download file Excel (.xlsx)"
                   >
                     <Download className="w-3.5 h-3.5" />
@@ -938,7 +1040,8 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
                         <th className="p-2.5 text-center text-amber-700">S</th>
                         <th className="p-2.5 text-center text-sky-700">I</th>
                         <th className="p-2.5 text-center text-rose-700">A</th>
-                        {classKpi.totalD > 0 && <th className="p-2.5 text-center text-indigo-700">D</th>}
+                        <th className="p-2.5 text-center text-purple-700">D</th>
+                        <th className="p-2.5 text-center text-indigo-700">M</th>
                         <th className="p-2.5 text-center bg-slate-200/60 font-black">% Hadir</th>
                         <th className="p-2.5 text-center">Status</th>
                       </tr>
@@ -954,7 +1057,8 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
                           <td className="p-2.5 text-center text-amber-700 font-semibold">{st.sakit}</td>
                           <td className="p-2.5 text-center text-sky-700 font-semibold">{st.ijin}</td>
                           <td className="p-2.5 text-center text-rose-700 font-bold">{st.alpa}</td>
-                          {classKpi.totalD > 0 && <td className="p-2.5 text-center text-indigo-700">{st.dispen}</td>}
+                          <td className="p-2.5 text-center text-purple-700 font-semibold">{st.dispen}</td>
+                          <td className="p-2.5 text-center text-indigo-700 font-semibold">{st.magang}</td>
                           <td className="p-2.5 text-center font-black text-slate-900 bg-slate-50/50">
                             {st.persenHadir}%
                           </td>
@@ -966,6 +1070,14 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
                             ) : st.alpa > 0 ? (
                               <span className="px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 text-[10px] font-bold">
                                 Alpa ({st.alpa})
+                              </span>
+                            ) : st.dispen > 0 ? (
+                              <span className="px-2 py-0.5 rounded-md bg-purple-100 text-purple-800 text-[10px] font-bold">
+                                Dispen ({st.dispen})
+                              </span>
+                            ) : st.magang > 0 ? (
+                              <span className="px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 text-[10px] font-bold">
+                                Magang ({st.magang})
                               </span>
                             ) : (
                               <span className="px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 text-[10px] font-bold">
@@ -1106,7 +1218,7 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
 
               {/* Student Overview Card */}
               {currentStudentStats && (
-                <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
+                <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 grid grid-cols-2 sm:grid-cols-7 gap-2.5 text-center">
                   <div className="bg-white p-3 rounded-xl border border-slate-100">
                     <span className="text-[10px] font-bold text-slate-400 block uppercase">Kehadiran</span>
                     <span className="text-xl font-black text-indigo-700 mt-0.5 block">{currentStudentStats.persenHadir}%</span>
@@ -1126,6 +1238,14 @@ export const ShareablePresensiModal: React.FC<ShareablePresensiModalProps> = ({
                   <div className="bg-white p-3 rounded-xl border border-slate-100">
                     <span className="text-[10px] font-bold text-rose-600 block uppercase">Alpa</span>
                     <span className="text-xl font-black text-rose-700 mt-0.5 block">{currentStudentStats.alpa}x</span>
+                  </div>
+                  <div className="bg-white p-3 rounded-xl border border-slate-100">
+                    <span className="text-[10px] font-bold text-purple-600 block uppercase">Dispen</span>
+                    <span className="text-xl font-black text-purple-700 mt-0.5 block">{currentStudentStats.dispen}x</span>
+                  </div>
+                  <div className="bg-white p-3 rounded-xl border border-slate-100">
+                    <span className="text-[10px] font-bold text-indigo-600 block uppercase">Magang</span>
+                    <span className="text-xl font-black text-indigo-700 mt-0.5 block">{currentStudentStats.magang}x</span>
                   </div>
                 </div>
               )}
